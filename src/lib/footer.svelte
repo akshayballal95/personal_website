@@ -1,4 +1,4 @@
-<div class="flex items-center m-10">
+<div class="flex items-center ml-10 mr-10 mb-3">
 	<p class="text-sm text-thin grow unstyled">@2023 by Akshay Ballal</p>
 
 	<div class="flex items-start gap-12">

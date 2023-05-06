@@ -14,28 +14,28 @@
 >
 	<Tab bind:group={tabsBottomNav} name="about_me" value={0} class = "rounded">
 		<!-- <svelte:fragment slot="lead">SD</svelte:fragment> -->
-		<p class = "font-thin">About Me</p>
+		<p class = "font-light">About Me</p>
 	</Tab>
 
 	<Tab bind:group={tabsBottomNav} name="resume" value={1} class = "rounded">
 		<!-- <svelte:fragment slot="lead">SD</svelte:fragment> -->
-		<p class = "font-thin">Resume</p>
+		<p class = "font-light">Resume</p>
 	</Tab>
 
 	<Tab bind:group={tabsBottomNav} name="projects" value={2} class = "rounded">
 		<!-- <svelte:fragment slot="lead">SD</svelte:fragment> -->
-		<p class = "font-thin">Projects</p>
+		<p class = "font-light">Projects</p>
 	</Tab>
 
 	<Tab bind:group={tabsBottomNav} name="Contact" value={3} class = "rounded">
 		<!-- <svelte:fragment slot="lead">SD</svelte:fragment> -->
-		<p class = "font-thin">Contact</p>
+		<p class = "font-light">Contact</p>
 
 	</Tab>
 	
 	<Tab bind:group={tabsBottomNav} name="Blog" value={4} class = "rounded">
 		<!-- <svelte:fragment slot="lead">SD</svelte:fragment> -->
-		<p class = "font-thin">Blog</p>
+		<p class = "font-light">Blog</p>
 
 	</Tab>
 	<!-- ... -->

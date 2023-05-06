@@ -5,7 +5,25 @@
 	import '@skeletonlabs/skeleton/styles/all.css';
 	// Most of your app wide CSS should be put in this file
 	import '../app.postcss';
+	
+	import { AppShell } from '@skeletonlabs/skeleton';
+	import Header from '$lib/header.svelte';
+	import { AppBar } from '@skeletonlabs/skeleton';
+	import Footer from '$lib/footer.svelte';
+	import Aboutme from '$lib/aboutme.svelte';
+
+
 </script>
 
-<slot />
 
+
+<AppShell>
+	<svelte:fragment slot="header"
+		><Header></Header></svelte:fragment
+	>
+
+	<!-- Router Slot -->
+	<slot   />
+	<!-- ---- / ---- -->
+	<svelte:fragment slot="pageFooter"><Footer></Footer></svelte:fragment>
+</AppShell>
