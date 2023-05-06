@@ -8,13 +8,24 @@
 	
 	import { AppShell } from '@skeletonlabs/skeleton';
 	import Header from '$lib/header.svelte';
-	import { AppBar } from '@skeletonlabs/skeleton';
 	import Footer from '$lib/footer.svelte';
-	import Aboutme from '$lib/aboutme.svelte';
+	import {tabSet} from "$lib/stores/stateStore"
+	import { goto } from '$app/navigation';
+	import { onMount } from 'svelte';
 
 
+	onMount(()=>
+	{
+	if($tabSet == 0){
+		goto("/")
+	}
+	else if($tabSet == 1){
+		goto("/resume")
+	}
+
+
+	})
 </script>
-
 
 
 <AppShell>
@@ -23,7 +34,7 @@
 	>
 
 	<!-- Router Slot -->
-	<slot   />
+	<slot  />
 	<!-- ---- / ---- -->
 	<svelte:fragment slot="pageFooter"><Footer></Footer></svelte:fragment>
 </AppShell>

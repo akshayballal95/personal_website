@@ -1,5 +1,5 @@
 <script>
-	import Aboutme from "$lib/aboutme.svelte";
+	import Aboutme from "$lib/aboutme/aboutme.svelte";
 
 </script>
 <!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->

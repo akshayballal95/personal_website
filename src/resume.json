@@ -1,0 +1,89 @@
+{
+  "personal_information": {
+    "introduction": "",
+    "position": "Chief Product Officer",
+    "phone_number": "7762844196",
+    "email": "arballal95@gmail.com",
+    "last_name": "Ballal",
+    "first_name": "Akshay"
+  },
+  "avatar": "",
+  "education": [
+    {
+      "country": "India",
+      "start_date": "2013",
+      "field": "Mechanical Engineering",
+      "degree": "Bachelor of Engineering",
+      "institute_name": "Birla Institute of Technology",
+      "city": "Ranchi",
+      "end_date": "2017"
+    }
+  ],
+  "address": {
+    "city": "Chennai",
+    "address_line_1": "C604, Emami Tejomaya",
+    "address_line_2": "OMR Egatur",
+    "pincode": "603103"
+  },
+  "projects": [
+    {
+      "start_date": "2017",
+      "description": "Build a new 3d printer that can print continuous fiber\nfull design from scratch\ntesting and analysis",
+      "title": "Continuous Fiber 3D Printer",
+      "end_date": "2018"
+    },
+    {
+      "description": "Designed a shock absorber that can absorb energy from road bumps and convert it into electricity",
+      "title": "Regenerative Shock absorber",
+      "start_date": "2016",
+      "end_date": "2017"
+    }
+  ],
+  "id": "Wge83PkyBViAm5Hk3zE9",
+  "target_company": {
+    "job_description": "Structural Analysis",
+    "company_name": "Tesla",
+    "position": "Mechanical Design Engineer"
+  },
+  "work_experience": [
+    {
+      "description": "Developed and executed strategic plans to increase revenue and market share.\nLed the design and development of innovative products resulting in a 20% increase in efficiency.\nSuccessfully patented multiple products, protecting company intellectual property and increasing brand recognition.\nManaged team members to ensure productivity and team cohesiveness",
+      "end_date": "Present",
+      "job_title": "Chief Product Officer",
+      "start_date": "September 2019",
+      "city": "Chennai",
+      "country": "India",
+      "company_name": "Fabhead Automation"
+    },
+    {
+      "job_title": "Head Engineering",
+      "description": "Conducted Preliminary and Critical Design Reviews, resulting in improved product functionality and quality.\nDemonstrated strong leadership skills by leading a team of engineers to deliver successful projects, while ensuring timely delivery and budget adherence.\nAchieved increased reliability of the product through rigorous testing and design optimization, resulting in improved customer satisfaction and retention.\nSpearheaded the development of new technologies and features, resulting in increased sales and revenue for the company.",
+      "city": "Chennai",
+      "end_date": "September 2019",
+      "company_name": "Fabheads Automation",
+      "start_date": "December 2017",
+      "country": "India"
+    },
+    {
+      "description": "Created complex CAD models and performed thermal and structural analysis, resulting in optimized product designs and improved manufacturing efficiency.\nDeveloped detailed engineering drawings and generated accurate bills of materials, enabling streamlined production and reduced material waste.\nConducted extensive research on industry standards and best practices to incorporate into design processes, resulting in improved product functionality and customer satisfaction.\nCollaborated with cross-functional teams to identify and resolve design issues, resulting in timely project completion and successful product launches."
+      ,
+      "company_name": "Carnot Technologies",
+      "country": "India",
+      "start_date": "2016",
+      "job_title": "Product Design Intern",
+      "city": "Mumbai",
+      "end_date": "2017"
+    },
+    {
+      "description": "Devised techniques for thermal management of the product and  performed several simulations to analyze the internal temperature profile of the device.\nPerformed vibration analysis of the product and developed new enclosure design for increasing the life of the product in harsher environments.\nWorked on the design of a new product which would be used for Security and Tracking of Motorbikes.",
+      "company_name": "Carnot Technologies",
+      "country": "India",
+      "start_date": "2016",
+      "job_title": "Product Design Intern",
+      "city": "Mumbai",
+      "end_date": "2017"
+    }
+
+
+  ]
+}
