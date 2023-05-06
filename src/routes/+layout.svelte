@@ -6,8 +6,6 @@
 	// Most of your app wide CSS should be put in this file
 	import '../app.postcss';
 </script>
-<svelte:head>
-	<script src="https://kit.fontawesome.com/2b247a2dc4.js" crossorigin="anonymous"></script>
-</svelte:head>
+
 <slot />
 
