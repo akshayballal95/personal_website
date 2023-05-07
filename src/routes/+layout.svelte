@@ -9,9 +9,7 @@
 	import { AppShell } from '@skeletonlabs/skeleton';
 	import Header from '$lib/header.svelte';
 	import Footer from '$lib/footer.svelte';
-	import {tabSet} from "$lib/stores/stateStore"
-	import { goto } from '$app/navigation';
-	import { onMount } from 'svelte';
+	
 
 
 	// onMount(()=>

@@ -21,7 +21,7 @@
 </script>
 
 <div class="flex h-full justify-center items-center">
-	<div class="bg-transparent w-2/4 flex flex-col gap-8 items-center justify-center p-5">
+	<div class="bg-transparent lg:w-2/4 flex flex-col gap-8 items-center justify-center p-5">
 		<h2>Projects</h2>
 		{#each pros as pro}
 			<div class="card pt-10 pb-10 pr-10 w-full flex flex-col">
@@ -30,16 +30,12 @@
 
 					<p class="unstyled text-2xl text-primary-500">{pro.metadata.title}</p>
 				</div>
-				<div class="flex ml-8 mt-5">
-					<p class="text-justify unstyled text-sm mr-5">
-						<svelte:component  this = {pro.default}/>
+				<div class="lg:flex-row flex flex-col gap-3 ml-8 mt-5 justify-around ">
+					<p class="text-justify unstyled text-sm mr-5 basis-3/5 shrink-0">
+						<svelte:component this={pro.default} />
 					</p>
 
-					<img
-						alt=""
-						class = " w-72 object-cover"
-						src= {pro.metadata.image}
-					/>
+					<img alt="" class="object-cover overflow-hidden" src={pro.metadata.image} />
 				</div>
 			</div>
 		{/each}

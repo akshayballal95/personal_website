@@ -5,8 +5,8 @@
 </script>
 
 <div class="bg-transparent h-full w-full flex items-center justify-center">
-	<div class=" h-[500px] w-[800px] flex gap-10">
-		<div class=" flex flex-col items-center gap-5 card min-w-[350px]">
+	<div class=" md:h-[500px] md:w-[800px] md:flex-row flex flex-col gap-5 p-10 md:p-0 items-center bg-neutral-950 bg-opacity-50">
+		<div class=" flex flex-col items-center gap-5 card min-w-[350px] h-full w-full md:w-auto">
 			<Avatar class="mt-10 mb-5" src={img} width="w-40" rounded="rounded-full" />
 			<h3>Akshay Ballal</h3>
 			<div class="h-0.5 mt-5 w-14 bg-[#e6c833] rounded-full" />
@@ -14,7 +14,7 @@
 				CHIEF PRODUCT OFFICER
 			</p>
 			<div
-				class=" h-14 w-full bg-primary-50 flex text-black justify-around items-center text-3xl self-end"
+				class=" h-14 w-full bg-primary-50 flex text-surface-700 justify-around items-center text-3xl self-end"
 			>
 				<a class="unstyled" href="https://twitter.com/akshayballal95"
 					><i class="fa-brands fa-twitter" /></a
@@ -30,14 +30,14 @@
 				>
 			</div>
 		</div>
-		<div class="flex flex-col justify-start">
+		<div class="flex flex-col justify-center pr-5 h-full">
 			<h2 class="mb-2">Hello</h2>
 			<h3 class="mb-10">Here's who I am and what I do</h3>
 			<div class="flex gap-5 mb-10">
 				<button type="button" class="btn variant-filled rounded-full">Resume</button>
 				<button type="button" class="btn variant-ringed rounded-full">Projects</button>
 			</div>
-			<p class="text-justify">
+			<p class="text-justify text-sm unstyled">
 				I am passionate about building new technologies that push the boundaries of the status quo.
 				My mix of knowledge in both mechanical systems and software development allows me to build
 				more holistic systems and products. I have experience in building additive manufacturing

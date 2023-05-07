@@ -1,6 +1,6 @@
 ---
 title: High Temperature 3D Printer
-image: "./src/lib/assets/projects/5DIV0098.png"
+image: "https://res.cloudinary.com/dltwftrgc/image/upload/v1683483683/Projects/5DIV0098_fahgh8.png"
  
 ---
 <br>

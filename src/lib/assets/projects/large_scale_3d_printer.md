@@ -1,6 +1,6 @@
 ---
 title: Large Scale 3D Printer
-image: "./src/lib/assets/projects/5DIV0126.png"
+image: "https://res.cloudinary.com/dltwftrgc/image/upload/v1683484601/Projects/5DIV0126_emc6m5.png"
 
 ---
 <br>
