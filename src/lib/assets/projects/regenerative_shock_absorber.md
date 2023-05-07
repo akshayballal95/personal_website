@@ -1,5 +1,6 @@
 ---
 title: Regenerative Shock Absorber
+type: hardware
 image: "https://res.cloudinary.com/dltwftrgc/image/upload/v1683484638/Projects/Render-RegenShox_sgnorg.png"
 
 ---

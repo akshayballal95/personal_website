@@ -1,5 +1,6 @@
 ---
 title: Continuous Fiber 3D Printer
+type: hardware
 image: "https://res.cloudinary.com/dltwftrgc/image/upload/v1683483682/Projects/continuous_fiber_pdma25.png"
 ---
 <br>

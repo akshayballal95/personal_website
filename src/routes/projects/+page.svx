@@ -8,4 +8,5 @@
 	<title>My Projects</title>
 </svelte:head>
 
+
 <Projects projects = {data}></Projects>

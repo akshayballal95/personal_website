@@ -1,5 +1,6 @@
 ---
 title: Large Scale 3D Printer
+type: hardware
 image: "https://res.cloudinary.com/dltwftrgc/image/upload/v1683484601/Projects/5DIV0126_emc6m5.png"
 
 ---

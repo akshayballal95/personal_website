@@ -1,5 +1,6 @@
 ---
 title: High Temperature 3D Printer
+type: hardware
 image: "https://res.cloudinary.com/dltwftrgc/image/upload/v1683483683/Projects/5DIV0098_fahgh8.png"
  
 ---
