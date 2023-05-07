@@ -16,7 +16,8 @@
       "degree": "Bachelor of Engineering",
       "institute_name": "Birla Institute of Technology",
       "city": "Ranchi",
-      "end_date": "2017"
+      "end_date": "2017",
+      "description":"Part of a student Baja Racing Team, Firebolt Racing\nWorked as Chassis Designer and Vehicle Integration Head\nDesigned and Manufactured 3 Cars over 3 years." 
     }
   ],
   "address": {
@@ -28,7 +29,7 @@
   "projects": [
     {
       "start_date": "2017",
-      "description": "Build a new 3d printer that can print continuous fiber\nfull design from scratch\ntesting and analysis",
+      "description": "I am proud to have led the development of a cutting-edge 3D printer that is designed to print high-temperature materials like PEEK, PEI, and PAEK. With applications in aerospace and biomedical industries, this printer is a game-changer in the world of advanced manufacturing.\n What sets this printer apart is its unique extruder head, which is capable of printing inside a heated chamber that is completely isolated from all electronics and drive components. This ensures that the printing process is precise and free from any external influences, resulting in high-quality, reliable parts.As the lead engineer on this project, I oversaw a team of skilled professionals to bring this printer to life. The result is a groundbreaking machine that has the potential to revolutionize the way we approach advanced manufacturing. I am thrilled to have been a part of this project, and I look forward to seeing the impact it will have in the future",
       "title": "Continuous Fiber 3D Printer",
       "end_date": "2018"
     },
@@ -67,21 +68,21 @@
     {
       "description": "Created complex CAD models and performed thermal and structural analysis, resulting in optimized product designs and improved manufacturing efficiency.\nDeveloped detailed engineering drawings and generated accurate bills of materials, enabling streamlined production and reduced material waste.\nConducted extensive research on industry standards and best practices to incorporate into design processes, resulting in improved product functionality and customer satisfaction.\nCollaborated with cross-functional teams to identify and resolve design issues, resulting in timely project completion and successful product launches."
       ,
-      "company_name": "Carnot Technologies",
+      "company_name": "Fabheads Automation",
       "country": "India",
-      "start_date": "2016",
-      "job_title": "Product Design Intern",
-      "city": "Mumbai",
-      "end_date": "2017"
+      "start_date": "July 2017",
+      "job_title": "Mechanical Design Engineer",
+      "city": "Chennai",
+      "end_date": "December 2017"
     },
     {
       "description": "Devised techniques for thermal management of the product and  performed several simulations to analyze the internal temperature profile of the device.\nPerformed vibration analysis of the product and developed new enclosure design for increasing the life of the product in harsher environments.\nWorked on the design of a new product which would be used for Security and Tracking of Motorbikes.",
       "company_name": "Carnot Technologies",
       "country": "India",
-      "start_date": "2016",
+      "start_date": "December 2016",
       "job_title": "Product Design Intern",
       "city": "Mumbai",
-      "end_date": "2017"
+      "end_date": "June 2017"
     }
 
 

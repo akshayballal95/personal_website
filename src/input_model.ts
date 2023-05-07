@@ -60,6 +60,7 @@ export class Education {
     this.country = "";
     this.start_date = "";
     this.end_date = "";
+    this.description = "";
   }
 
   institute_name: string;
@@ -69,6 +70,7 @@ export class Education {
   start_date: string;
   end_date: string;
   country: string;
+  description: string;
 
 }
 

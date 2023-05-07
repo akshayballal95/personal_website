@@ -25,7 +25,7 @@
 		<p class = "font-light">Resume</p>
 	</Tab>
 
-	<Tab bind:group={$tabSet} name="projects" value={2} class = "rounded">
+	<Tab bind:group={$tabSet} on:click={()=>{goto("/projects")}} name="projects" value={2} class = "rounded">
 		<!-- <svelte:fragment slot="lead">SD</svelte:fragment> -->
 		<p class = "font-light">Projects</p>
 	</Tab>

@@ -14,17 +14,17 @@
 	import { onMount } from 'svelte';
 
 
-	onMount(()=>
-	{
-	if($tabSet == 0){
-		goto("/")
-	}
-	else if($tabSet == 1){
-		goto("/resume")
-	}
+	// onMount(()=>
+	// {
+	// if($tabSet == 0){
+	// 	goto("/")
+	// }
+	// else if($tabSet == 1){
+	// 	goto("/resume")
+	// }
 
 
-	})
+	// })
 </script>
 
 
