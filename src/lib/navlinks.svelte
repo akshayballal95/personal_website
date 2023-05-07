@@ -90,8 +90,7 @@
 		<ListBox
 			hover="hover:variant-soft-primary"
 			active="variant-filled-primary"
-
-			class="mt-16 gap-5 flex flex-col justify-center items-center"
+			class=" mt-12 gap-5 flex flex-col justify-center items-center"
 		>
 			<ListBoxItem
 				bind:group={$tabSet}
