@@ -1,5 +1,6 @@
 ---
 title: Continuous Fiber 3D Printer
+image: "./src/lib/assets/projects/continuous_fiber.png"
 ---
 <br>
 I led the development of the first-ever Continuous Fiber 3D printer in Asia, which can print with materials such as carbon fiber and glass fiber, creating parts that are as strong as steel but as light as plastic. I invented the technology and oversaw the project from start to finish, conducting design reviews, creating a product roadmap, and leading a team of experts in mechanical engineering, embedded systems development, and software development.

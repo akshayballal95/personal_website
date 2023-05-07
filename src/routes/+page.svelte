@@ -11,4 +11,8 @@
 </script>
 <!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
 
+<svelte:head>
+	<title> About Me</title>
+</svelte:head>
+
 <Aboutme/>

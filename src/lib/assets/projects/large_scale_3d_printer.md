@@ -1,5 +1,7 @@
 ---
 title: Large Scale 3D Printer
+image: "./src/lib/assets/projects/5DIV0126.png"
+
 ---
 <br>
 As the Chief Product Officer at Fabheads, I led a team of engineers in designing and developing a high-performance 3D printer from scratch. Our printer uses a pellet extruder, making it one of the fastest in India and capable of printing parts up to 1m x 1.5m in size.
