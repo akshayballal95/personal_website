@@ -124,6 +124,8 @@
 				bind:group={$tabSet}
 				on:click={() => {
 					goto('/projects');
+					drawerStore.close();
+
 				}}
 				name="projects"
 				value={2}
