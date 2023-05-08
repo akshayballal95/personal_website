@@ -37,9 +37,9 @@
 		<ListBox
 			hover="hover:variant-soft-primary"
 			active="variant-filled-primary"
-			class=" m-4 gap-5 flex flex-col justify-center items-center"
+			class=" m-12 gap-5 flex flex-col justify-center items-center"
 		>
-			<button class="btn-icon variant-filled self-end" on:click={()=>drawerStore.close()}
+			<button class="btn-icon variant-filled absolute self-end top-5 right-5" on:click={()=>drawerStore.close()}
 				><i class="fa-solid fa-xmark fa-xl" />
 			</button>
 			<ListBoxItem
