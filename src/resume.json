@@ -46,6 +46,59 @@
     "company_name": "Tesla",
     "position": "Mechanical Design Engineer"
   },
+
+  "certification":[
+    {
+      "course_name":"Convolutional Neural Networks",
+      "date": "Feb 2023",
+      "credential":"Credential ID 24KKVWBDGYHV",
+      "platform": "Coursera",
+      "url":"https://www.coursera.org/account/accomplishments/certificate/24KKVWBDGYHV"
+    },
+    {
+      "course_name":"Deep Learning Specialization",
+      "date": "Feb 2023",
+      "credential":"Credential ID EQXBTTW29QN5",
+      "platform": "Coursera",
+      "url":"https://www.coursera.org/account/accomplishments/specialization/certificate/EQXBTTW29QN5"
+    },
+    {
+      "course_name":"Sequence Models",
+      "date": "Feb 2023",
+      "credential":"Credential ID V8JEHG5HGCKL",
+      "platform": "Coursera",
+      "url":"https://www.coursera.org/account/accomplishments/certificate/V8JEHG5HGCKL"
+    },
+    {
+      "course_name":"Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization",
+      "date": "Jan 2023",
+      "credential":"Credential ID 3QBGWYLWPP5R",
+      "platform": "Coursera",
+      "url":"https://www.coursera.org/account/accomplishments/certificate/3QBGWYLWPP5R"
+    },
+    {
+      "course_name":"Structuring Machine Learning Projects",
+      "date": "Jan 2023",
+      "credential":"Credential ID 8YRTGURSJA2R",
+      "platform": "Coursera",
+      "url":"https://www.coursera.org/account/accomplishments/certificate/8YRTGURSJA2R"
+    },
+    {
+      "course_name":"Neural Networks and Deep Learning",
+      "date": "Dec 2022",
+      "credential":"Credential ID 4HSGMWLNPRUX",
+      "platform": "Coursera",
+      "url":"https://www.coursera.org/account/accomplishments/certificate/4HSGMWLNPRUX"
+    },
+    {
+      "course_name":"Introduction to Computer Science and Programing Using Python",
+      "date": "Nov 2016",
+      "credential":"Credential ID 0a3d508a4bc546ab8324e488a76a0ab8",
+      "platform": "edX",
+      "url":"https://courses.edx.org/certificates/0a3d508a4bc546ab8324e488a76a0ab8"
+    }
+  ],
+
   "work_experience": [
     {
       "description": "Developed and executed strategic plans to increase revenue and market share.\nLed the design and development of innovative products resulting in a 20% increase in efficiency.\nSuccessfully patented multiple products, protecting company intellectual property and increasing brand recognition.\nManaged team members to ensure productivity and team cohesiveness",

@@ -32,12 +32,16 @@
 		}
 	});
 
-	$: console.log(pros);
 </script>
 
 <div class="flex h-full justify-center items-center p-5">
 	<div class="bg-transparent lg:w-2/4 flex flex-col gap-8 items-center justify-center ">
+		
+		<div class=" flex flex-col gap-4 items-center">
+
 		<h2>Projects</h2>
+		<div class="h-1 w-56 bg-primary-500" />
+
 		<TabGroup
 			justify="justify-center"
 			active="variant-filled-primary"
@@ -49,17 +53,18 @@
 		>
 			<Tab bind:group={$projectSet} name="about_me" value={0} class="rounded">
 				<!-- <svelte:fragment slot="lead">SD</svelte:fragment> -->
-				<p class="font-light">Software</p>
+				<p class="unstyled text-sm">Software</p>
 			</Tab>
 
 			<Tab bind:group={$projectSet} name="resume" value={1} class="rounded">
 				<!-- <svelte:fragment slot="lead">SD</svelte:fragment> -->
-				<p class="font-light">Hardware</p>
+				<p class="unstyled text-sm">Hardware</p>
 			</Tab>
 		</TabGroup>
+		</div>
 		{#each pros as pro}
 			{#if (pro.metadata.type == 'software' && $projectSet == 0) || (pro.metadata.type == 'hardware' && $projectSet == 1)}
-				<div class="card pt-10 pb-10 w-full flex flex-col"  in:fly={{duration:500,x: $projectSet==0? -150 : 150}} >
+				<div class="card pt-10 pb-10 lg:pr-5 w-full flex flex-col"  in:fly={{duration:500,x: $projectSet==0? -150 : 150}} >
 					<div class="flex items-center">
 						<div class="h-12 w-2 mr-5 bg-primary-500" />
 

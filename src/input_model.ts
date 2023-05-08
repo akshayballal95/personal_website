@@ -50,7 +50,23 @@ export class Address {
 
 }
 
+export class Certification{
+constructor(){
+  this.course_name = "";
+  this.date = "";
+  this.credential = "";
+  this.platform = "";
+  this.url = "";
 
+}
+  course_name: string;
+  date: string;
+  credential: string;
+  platform: string;
+  url: string;
+
+
+}
 export class Education {
   constructor() {
     this.institute_name = "";
@@ -105,6 +121,7 @@ export class TargetCompany {
 
 export class Resume {
   constructor() {
+    this.certification = [new Certification()];
     this.id = "";
     this.target_company = new TargetCompany();
     this.avatar = "";
@@ -126,6 +143,7 @@ export class Resume {
   work_experience: WorkExperience[];
   skills: string[];
   languages: string[];
+  certification: Certification[];
 }
 
 export class GptResume {
