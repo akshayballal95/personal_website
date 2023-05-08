@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { tabSet } from '$lib/stores/stateStore';
 	import { toastStore, type ToastSettings } from '@skeletonlabs/skeleton';
+	import { slide } from 'svelte/transition';
 
 	/** @type {import('./$types').ActionData} */
 	export let form: { success: string };
@@ -21,10 +22,10 @@
 		callback: (response) => console.log(response)
 	};
 
-	if (form?.success=="true") {
+	if (form?.success == 'true') {
 		toastStore.trigger(t);
-	} else if (form?.success=="false") {
-		toastStore.trigger(e)
+	} else if (form?.success == 'false') {
+		toastStore.trigger(e);
 	}
 
 	interface FormData {
@@ -55,7 +56,9 @@
 	<form
 		method="POST"
 		class="card p-4 lg:min-w-[350px] lg:w-[500px] m-10 text-token space-y-4 flex flex-col gap-4"
+		transition:slide
 	>
+		<h3 class = "self-center">Get in touch with me!</h3>
 		<!-- Required -->
 		<label class="label">
 			<span>First Name</span>

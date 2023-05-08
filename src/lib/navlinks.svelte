@@ -16,7 +16,6 @@
 
 <svelte:window bind:innerWidth />
 
-{#if innerWidth > 768}
 	<TabGroup
 		justify="justify-center"
 		active="variant-filled-primary"
@@ -24,7 +23,8 @@
 		flex="flex-1 lg:flex-none"
 		rounded=""
 		border=""
-		class="bg-surface-100-800-token w-full"
+		class="bg-surface-100-800-token w-full hidden md:block"
+
 	>
 		<Tab
 			bind:group={$tabSet}
@@ -80,9 +80,9 @@
 		</Tab>
 		<!-- ... -->
 	</TabGroup>
-{:else}
+
 	<button
-		class="btn-icon variant-filled"
+		class="btn-icon variant-filled md:hidden"
 		on:click={() => {
 			trigger('top');
 		}}
@@ -90,8 +90,3 @@
 		<i class="fa-solid fa-arrow-down" />
 	</button>
 
-
-{/if}
-
-<style>
-</style>
