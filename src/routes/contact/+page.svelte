@@ -29,6 +29,8 @@
 
 <svelte:head>
     <title>Contact Me</title>
+    <meta name="Contact Akshay">
+
 </svelte:head>
 
 <div class="flex h-full justify-center">
