@@ -59,14 +59,14 @@
 		</TabGroup>
 		{#each pros as pro}
 			{#if (pro.metadata.type == 'software' && $projectSet == 0) || (pro.metadata.type == 'hardware' && $projectSet == 1)}
-				<div class="card pt-10 pb-10 pr-10 w-full flex flex-col"  in:fly={{duration:500,x: $projectSet==0? -150 : 150}} >
+				<div class="card pt-10 pb-10 w-full flex flex-col"  in:fly={{duration:500,x: $projectSet==0? -150 : 150}} >
 					<div class="flex items-center">
 						<div class="h-12 w-2 mr-5 bg-primary-500" />
 
 						<p class="unstyled text-2xl text-primary-500">{pro.metadata.title}</p>
 					</div>
 					<div class="lg:flex-row flex flex-col gap-5 mt-5 justify-around items-center">
-						<p class="text-justify unstyled text-sm ml-5 lg:mr-5 lg:ml-8 basis-3/5 shrink-0">
+						<p class="text-justify unstyled text-sm ml-5 mr-5 lg:mr-5 lg:ml-8 basis-3/5 shrink-0">
 							<svelte:component this={pro.default} />
 						</p>
 						<div class=" lg:h-80 lg:w-1 w-64 h-0.5 mr-6 bg-primary-500" />
