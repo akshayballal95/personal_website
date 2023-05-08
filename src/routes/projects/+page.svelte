@@ -1,7 +1,6 @@
 <script>
 	import Projects from "$lib/projects/projects.svelte";
 
-	export let data
 </script>
 
 <svelte:head>
@@ -9,4 +8,4 @@
 </svelte:head>
 
 
-<Projects projects = {data}></Projects>
+<Projects></Projects>

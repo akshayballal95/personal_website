@@ -8,19 +8,28 @@
 
 	let resume = item as Resume;
 
-	export let projects: any;
+	// export let projects: any;
 	let pros: any[];
 	$: pros = [];
 
 	onMount(async () => {
 		$tabSet = 2;
-		projects.projects.forEach(async (element: any) => {
-			let project = await import(`../assets/projects/${element.slug}.md`);
-			pros = [...pros, project];
-		});
+		// projects.projects.forEach(async (element: any) => {
+		// 	let project = await import(`../assets/projects/${element.slug}.md`);
+		// 	pros = [...pros, project];
+		// });
+		const paths = import.meta.glob('/src/lib/assets/projects/*.md', { eager: true });
+		
+	
+		for (const path in paths) {
+			const file: any = paths[path];
+			const slug = path.split('/').at(-1)?.replace('.md', '');
+			
+			pros = [...pros, file]
+		}
 	});
 
-	// $: console.log(pros[0].metadata.image)
+	$: console.log(pros)
 </script>
 
 <div class="flex h-full justify-center items-center">
@@ -46,7 +55,7 @@
 			</Tab>
 		</TabGroup>
 		{#each pros as pro}
-			{#if (pro.metadata.type == 'software' && $projectSet == 0) || (pro.metadata.type == 'hardware' && $projectSet == 1) }
+			{#if (pro.metadata.type == 'software' && $projectSet == 0) || (pro.metadata.type == 'hardware' && $projectSet == 1)}
 				<div class="card pt-10 pb-10 pr-10 w-full flex flex-col">
 					<div class="flex items-center">
 						<div class="h-12 w-2 mr-5 bg-primary-500" />
@@ -57,19 +66,13 @@
 						<p class="text-justify unstyled text-sm mr-5 basis-3/5 shrink-0">
 							<svelte:component this={pro.default} />
 						</p>
-						<div class=" lg:h-80 lg:w-1 w-80 h-0.5 mr-6 bg-primary-500 " />
+						<div class=" lg:h-80 lg:w-1 w-80 h-0.5 mr-6 bg-primary-500" />
 
-						<div class = " w-72">
-							<img
-								alt=""
-								class=" object-contain"
-					
-								src={pro.metadata.image}
-							/>
+						<div class=" w-72">
+							<img alt="" class=" object-contain" src={pro.metadata.image} />
 						</div>
 					</div>
 				</div>
-
 			{/if}
 		{/each}
 	</div>

@@ -5,8 +5,8 @@
 </script>
 
 <div class="bg-transparent h-full w-full flex items-center justify-center">
-	<div class=" md:h-[500px] md:w-[800px] md:flex-row flex flex-col gap-5 p-10 md:p-0 items-center bg-neutral-950 bg-opacity-50">
-		<div class=" flex flex-col items-center gap-5 card min-w-[350px] h-full w-full md:w-auto">
+	<div class=" md:h-[500px] md:w-[800px] md:flex-row flex flex-col gap-5 p-3 md:p-0 items-center bg-neutral-950 bg-opacity-50">
+		<div class=" flex flex-col items-center gap-5 card md:min-w-[350px] h-full w-full md:w-auto">
 			<Avatar class="mt-10 mb-5" src={img} width="w-40" rounded="rounded-full" />
 			<h3>Akshay Ballal</h3>
 			<div class="h-0.5 mt-5 w-14 bg-[#e6c833] rounded-full" />

@@ -65,7 +65,11 @@
 			<p class="font-light">Projects</p>
 		</Tab>
 
-		<Tab bind:group={$tabSet} name="Contact" value={3} class="rounded">
+		<Tab bind:group={$tabSet} name="Contact" value={3} class="rounded"
+		on:click={() => {
+			goto('/contact');
+		}}
+		>
 			<!-- <svelte:fragment slot="lead">SD</svelte:fragment> -->
 			<p class="font-light">Contact</p>
 		</Tab>
@@ -86,67 +90,7 @@
 		<i class="fa-solid fa-arrow-down" />
 	</button>
 
-	<Drawer padding="0" position="top" regionBackdrop="p-0 m-0 -translate-x-4 w-full">
-		<ListBox
-			hover="hover:variant-soft-primary"
-			active="variant-filled-primary"
-			class=" mt-12 gap-5 flex flex-col justify-center items-center"
-		>
-			<ListBoxItem
-				bind:group={$tabSet}
-				on:click={() => {
-					goto('/');
-					drawerStore.close();
-				}}
-				name="about_me"
-				value={0}
-				class="rounded"
-			>
-				<!-- <svelte:fragment slot="lead">SD</svelte:fragment> -->
-				<p class="font-light">About Me</p>
-			</ListBoxItem>
 
-			<ListBoxItem
-				bind:group={$tabSet}
-				on:click={() => {
-					goto('/resume');
-					drawerStore.close();
-				}}
-				name="resume"
-				value={1}
-				class="rounded"
-			>
-				<!-- <svelte:fragment slot="lead">SD</svelte:fragment> -->
-				<p class="font-light">Resume</p>
-			</ListBoxItem>
-
-			<ListBoxItem
-				bind:group={$tabSet}
-				on:click={() => {
-					goto('/projects');
-					drawerStore.close();
-
-				}}
-				name="projects"
-				value={2}
-				class="rounded"
-			>
-				<!-- <svelte:fragment slot="lead">SD</svelte:fragment> -->
-				<p class="font-light">Projects</p>
-			</ListBoxItem>
-
-			<ListBoxItem bind:group={$tabSet} name="Contact" value={3} class="rounded">
-				<!-- <svelte:fragment slot="lead">SD</svelte:fragment> -->
-				<p class="font-light">Contact</p>
-			</ListBoxItem>
-
-			<ListBoxItem bind:group={$tabSet} name="Blog" value={4} class="rounded">
-				<!-- <svelte:fragment slot="lead">SD</svelte:fragment> -->
-				<p class="font-light">Blog</p>
-			</ListBoxItem>
-			<!-- ... -->
-		</ListBox>
-	</Drawer>
 {/if}
 
 <style>
