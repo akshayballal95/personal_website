@@ -7,7 +7,7 @@
 	// Most of your app wide CSS should be put in this file
 	import '../app.postcss';
 
-	import { AppShell, Drawer, ListBox, ListBoxItem, drawerStore } from '@skeletonlabs/skeleton';
+	import { AppShell, Drawer, ListBox, ListBoxItem, Toast, drawerStore } from '@skeletonlabs/skeleton';
 	import Header from '$lib/header.svelte';
 	import Footer from '$lib/footer.svelte';
 	import { goto } from '$app/navigation';
@@ -106,3 +106,6 @@
 		</ListBox>
 	</Drawer>
 </AppShell>
+
+<Toast />
+

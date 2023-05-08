@@ -42,6 +42,7 @@
 	"type": "module",
 	"dependencies": {
 		"@prisma/client": "^4.13.0",
+		"@sendgrid/mail": "^7.7.0",
 		"@sveltejs/adapter-vercel": "^2.4.3",
 		"md-block": "^0.0.1",
 		"svelte-markdown": "^0.2.3"
