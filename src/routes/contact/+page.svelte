@@ -1,5 +1,31 @@
 <script lang="ts">
 	import { tabSet } from '$lib/stores/stateStore';
+	import { toastStore, type ToastSettings } from '@skeletonlabs/skeleton';
+
+	/** @type {import('./$types').ActionData} */
+	export let form: { success: string };
+
+	const t: ToastSettings = {
+		autohide: true,
+		timeout: 1000,
+		message: 'Message Sent Successfully',
+		callback: (response) => console.log(response)
+	};
+
+	const e: ToastSettings = {
+		autohide: true,
+		timeout: 500,
+		background: 'bg-error-500',
+
+		message: 'Something went wrong. Please give all details',
+		callback: (response) => console.log(response)
+	};
+
+	if (form?.success=="true") {
+		toastStore.trigger(t);
+	} else if (form?.success=="false") {
+		toastStore.trigger(e)
+	}
 
 	interface FormData {
 		firstName: string;
@@ -51,7 +77,7 @@
 				placeholder="Last Name"
 			/>
 		</label>
-		<label class="label ">
+		<label class="label">
 			<span>Email</span>
 			<input bind:value={data.email} class="input" name="email" type="text" placeholder="Email" />
 		</label>

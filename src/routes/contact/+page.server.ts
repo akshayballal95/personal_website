@@ -42,29 +42,15 @@ export const actions = {
 
             console.log(response_send[0].statusCode)
             if (response_send) {
-                const t: ToastSettings = {
-                    message: 'Message Sent Successfully',
-                    callback: (response) => console.log(response)
-                };
-                toastStore.trigger(t);
 
-                return { success: true };
+                return { success: "true" };
             }
 
         }
 
         catch {
-            const t: ToastSettings = {
-                autohide: true,
-                timeout: 500,
-                background: "bg-error-500",
 
-                message: 'Something went wrong. Please give all details',
-                callback: (response) => console.log(response)
-            };
-            toastStore.trigger(t);
-
-            return { success: false };
+            return { success: "false" };
 
         }
 
