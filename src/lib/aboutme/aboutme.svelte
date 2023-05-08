@@ -1,10 +1,14 @@
 <script>
 	import { Avatar } from '@skeletonlabs/skeleton';
 	import img from '$lib/assets/img.png';
+	import resume from "$lib/assets/projects/resume.pdf"
+	import { goto } from '$app/navigation';
 </script>
 
 <div class="bg-transparent h-full w-full flex items-center justify-center">
-	<div class=" md:h-[500px] md:w-[800px] md:flex-row flex flex-col gap-5 p-3 md:p-0 items-center bg-neutral-950 bg-opacity-50">
+	<div
+		class=" md:h-[500px] md:w-[800px] md:flex-row flex flex-col gap-5 p-3 md:p-0 items-center bg-neutral-950 bg-opacity-50"
+	>
 		<div class=" flex flex-col items-center gap-5 card md:min-w-[350px] h-full w-full md:w-auto">
 			<Avatar class="mt-10 mb-5" src={img} width="w-40" rounded="rounded-full" />
 			<h3>Akshay Ballal</h3>
@@ -33,8 +37,10 @@
 			<h2 class="mb-2">Hello</h2>
 			<h3 class="mb-10">Here's who I am and what I do</h3>
 			<div class="flex gap-5 mb-10">
-				<button type="button" class="btn variant-filled rounded-full">Resume</button>
-				<button type="button" class="btn variant-ringed rounded-full">Projects</button>
+				<a href={resume} download
+					><button type="button" class="btn variant-filled rounded-full"><i class="fa-regular fa-download"></i> <span>Resume</span></button></a
+				>
+				<button on:click={()=> goto("/projects")} type="button" class="btn variant-ringed rounded-full">Projects</button>
 			</div>
 			<p class="text-justify">
 				I am passionate about building new technologies that push the boundaries of the status quo.

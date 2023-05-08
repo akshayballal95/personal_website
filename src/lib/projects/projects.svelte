@@ -5,8 +5,12 @@
 	import { projectSet, tabSet } from '$lib/stores/stateStore';
 	import { Tab, TabGroup } from '@skeletonlabs/skeleton';
 	import { goto } from '$app/navigation';
+	import { fly, slide } from 'svelte/transition';
 
 	let resume = item as Resume;
+
+
+	
 
 	// export let projects: any;
 	let pros: any[];
@@ -31,7 +35,7 @@
 	$: console.log(pros);
 </script>
 
-<div class="flex h-full justify-center items-center">
+<div class="flex h-full justify-center items-center p-5">
 	<div class="bg-transparent lg:w-2/4 flex flex-col gap-8 items-center justify-center ">
 		<h2>Projects</h2>
 		<TabGroup
@@ -55,7 +59,7 @@
 		</TabGroup>
 		{#each pros as pro}
 			{#if (pro.metadata.type == 'software' && $projectSet == 0) || (pro.metadata.type == 'hardware' && $projectSet == 1)}
-				<div class="card pt-10 pb-10 pr-10 w-full flex flex-col">
+				<div class="card pt-10 pb-10 pr-10 w-full flex flex-col"  in:fly={{duration:500,x: $projectSet==0? -150 : 150}} >
 					<div class="flex items-center">
 						<div class="h-12 w-2 mr-5 bg-primary-500" />
 

@@ -3,6 +3,7 @@
 	import type { Resume } from '../../input_model';
 	import item from '../../resume.json';
 	import { tabSet } from '$lib/stores/stateStore';
+	import { fly } from 'svelte/transition';
 
 	let resume = item as Resume;
 
@@ -16,7 +17,7 @@
 
     <h2 class = "self-start">Experience</h2>
 	{#each resume.work_experience as experience}
-		<div class="card w-full p-5 gap-3 flex flex-col lg:items-center lg:flex-row">
+		<div class="card w-full p-5 gap-3 flex flex-col lg:items-center lg:flex-row" in:fly={{duration:500,x: -150}}>
 			<div class="flex flex-col gap-2 basis-1/4 shrink-0">
 				<p class="unstyled text-2xl mb-3">{experience.start_date} - {experience.end_date}</p>
 				<p class="unstyled font-semibold text-primary-500">{experience.job_title}</p>
