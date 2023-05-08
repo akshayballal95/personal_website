@@ -29,7 +29,7 @@
 
 <svelte:head>
     <title>Contact Me</title>
-    <meta name="Contact Akshay">
+    <meta name="description" content="Contact Akshay">
 
 </svelte:head>
 

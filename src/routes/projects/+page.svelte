@@ -5,7 +5,7 @@
 
 <svelte:head>
 	<title>My Projects</title>
-	<meta name="All of Akshay's Projects. Software and Hardware">
+	<meta name="description" content="All of Akshay's Projects. Software and Hardware">
 </svelte:head>
 
 
