@@ -41,9 +41,9 @@
 			<div class="flex flex-col gap-2 basis-1/4 shrink-0">
 				<p class="unstyled text-2xl mb-3">{education.start_date} - {education.end_date}</p>
 				<p class="unstyled font-semibold text-primary-500">{education.institute_name}</p>
-				<p class="unstyled text-sm">{education.degree}</p>
-                <p class="unstyled text-sm">{education.field}</p>
-				<p class="unstyled text-sm">{education.city}, {education.country}</p>
+				<p class="unstyled">{education.degree}</p>
+                <p class="unstyled">{education.field}</p>
+				<p class="unstyled">{education.city}, {education.country}</p>
 			</div>
 			<div class=" lg:h-60 lg:w-1 w-60 h-0.5 mr-6 bg-primary-500 " />
 

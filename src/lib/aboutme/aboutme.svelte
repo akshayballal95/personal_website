@@ -1,7 +1,6 @@
 <script>
 	import { Avatar } from '@skeletonlabs/skeleton';
 	import img from '$lib/assets/img.png';
-	let currentVariant = 'bg-initial';
 </script>
 
 <div class="bg-transparent h-full w-full flex items-center justify-center">
@@ -37,7 +36,7 @@
 				<button type="button" class="btn variant-filled rounded-full">Resume</button>
 				<button type="button" class="btn variant-ringed rounded-full">Projects</button>
 			</div>
-			<p class="text-justify text-sm unstyled">
+			<p class="text-justify">
 				I am passionate about building new technologies that push the boundaries of the status quo.
 				My mix of knowledge in both mechanical systems and software development allows me to build
 				more holistic systems and products. I have experience in building additive manufacturing

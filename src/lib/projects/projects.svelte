@@ -19,21 +19,20 @@
 		// 	pros = [...pros, project];
 		// });
 		const paths = import.meta.glob('/src/lib/assets/projects/*.md', { eager: true });
-		
-	
+
 		for (const path in paths) {
 			const file: any = paths[path];
 			const slug = path.split('/').at(-1)?.replace('.md', '');
-			
-			pros = [...pros, file]
+
+			pros = [...pros, file];
 		}
 	});
 
-	$: console.log(pros)
+	$: console.log(pros);
 </script>
 
 <div class="flex h-full justify-center items-center">
-	<div class="bg-transparent lg:w-2/4 flex flex-col gap-8 items-center justify-center p-5">
+	<div class="bg-transparent lg:w-2/4 flex flex-col gap-8 items-center justify-center ">
 		<h2>Projects</h2>
 		<TabGroup
 			justify="justify-center"
@@ -62,11 +61,11 @@
 
 						<p class="unstyled text-2xl text-primary-500">{pro.metadata.title}</p>
 					</div>
-					<div class="lg:flex-row flex flex-col gap-5 ml-8 mt-5 justify-around items-center">
-						<p class="text-justify unstyled text-sm mr-5 basis-3/5 shrink-0">
+					<div class="lg:flex-row flex flex-col gap-5 mt-5 justify-around items-center">
+						<p class="text-justify unstyled text-sm ml-5 lg:mr-5 lg:ml-8 basis-3/5 shrink-0">
 							<svelte:component this={pro.default} />
 						</p>
-						<div class=" lg:h-80 lg:w-1 w-80 h-0.5 mr-6 bg-primary-500" />
+						<div class=" lg:h-80 lg:w-1 w-64 h-0.5 mr-6 bg-primary-500" />
 
 						<div class=" w-72">
 							<img alt="" class=" object-contain" src={pro.metadata.image} />
@@ -77,3 +76,4 @@
 		{/each}
 	</div>
 </div>
+
