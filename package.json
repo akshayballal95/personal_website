@@ -41,6 +41,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@notionhq/client": "^2.2.5",
 		"@prisma/client": "^4.13.0",
 		"@sendgrid/mail": "^7.7.0",
 		"@sveltejs/adapter-vercel": "^2.4.3",

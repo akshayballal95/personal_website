@@ -1,3 +1,9 @@
+export interface Blog {
+  title: string;
+  image: string|null;
+  description: string;
+}
+
 export class WorkExperience {
   constructor() {
     this.company_name = "";
