@@ -2,6 +2,8 @@ export interface Blog {
   title: string;
   image: string|null;
   description: string;
+  date: string;
+  id:string;
 }
 
 export class WorkExperience {

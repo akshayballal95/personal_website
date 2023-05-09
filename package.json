@@ -46,6 +46,9 @@
 		"@sendgrid/mail": "^7.7.0",
 		"@sveltejs/adapter-vercel": "^2.4.3",
 		"md-block": "^0.0.1",
+		"mdsvex-relative-images": "^1.0.3",
+		"notion-to-md": "^2.7.0",
+		"rehype-figure": "^1.0.1",
 		"svelte-markdown": "^0.2.3"
 	}
 }

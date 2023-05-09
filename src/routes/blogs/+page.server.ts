@@ -1,10 +1,8 @@
 
 import { Client } from "@notionhq/client"
-import type {PageObjectResponse} from "@notionhq/client/build/src/api-endpoints"
 import { VITE_NOTION_KEY } from "$env/static/private"
 import { VITE_DATABASE_ID } from "$env/static/private"
-import Page from "../+page.svelte"
-import type {Blog}  from ".././../input_model"
+import type {Blog}  from "../../input_model"
 
 
 
@@ -26,21 +24,30 @@ export async function load({params}){
 
 
     let blogs:Blog[] = []
-    response.results.forEach( async (element) => {
-        let elem = element as any
-        let blog:Blog = {
-            title: elem.properties.Name.title[0].text.content,
-            image : elem.cover? elem.cover.file.url:null,
-            description : elem.properties.Description? elem.properties.Description.rich_text[0].text.content:null,
-        }
-  
-        blogs.push(blog)
 
+    try{
+        response.results.forEach( async (element) => {
+        
+            let elem = element as any
+            console.log(elem.properties.Description)
+            let blog:Blog = {
+                title: elem.properties.Name.title[0].text.content,
+                image : elem.cover!=null? elem.cover.file.url:null,
+                description : elem.properties.Description.rich_text[0]? elem.properties.Description.rich_text[0].text.content:"No description provided",
+                date: elem.properties.Date.date?elem.properties.Date.date.start:"",
+                id: element.id
+            }
+      
+            blogs.push(blog)
+    
+    
+        });
+    
+        return ({
+            blogs
+        })
+    }
+    catch(e){console.log(e)}
 
-    });
-
-    return ({
-        blogs
-    })
 
 }

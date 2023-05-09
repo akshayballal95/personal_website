@@ -18,16 +18,11 @@
 
 	onMount(async () => {
 		$tabSet = 2;
-		// projects.projects.forEach(async (element: any) => {
-		// 	let project = await import(`../assets/projects/${element.slug}.md`);
-		// 	pros = [...pros, project];
-		// });
+
 		const paths = import.meta.glob('/src/lib/assets/projects/*.md', { eager: true });
 
 		for (const path in paths) {
 			const file: any = paths[path];
-			const slug = path.split('/').at(-1)?.replace('.md', '');
-
 			pros = [...pros, file];
 		}
 	});
