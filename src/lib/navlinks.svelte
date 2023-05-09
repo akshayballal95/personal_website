@@ -17,7 +17,7 @@
 <svelte:window bind:innerWidth />
 
 <TabGroup
-	justify="justify-center"
+	justify="justify-center gap-2"
 	active="variant-filled-primary"
 	hover="hover:variant-soft-primary"
 	flex="flex-1 lg:flex-none"
