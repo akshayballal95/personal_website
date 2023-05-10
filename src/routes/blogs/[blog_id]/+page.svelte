@@ -12,8 +12,6 @@
 		blog = await import(`../[blog_id]/blogs/${data.id}.md`);
 	});
 
-    $: console.log(blog)
-
 </script>
 
 <svelte:head>
