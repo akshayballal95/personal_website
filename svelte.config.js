@@ -15,7 +15,7 @@ const dirName = path.resolve(fileURLToPath(import.meta.url), '../');
 const mdsvexOptions = {
 	// layout: {blog:path.join(dirName, './src/routes/blogs/[blog_id]/_layout.svelte')},
 	extensions: ['.md', '.svx'],
-	rehypePlugins: [[addClasses, {"img":"rounded-md"}]],
+	rehypePlugins: [[addClasses, {"img":"rounded-md", "ul":"list-disc list-inside ml-5", "ol":"list-decimal", }]],
 	highlight: {
 		highlighter: async (code, lang = "text") => {
 			const highlighter = await shiki.getHighlighter({ theme: "poimandres" });

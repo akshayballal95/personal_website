@@ -40,7 +40,6 @@ export const actions = {
             })
 
 
-            console.log(response_send[0].statusCode)
             if (response_send) {
 
                 return { success: "true" };
