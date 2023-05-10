@@ -1,9 +1,15 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
+	import { onMount } from 'svelte';
 	import type { Blog } from '..//../input_model';
+	import { tabSet } from '$lib/stores/stateStore';
 
 	/** @type {import('./$types').PageData} */
 	export let data: { blogs: Blog[] };
+
+	onMount(()=>{
+		$tabSet = 4
+	})
 </script>
 
 <svelte:head>
