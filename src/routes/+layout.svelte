@@ -12,17 +12,10 @@
 	import Footer from '$lib/footer.svelte';
 	import { goto } from '$app/navigation';
 	import { tabSet } from '$lib/stores/stateStore';
-
-	// onMount(()=>
-	// {
-	// if($tabSet == 0){
-	// 	goto("/")
-	// }
-	// else if($tabSet == 1){
-	// 	goto("/resume")
-	// }
-
-	// })
+	import { inject } from '@vercel/analytics';
+	import { dev } from '$app/environment';
+	inject({ mode: dev ? 'development' : 'production' });
+	
 </script>
 
 <AppShell>
