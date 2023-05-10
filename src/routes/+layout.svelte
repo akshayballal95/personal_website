@@ -91,7 +91,11 @@
 				<p class="font-light">Contact</p>
 			</ListBoxItem>
 
-			<ListBoxItem bind:group={$tabSet} name="Blog" value={4} class="rounded">
+			<ListBoxItem bind:group={$tabSet} name="Blog" value={4} class="rounded"
+			on:click={() => {
+				goto('/blogs');
+				drawerStore.close();
+			}}>
 				<!-- <svelte:fragment slot="lead">SD</svelte:fragment> -->
 				<p class="font-light">Blog</p>
 			</ListBoxItem>

@@ -5,8 +5,6 @@
 	/** @type {import('./$types').PageData} */
 	export let data: { blogs: Blog[] };
 
-    console.log(data.blogs)
-
     
 </script>
 

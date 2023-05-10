@@ -4,6 +4,7 @@ export interface Blog {
   description: string;
   date: string;
   id:string;
+  stage: string;
 }
 
 export class WorkExperience {

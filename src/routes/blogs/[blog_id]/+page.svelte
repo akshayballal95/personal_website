@@ -1,20 +1,23 @@
-<script>
-	import { tabSet } from '$lib/stores/stateStore';
+<script lang="ts">
 	import { onMount } from 'svelte';
 
-
 	/** @type {import('./$types').PageData} */
-	export let data;
+	export let data: { id: string };
 
-	onMount(() => {
-		$tabSet = 4;
+	let blog: any;
+	$: blog = {};
+
+	onMount(async () => {
+		blog = await import(`../[blog_id]/blogs/${data.id}.md`);
 	});
+
+	$: console.log(blog);
 </script>
 
-<!-- <div>
-{data.data}
-</div> -->
-<div class="flex h-full justify-center items-center">
-	<div class="flex flex-col gap-3 lg:w-3/4 p-10 bg-stone-800 ">{@html data.data}</div>
+<div class="flex justify-center p-10">
+    <div class="flex flex-col gap-8 lg:w-2/4 bg-neutral-800 card p-5">
+        <svelte:component this={blog.default} />
+    
+    </div>
 </div>
-<!-- ![](https://res.cloudinary.com/dltwftrgc/image/upload/v1683653822/Blogs/AI_powered_game_bot/cover_image.png) -->
+
