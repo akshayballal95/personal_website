@@ -17,7 +17,7 @@
 </script>
 
 <svelte:head>
-	<title>Blog</title>
+	<title>{data.title}</title>
 	<meta name="description" content="Blogs written by Akshay Ballal" />
 	<meta name="keywords" content="Artificial Intelligence, Machine Learning, Programming, Rust" />
 </svelte:head>
