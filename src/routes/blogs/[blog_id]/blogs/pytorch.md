@@ -4,8 +4,9 @@ author: Akshay Ballal
 stage: live
 image: https://res.cloudinary.com/dltwftrgc/image/upload/v1683653822/Blogs/AI_powered_game_bot/cover_image.png
 layout: blog
-description: Hello World!
-date: 10th May
+description: Are you interested in learning about image classification using PyTorch? If so, check out my latest blog post! In this article, I cover the fundamentals of PyTorch, demonstrate how to create a dataset using PyTorch's Dataset class, and explain how to load and preprocess images for use in a convolutional neural network (CNN). Additionally, I provide step-by-step instructions on building a CNN model, training and evaluating it, and using the trained model to make predictions on new data. Whether you're a beginner or an experienced PyTorch user, this post has something for you!
+
+date: 10th May 2023
 ---
 
 ![Robot Playing Computer Games](https://res.cloudinary.com/dltwftrgc/image/upload/v1683653822/Blogs/AI_powered_game_bot/cover_image.png)
@@ -504,8 +505,8 @@ I hope you had fun making this project and have learnt a bit about general AI wo
 
 Git Repo: https://github.com/akshayballal95/dino
 
-<div style="display: flex; gap:10px; align-items: center">
-<img width ="90" height="90" src  = "https://res.cloudinary.com/dltwftrgc/image/upload/t_Facebook ad/v1683659009/Blogs/AI_powered_game_bot/profile_lyql45.jpg" >
+<div style="display: flex; gap:10px; align-items: center" class=" bg-neutral-500">
+<img class="rounded-md" width ="90" height="90" src  = "https://res.cloudinary.com/dltwftrgc/image/upload/t_Facebook ad/v1683659009/Blogs/AI_powered_game_bot/profile_lyql45.jpg" >
 <div style = "display: flex; flex-direction:column; gap:10px; justify-content:space-between">
 <p style="padding:0; margin:0">my website: <a href ="http://www.akshaymakes.com/">http://www.akshaymakes.com/</a></p>
 <p  style="padding:0; margin:0">linkedin: <a href ="https://www.linkedin.com/in/akshay-ballal/">https://www.linkedin.com/in/akshay-ballal/</a></p>
