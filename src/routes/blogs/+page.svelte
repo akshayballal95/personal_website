@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-	import type { Blog } from '.././../input_model';
+	import type { Blog } from '..//../input_model'
 
 	/** @type {import('./$types').PageData} */
 	export let data: { blogs: Blog[] };
