@@ -2,13 +2,13 @@
 	import { onMount } from 'svelte';
 
 	/** @type {import('./$types').PageData} */
-	export let data: { id: string; title: string; html: string };
+	export let data: { id: string; title: string; html: string, description: string };
 </script>
 
 <svelte:head>
 	<title>{data.title}</title>
 	<meta name="description" content="Blogs written by Akshay Ballal" />
-	<meta name="keywords" content="Artificial Intelligence, Machine Learning, Programming, Rust" />
+	<meta name="keywords" content= {data.description} />
 </svelte:head>
 
 <div class="flex justify-center lg:p-10 p-5">
