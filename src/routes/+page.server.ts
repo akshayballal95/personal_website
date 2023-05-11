@@ -1,12 +1,13 @@
-import type { Blog } from "../../input_model"
+import type { Blog } from "../input_model"
 
 /** @type {import('./$types').PageLoad} */
 export async function load({ params }) {
 
     let blogs: Blog[] = []
 
-    const paths = import.meta.glob('./[blog_id]/blogs/*.md', { eager: true })
+    const paths = import.meta.glob('./blogs/[blog_id]/blogs/*.md', { eager: true })
 
+    console.log(paths)
     for (const path in paths) {
         const file = paths[path]
         const slug = path.split('/').at(-1)?.replace('.md', '')

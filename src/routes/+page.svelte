@@ -1,8 +1,12 @@
-<script>
+<script lang="ts">
 	import Aboutme from '$lib/aboutme/aboutme.svelte';
+	import BlogList from '$lib/blogs/blog_list.svelte';
 	import { tabSet } from '$lib/stores/stateStore';
 	import { onMount } from 'svelte';
+	import type { Blog } from '../input_model';
 
+	/** @type {import('./$types').PageData} */
+	export let data: { blogs: Blog[] };
 	onMount(() => {
 		$tabSet = 0;
 	});
@@ -22,4 +26,15 @@
 	/>
 </svelte:head>
 
-<Aboutme />
+<div class="h-full flex items-center p-3">
+	<div class="flex xl:flex-row flex-col gap-8 justify-around">
+		<div >
+			<Aboutme />
+		</div>
+
+		<div class="flex flex-col gap-3 lg:basis-2/5 self-start">
+			<h3>Recent Blogs</h3>
+			<BlogList blogs={data.blogs} />
+		</div>
+	</div>
+</div>
