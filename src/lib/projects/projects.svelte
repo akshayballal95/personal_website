@@ -30,7 +30,7 @@
 </script>
 
 <div class="flex h-full justify-center items-center p-5">
-	<div class="bg-transparent lg:w-2/4 flex flex-col gap-8 items-center justify-center ">
+	<div class="md:w-3/4 lg:w-2/4 lg:min-w-[800px] flex flex-col gap-8 items-center justify-center ">
 		
 		<div class=" flex flex-col gap-4 items-center">
 
@@ -59,7 +59,7 @@
 		</div>
 		{#each pros as pro}
 			{#if (pro.metadata.type == 'software' && $projectSet == 0) || (pro.metadata.type == 'hardware' && $projectSet == 1)}
-				<div class="card pt-10 pb-10 lg:pr-5 w-full flex flex-col"  in:fly={{duration:500,x: $projectSet==0? -150 : 150}} >
+				<div class="card pt-10 pb-10 md:pr-10 w-full flex flex-col"  in:fly={{duration:500,x: $projectSet==0? -150 : 150}} >
 					<div class="flex items-center">
 						<div class="h-12 w-2 mr-5 bg-primary-500" />
 
@@ -72,7 +72,7 @@
 						<div class=" lg:h-80 lg:w-1 w-64 h-0.5 mr-6 bg-primary-500" />
 
 						<div class=" w-72">
-							<img alt="" class=" object-contain" src={pro.metadata.image} />
+							<img alt="" class=" object-contain rounded-md" src={pro.metadata.image} />
 						</div>
 					</div>
 				</div>
