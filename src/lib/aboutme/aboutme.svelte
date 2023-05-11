@@ -11,7 +11,7 @@
 	>
 		<div class=" flex flex-col items-center gap-5 card md:min-w-[350px] h-full w-full md:w-auto">
 			<Avatar class="mt-10 mb-5" src={img} width="w-40" rounded="rounded-full" />
-			<h3>Akshay Ballal</h3>
+			<h1 class="unstyled text-4xl">Akshay Ballal</h1>
 			<div class="h-0.5 mt-5 w-14 bg-primary-500 rounded-full" />
 			<p class="unstyled grow ml-5 mr-5 text-center font-light text-lg tracking-widest">
 				CHIEF PRODUCT OFFICER
