@@ -6,7 +6,7 @@
 </script>
 
 	<div
-		class=" md:h-[500px] md:w-[800px] md:flex-row flex flex-col gap-5 md:p-0 items-center bg-neutral-950 bg-opacity-0"
+		class=" md:h-[450px] md:w-[800px] md:flex-row flex flex-col gap-5 md:p-0 items-center bg-neutral-950 bg-opacity-0"
 	>
 		<div class=" flex flex-col items-center gap-5 card md:min-w-[350px] h-full w-full md:w-auto">
 			<Avatar class="mt-10 mb-5" src={img} width="w-40" rounded="rounded-full" />
@@ -32,7 +32,7 @@
 				>
 			</div>
 		</div>
-		<div class="flex flex-col justify-center pr-5 h-full">
+		<div class="flex flex-col justify-center h-full">
 			<h2 class="mb-2">Hello</h2>
 			<h3 class="mb-10">Here's who I am and what I do</h3>
 			<div class="flex gap-5 mb-10">
