@@ -19,4 +19,7 @@ This project showcases the power of Rust for implementing complex algorithms suc
 
 <br>
 
-Github Repository: https://github.com/akshayballal95/deep_neural_network.git
+[Git Repository](https://github.com/akshayballal95/deep_neural_network.git)
+
+
+

@@ -19,4 +19,4 @@ Overall, this personal website showcases my technical skills in web development 
 
 <br>
 
-Git Repo: https://github.com/akshayballal95/personal_website.git
+[Git Repository](https://github.com/akshayballal95/personal_website.git)

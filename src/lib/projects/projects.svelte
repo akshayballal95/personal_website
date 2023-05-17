@@ -66,7 +66,7 @@
 						<p class="unstyled text-2xl text-primary-500">{pro.metadata.title}</p>
 					</div>
 					<div class="lg:flex-row flex flex-col gap-5 mt-5 justify-around items-center">
-						<p class="text-justify unstyled text-sm ml-5 mr-5 lg:mr-5 lg:ml-8 basis-3/5 shrink-0">
+						<p class="text-justify unstyled text-sm ml-5 mr-5 lg:mr-5 lg:ml-8 md:basis-3/5 shrink-0">
 							<svelte:component this={pro.default} />
 						</p>
 						<div class=" lg:h-80 lg:w-1 w-64 h-0.5 mr-6 bg-primary-500" />

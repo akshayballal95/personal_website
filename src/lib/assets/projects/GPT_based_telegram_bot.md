@@ -16,6 +16,8 @@ The Telegram bot was designed to be interactive, allowing users to engage in con
 
 <br>
 
-This project highlights the potential of AI for creating personalized chatbots that can mimic human speech patterns and personalities. With further development and refinement, this technology could have applications in a variety of industries, from customer service to education and beyond.
+This project highlights the potential of AI for creating personalized chatbots that can mimic human speech patterns and personalities. With further development and refinement, this technology could have applications in a variety of industries, from customer service to education and beyond.  
 
-Git Repo: https://github.com/akshayballal95/gpt_bot.git
+<br>
+
+[Git Repository](https://github.com/akshayballal95/gpt_bot.git)

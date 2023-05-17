@@ -16,4 +16,4 @@ The project was documented in a detailed [blog post](https://www.akshaymakes.com
 
 <br>
 
-Git Repo: https://github.com/akshayballal95/dino
+[Git Repository](https://github.com/akshayballal95/dino)
