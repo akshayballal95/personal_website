@@ -7,7 +7,6 @@ export async function load({ params }) {
 
     const paths = import.meta.glob('./blogs/[blog_id]/blogs/*.md', { eager: true })
 
-    console.log(paths)
     for (const path in paths) {
         const file = paths[path]
         const slug = path.split('/').at(-1)?.replace('.md', '')
