@@ -12,7 +12,7 @@ To train the model, I used the EfficientNet v2_s architecture, which allowed for
 <br>
 
 
-The project was documented in a detailed [blog post](https://www.akshaymakes.com/blogs/pytorch), which included information on the training process, the architecture of the deep learning model, and the implementation of the game bot. This project demonstrates the power of AI and its potential applications in gaming and other fields.
+The project is documented in a detailed [blog post](https://www.akshaymakes.com/blogs/pytorch), which includes information on the training process, the architecture of the deep learning model, and the implementation of the game bot. This project demonstrates the power of AI and its potential applications in gaming and other fields.
 
 <br>
 
