@@ -2,6 +2,11 @@
 	import type { Blog } from '../../input_model';
 
 	export let blogs: Blog[];
+	function formattedDate (date:Date){
+		return date.toLocaleDateString('en-GB', {
+  day: 'numeric', month: 'short', year: 'numeric'
+}).replace(/ /g, ' ');
+	}
 </script>
 
 <div class="flex flex-col gap-4 lg:h-40">
@@ -11,7 +16,7 @@
 		>
 			<img class=" w-28 h-28 rounded-md object-fill" src={blog.image} alt="" />
 			<div class="flex flex-col w-full gap-2">
-				<p class="unstyled text-xs text-justify">{blog.date}</p>
+				<p class="unstyled text-xs text-justify">{formattedDate(blog.date)}</p>
 				<a href="/blogs/{blog.id}"><h2 class="unstyled font-bold">{blog.title}</h2></a>
 
 				<p

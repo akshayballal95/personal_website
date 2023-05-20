@@ -5,8 +5,8 @@ stage: live
 image: https://res.cloudinary.com/dltwftrgc/image/upload/v1683653822/Blogs/AI_powered_game_bot/cover_image.png
 layout: blog
 description: Are you interested in learning about image classification using PyTorch? If so, check out my latest blog post! In this article, I cover the fundamentals of PyTorch, demonstrate how to create a dataset using PyTorch's Dataset class, and explain how to load and preprocess images for use in a convolutional neural network (CNN). Additionally, I provide step-by-step instructions on building a CNN model, training and evaluating it, and using the trained model to make predictions on new data. Whether you're a beginner or an experienced PyTorch user, this post has something for you!
-
-date: 10th May 2023
+date: 05/10/2023
+link: https://medium.com/@akshayballal95/deep-neural-network-from-scratch-in-rust-part-1-basics-of-neural-network-27b1ab8f521e
 ---
 
 ![Robot Playing Computer Games](https://res.cloudinary.com/dltwftrgc/image/upload/v1683653822/Blogs/AI_powered_game_bot/cover_image.png)

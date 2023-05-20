@@ -3,8 +3,9 @@ title: Deep Neural Network from Scratch in Rust- Part 1- Basics of Neural Networ
 author: Akshay Ballal
 stage: live
 image: https://res.cloudinary.com/dltwftrgc/image/upload/v1683700799/Blogs/rust_dnn_1/cover_n3jun5.png
-description: Check out my latest blog post on "Deep Neural Network from Scratch in Rust- Part 1 - Basics of Neural Network"! In this post, I explain the fundamental concepts of neural networks and show you how to build one from scratch using Rust. Whether you're a beginner or an experienced developer, you won't want to miss this in-depth tutorial. Let's dive into the world of deep learning together! #deeplearning #neuralnetwork #RustProgramming #codingtutorials
-date: 17th May 2023
+description: Check out my latest blog post on "Deep Neural Network from Scratch in Rust- Part 1 - Basics of Neural Network"! In this post, I explain the fundamental concepts of neural networks and show you how to build one from scratch using Rust. Whether you're a beginner or an experienced developer, you won't want to miss this in-depth tutorial. Let's dive into the world of deep learning together!
+date: 05/15/2023
+link: https://medium.com/@akshayballal95/deep-neural-network-from-scratch-in-rust-part-1-basics-of-neural-network-27b1ab8f521e
 ---
 
 ![Cover Image](https://res.cloudinary.com/dltwftrgc/image/upload/v1683700799/Blogs/rust_dnn_1/cover_n3jun5.png)

@@ -1,0 +1,187 @@
+---
+title: Deep Neural Network from Scratch in Rust - Part 2- Loading Data and Initializing an NN Model
+author: Akshay Ballal
+stage: live
+image: https://res.cloudinary.com/dltwftrgc/image/upload/v1683700799/Blogs/rust_dnn_1/cover_n3jun5.png
+description: Check out my latest blog post on "Deep Neural Network from Scratch in Rust- Part 2 - Basics of Neural Network"! In this post, I explain the fundamental concepts of neural networks and show you how to build one from scratch using Rust. Whether you're a beginner or an experienced developer, you won't want to miss this in-depth tutorial. Let's dive into the world of deep learning together!
+date: 05/15/2023
+link: https://medium.com/@akshayballal95/deep-neural-network-from-scratch-in-rust-part-1-basics-of-neural-network-27b1ab8f521e
+---
+
+![Cover Image](https://res.cloudinary.com/dltwftrgc/image/upload/v1683700799/Blogs/rust_dnn_1/cover_n3jun5.png)
+I hope you have gone through part 1 to understand the premise of how a neural network broadly works and why we are using rust to build your Neural Network. In case you have not, I highly recommend you to go through this [[1. Deep Neural Network from Scratch in Rust-  Part 1- Basics of Neural Network.]]. Once that is out of the way, let's see what we are going to learn in this part of the series. 
+
+1.  Starting a Rust project
+2.  Adding and installing dependencies
+3.  Loading the data for training
+4.  Creating a neural network structure in Rust
+5.  Implementing random initialization of neural network parameters
+
+---
+### Starting a Rust Project
+
+If you don't have Rust installed on your computer, you can easily get started by visiting the Rust [website](https://www.rust-lang.org/tools/install) and following the installation steps. Additionally, you can install the `rust-analyzer` extension for VS Code to enhance your Rust programming experience. Once Rust is installed, we will create a new project. In this case, we'll start the Rust project as a library since our goal is to create a neural network crate that can be utilized in various machine learning applications. To begin, open your terminal in the desired directory for the project and execute the following command:
+
+```bash
+cargo new rust_dnn --lib
+```
+Here, `rust_dnn` is the name of our library, and the `--lib` flag indicates that this project will be used as a library rather than a binary. Open the project directory and start VS Code in this folder.
+
+---
+### Adding and Installing Dependencies
+
+You can either copy the `Cargo.toml` file from the Git repository linked below or run the following cargo CLI commands in the terminal from the project directory:
+
+```bash
+cargo add polars -F lazy
+```
+```bash
+cargo add ndarray -F serde
+```
+```bash
+cargo add rand
+```
+
+These are all the dependencies we need for this part. We can install these dependencies by running this command. 
+
+```bash
+cargo install
+```
+
+---
+### Loading the data 
+
+For our neural network library, we'll build a classifier that can identify images of cats and non-cats. To simplify the process, I have converted these images into 3-channel matrices of size 64 x 64, which represents the image resolution. If we flatten this matrix, we obtain a vector of size (3 x 64 x 64), which is equal to 12288. This is the number of input features that will be fed into the network. Although we can make the network adaptable to different input feature sizes, let's design it specifically for this dataset for now. We can generalize it further in the subsequent parts.
+
+You can download the training and test datasets as CSV files from [here](https://github.com/akshayballal95/dnn_rust_blog/tree/master/datasets). Let's create a function in the `lib.rs` file to load the CSV file as a Polars Data Frame. This will enable us to preprocess the data if necessary. In our case, the only preprocessing step is to separate the labels from the input data in the CSV file. The following function accomplishes this task and returns two Data Frames: one for the input data and one for the labels.
+
+```rust
+// lib.rs
+use ndarray::prelude::*;
+use polars::prelude::*;
+use rand::distributions::Uniform;
+use rand::prelude::*;
+use std::collections::HashMap;
+use std::path::PathBuf;
+
+pub fn dataframe_from_csv(file_path: PathBuf) -> PolarsResult<(DataFrame, DataFrame)> {
+
+    let data = CsvReader::from_path(file_path)?.has_header(true).finish()?;
+
+    let training_dataset = data.drop("y")?;
+    let training_labels = data.select(["y"])?;
+
+    return Ok((training_dataset, training_labels));
+
+}
+```
+
+Once we have loaded the data as Polars data frame and separated the input data from the labels, we need to convert the data frames into `ndarray` which can be used as input to the neural network. This function can do that for us. 
+
+```rust
+pub fn array_from_dataframe(df: &DataFrame) -> Array2<f32> {
+    df.to_ndarray::<Float32Type>().unwrap().reversed_axes()
+}
+```
+
+Here you can see that we have reversed the axes. That's because we need the input data in the following format: 
+
+<img src="https://res.cloudinary.com/dltwftrgc/image/upload/v1684581032/Blogs/rust_dnn_2/Input-Matrix_lvyzhp.png" width="400"/>
+
+Where `m` is the number of examples and `n` is the number of features for each example. In our data frame, we had the transpose of this. So we reversed the axes to get the right shape of (n x m). 
+
+### Creating a Deep Neural Network Model Class
+
+Next let's create a struct that will hold out Neural Network parameters like the number of layers, the number of hidden units in each layer and the learning rate. In the future, we can add more parameters in this struct. 
+
+```rust
+struct DeepNeuralNetwork{
+    pub layers: Vec<usize>,
+    pub learning_rate: f32,
+}
+```
+### Initializing Random Parameters
+
+We need to initialize the parameters of the neural network. Let us look at how the parameters can be represented for a layer `l` of our network. 
+
+Say for example we have a network of 3 hidden layers with number of hidden units represented by \[100, 4,3,6] i.e. 100 input units, 4 hidden units in the first hidden layer, 3 in the second and 6 in the third. For this the shape of the weight matrix for the first layer will be (4 x 100), for the second layer (3x4) and for the third layer (6x4).  And the shape of the bias matrix will be (4x1) for the first layer, (3x1) for the second layer and (6x1) for the third layer. In general, this is the mathematical representation of the weight and bias matrix of any l<sup>th</sup> layer of the network. 
+
+<img src="https://res.cloudinary.com/dltwftrgc/image/upload/v1684581196/Blogs/rust_dnn_2/weights-biases_myspdj.png" width="400"/>
+
+The terminology used here is the following:
+
+<p>
+  - W<sup>l</sup>→ weight matrix for connections between perceptrons in the
+  [l-1]<sup>th</sup> to the perceptrons in the l<sup>th</sup> layer
+</p>
+<p>
+  - w<sup>l</sup><sub>nm</sub> ⇾ weight value of the connection between the
+  m<sup>th</sup> perceptron of the [l-1]<sup>th</sup> layer to the n<sup>th</sup>
+  perceptron of the l<sup>th</sup> layer.
+</p>
+<p>
+  - b<sup>l</sup><sub>n</sub>⇾ bias value of the n<sup>th</sup> perceptron of
+  the l<sup>th</sup> layer
+</p>
+<p>- N ⇾ Number of perceptron in the l<sup>th </sup>layer</p>
+<p>- M ⇾ Number of perceptrons in the [l-1]<sup>th</sup> layer</p>
+
+
+Here's an implementation `initialize_parameters` for the `DeepNeuralNetwork` struct that creates these matrices and initializes the weights and biases randomly:
+
+```rust
+impl DeepNeuralNetwork {
+    /// Initializes the parameters of the neural network.
+    ///
+    /// ### Returns
+    /// a Hashmap dictionary of randomly initialized weights and biases.
+    pub fn initialize_parameters(&self) -> HashMap<String, Array2<f32>> {
+        let between = Uniform::from(-1.0..1.0); // random number between -1 and 1
+        let mut rng = rand::thread_rng(); // random number generator
+
+        let number_of_layers = self.layers.len();
+
+        let mut parameters: HashMap<String, Array2<f32>> = HashMap::new();
+
+        // start the loop from the first hidden layer to the output layer. 
+        // We are not starting from 0 because the zeroth layer is the input layer.
+        for l in 1..number_of_layers {
+            let weight_array: Vec<f32> = (0..self.layers[l]*self.layers[l-1])
+                .map(|_| between.sample(&mut rng))
+                .collect(); //create a flattened weights array of (N * M) values
+
+            let bias_array: Vec<f32> = (0..self.layers[l]).map(|_| 0.0).collect();
+
+            let weight_matrix = Array::from_shape_vec((self.layers[l], self.layers[l - 1]), weight_array).unwrap();
+            let bias_matrix = Array::from_shape_vec((self.layers[l], 1), bias_array).unwrap();
+
+            let weight_string = ["W", &l.to_string()].join("").to_string();
+            let biases_string = ["b", &l.to_string()].join("").to_string();
+
+            parameters.insert(weight_string, weight_matrix);
+            parameters.insert(biases_string, bias_matrix);
+        }
+        parameters
+    }
+```
+
+In this implementation, we use the `rand` crate to generate random numbers. We create a uniform distribution between -1 and 1 and use it to sample random numbers for weight initialization. We initialize the biases to `0.0`. The weights and biases are stored in a `HashMap` where the keys are strings representing the layer number followed by either "W" for weights or "b" for biases.
+
+That's it for this part! We have covered starting a Rust project, adding dependencies, loading data, and initializing neural network parameters. In the next part, we'll continue building our neural network by implementing forward propagation. Stay tuned!
+<br>
+
+
+<div style="display: flex; gap:10px; align-items: center">
+<img width ="90" height="90" src  = "https://res.cloudinary.com/dltwftrgc/image/upload/t_Facebook ad/v1683659009/Blogs/AI_powered_game_bot/profile_lyql45.jpg" >
+<div style = "display: flex; flex-direction:column; gap:10px; justify-content:space-between">
+<p style="padding:0; margin:0">my website: <a href ="http://www.akshaymakes.com/">http://www.akshaymakes.com/</a></p>
+<p  style="padding:0; margin:0">linkedin: <a href ="https://www.linkedin.com/in/akshay-ballal/">https://www.linkedin.com/in/akshay-ballal/</a></p>
+<p  style="padding:0; margin:0">twitter: <a href ="https://twitter.com/akshayballal95">https://twitter.com/akshayballal95/</a></p>
+</div>
+</div>
+
+
+
+
+
+

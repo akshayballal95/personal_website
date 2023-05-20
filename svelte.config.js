@@ -8,14 +8,18 @@ import shiki from 'shiki'
 /** @type {import('@sveltejs/kit').Config} */
 import { escapeSvelte, mdsvex } from 'mdsvex'
 import { fileURLToPath } from 'url';
+import rehypeKatexSvelte from "rehype-katex-svelte";
+import remarkMath from 'remark-math'
 
 const dirName = path.resolve(fileURLToPath(import.meta.url), '../');
 
 /** @type {import('mdsvex').MdsvexOptions} */
 const mdsvexOptions = {
-	// layout: {blog:path.join(dirName, './src/routes/blogs/[blog_id]/_layout.svelte')},
 	extensions: ['.md', '.svx'],
-	rehypePlugins: [[addClasses, {"img":"rounded-md", "ul":"list-disc list-inside ml-5", "ol":"list-decimal", }]],
+	remarkPlugins: [
+		remarkMath,
+	  ],
+	rehypePlugins: [[addClasses, {"img":"rounded-md", "ul":"list-disc list-inside ml-5", "ol":"list-decimal", }], rehypeKatexSvelte],
 	highlight: {
 		highlighter: async (code, lang = "text") => {
 			const highlighter = await shiki.getHighlighter({ theme: "poimandres" });

@@ -2,9 +2,10 @@ export interface Blog {
   title: string;
   image: string|null;
   description: string;
-  date: string;
+  date: Date;
   id:string;
   stage: string;
+  link: string; 
 }
 
 export class WorkExperience {
