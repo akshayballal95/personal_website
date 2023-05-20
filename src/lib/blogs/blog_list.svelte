@@ -9,7 +9,7 @@
 	}
 </script>
 
-<div class="flex flex-col gap-4 lg:h-40">
+<div class="flex flex-col gap-4 overflow-y-scroll">
 	{#each blogs as blog}
 		<div
 			class="card flex fmd:flex-row p-4 gap-6 items-center justify-start "

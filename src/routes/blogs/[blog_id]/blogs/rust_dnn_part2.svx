@@ -3,13 +3,14 @@ title: Deep Neural Network from Scratch in Rust - Part 2- Loading Data and Initi
 author: Akshay Ballal
 stage: live
 image: https://res.cloudinary.com/dltwftrgc/image/upload/v1683700799/Blogs/rust_dnn_1/cover_n3jun5.png
-description: Check out my latest blog post on "Deep Neural Network from Scratch in Rust- Part 2 - Basics of Neural Network"! In this post, I explain the fundamental concepts of neural networks and show you how to build one from scratch using Rust. Whether you're a beginner or an experienced developer, you won't want to miss this in-depth tutorial. Let's dive into the world of deep learning together!
-date: 05/15/2023
+description: Part 2 of my deep neural network from scratch in Rust series is now live! In this post, we learn how to start a Rust project, add and install dependencies, load data for training, create a neural network structure, and implement random initialization of neural network parameters.
+date: 05/20/2023
 link: https://medium.com/@akshayballal95/deep-neural-network-from-scratch-in-rust-part-1-basics-of-neural-network-27b1ab8f521e
 ---
 
 ![Cover Image](https://res.cloudinary.com/dltwftrgc/image/upload/v1683700799/Blogs/rust_dnn_1/cover_n3jun5.png)
-I hope you have gone through part 1 to understand the premise of how a neural network broadly works and why we are using rust to build your Neural Network. In case you have not, I highly recommend you to go through this [[1. Deep Neural Network from Scratch in Rust-  Part 1- Basics of Neural Network.]]. Once that is out of the way, let's see what we are going to learn in this part of the series. 
+
+I hope you have gone through part 1 to understand the premise of how a neural network broadly works and why we are using rust to build your Neural Network. In case you have not, I highly recommend you to go through this <a href="https://www.akshaymakes.com/blogs/rust_dnn_part1">Deep Neural Network from Scratch in Rust-  Part 1- Basics of Neural Network</a>. Once that is out of the way, let's see what we are going to learn in this part of the series. 
 
 1.  Starting a Rust project
 2.  Adding and installing dependencies

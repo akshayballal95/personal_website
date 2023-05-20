@@ -9,6 +9,7 @@ export async function load({ params }) {
         title: blog.metadata.title,
         html: blog.default.render().html,
         description: blog.metadata.description,
+        date:new Date( blog.metadata.date),
     }
 
 }
