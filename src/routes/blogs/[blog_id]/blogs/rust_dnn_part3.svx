@@ -10,7 +10,7 @@ date: 05/21/2023
 
 ![Cover Image](https://res.cloudinary.com/dltwftrgc/image/upload/v1683700799/Blogs/rust_dnn_1/cover_n3jun5.png)
 <p>
-  In the <a href = "https://dev.to/akshayballal/deep-neural-network-from-scratch-in-rust-part-2-loading-data-and-initializing-an-nn-model-10g5">previous part</a> of our blog series, we discussed how to initialize a
+  In the <a href = "https://www.akshaymakes.com/blogs/rust_dnn_part2">previous part</a> of our blog series, we discussed how to initialize a
   neural network (NN) model with specified layers and hidden units. Now, in this
   part, we will explore the forward propagation algorithm, a fundamental step in
   the NN's prediction process.
