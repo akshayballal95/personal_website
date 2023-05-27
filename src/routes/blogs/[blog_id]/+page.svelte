@@ -1,5 +1,5 @@
-<script lang="ts">
-	import { onMount } from 'svelte';
+<script lang="ts" id="MathJax-script">
+		import { onMount } from 'svelte';
 
 	/** @type {import('./$types').PageData} */
 	export let data: { id: string; date:Date; title: string; html: string, description: string };
@@ -9,7 +9,12 @@
   day: 'numeric', month: 'short', year: 'numeric'
 }).replace(/ /g, ' ');
 	}
+
+
+
+
 </script>
+
 
 <svelte:head>
 	<title>{data.title}</title>

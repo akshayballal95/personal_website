@@ -1,5 +1,5 @@
 ---
-title: Deep Neural Network from Scratch in Rust - Part 2- Loading Data and Initializing an NN Model
+title: Deep Neural Network from Scratch in Rust 🦀 - Part 2- Loading Data and Initializing an NN Model
 author: Akshay Ballal
 stage: live
 image: https://res.cloudinary.com/dltwftrgc/image/upload/v1683700799/Blogs/rust_dnn_1/cover_n3jun5.png

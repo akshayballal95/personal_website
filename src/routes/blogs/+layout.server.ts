@@ -2,7 +2,6 @@
 
 import type { Blog } from "../../input_model"
 
-
 /** @type {import('./$types').PageLoad} */
 export async function load({ params }) {
 
@@ -24,7 +23,7 @@ export async function load({ params }) {
                 date: metadata.date,
                 id: slug,
                 stage: metadata.stage,
-
+                link: metadata.link
 
             }
             if(blog.stage == "live"){
