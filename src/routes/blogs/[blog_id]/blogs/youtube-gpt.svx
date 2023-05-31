@@ -1,5 +1,5 @@
 ---
-title: Build your own YouTubeGPT using LangChain and OpenAI
+title: Build your own YouTubeGPT using LangChain and OpenAI 🦜🔗
 author: Akshay Ballal
 stage: live
 image: https://res.cloudinary.com/dltwftrgc/image/upload/v1685531712/Blogs/youtube-gpt/cover_image_ngq1hy.png
