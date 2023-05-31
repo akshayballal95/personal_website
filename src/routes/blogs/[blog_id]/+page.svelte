@@ -18,8 +18,8 @@
 
 <svelte:head>
 	<title>{data.title}</title>
-	<meta name="description" content="Blogs written by Akshay Ballal" />
-	<meta name="keywords" content= {data.description} />
+	<meta name="description" content={data.description} />
+	<meta name="title" content= {data.title} />
 </svelte:head>
 
 <div class="flex justify-center lg:p-10 p-5">
