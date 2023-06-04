@@ -22,7 +22,7 @@ const mdsvexOptions = {
 	rehypePlugins: [[addClasses, {"img":"rounded-md", "ul":"list-disc list-inside ml-5", "ol":"list-decimal", }], rehypeKatexSvelte],
 	highlight: {
 		highlighter: async (code, lang = "text") => {
-			const highlighter = await shiki.getHighlighter({ theme: "poimandres" });
+			const highlighter = await shiki.getHighlighter({ theme: "github-dark" });
 			const html = escapeSvelte(highlighter.codeToHtml(code, {lang}));
 			return html
 		

@@ -32,6 +32,8 @@ export async function load({ params }) {
            
         }
     }
+    blogs.sort((a,b) => b.date.getTime() - a.date.getTime())
+
     return { blogs }
 
 }
