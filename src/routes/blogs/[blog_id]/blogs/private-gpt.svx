@@ -223,6 +223,9 @@ streamlit run private_gpt.py
 
 ![Demo](https://res.cloudinary.com/dltwftrgc/image/upload/v1685894586/Blogs/private-gpt/demo_uirlha.gif)
 
+Git Repository: https://github.com/akshayballal95/youtube_gpt.git
+
+---
 
 <div style="display: flex; gap:10px; align-items: center">
 <img width ="90" height="90" src  = "https://res.cloudinary.com/dltwftrgc/image/upload/t_Facebook ad/v1683659009/Blogs/AI_powered_game_bot/profile_lyql45.jpg" >
