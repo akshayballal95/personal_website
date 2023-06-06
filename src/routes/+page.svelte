@@ -29,8 +29,11 @@
 		</div>
 
 		<div class="flex flex-col gap-3 lg:basis-2/5 self-start">
+
 			<h3>Recent Blogs</h3>
 			<BlogList blogs={data.blogs} />
 		</div>
+
 	</div>
+
 </div>

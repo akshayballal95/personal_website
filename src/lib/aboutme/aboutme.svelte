@@ -8,6 +8,7 @@
 <div
 	class=" md:h-[500px] md:w-[800px] md:flex-row flex flex-col gap-5 md:p-0 items-center bg-neutral-950 bg-opacity-0"
 >
+
 	<div class=" flex flex-col items-center gap-5 card md:min-w-[350px] h-full w-full md:w-auto">
 		<Avatar class="mt-10 mb-5" src={img} width="w-40" rounded="rounded-full" />
 		<h1 class="unstyled text-4xl">Akshay Ballal</h1>
@@ -30,8 +31,11 @@
 			<a class="unstyled" href="https://www.linkedin.com/in/akshay-ballal/"
 				><i class="fa-brands fa-linkedin" /></a
 			>
+
 		</div>
+
 	</div>
+
 	<div class="flex flex-col justify-center h-full">
 		<h2 class="mb-2">Hello</h2>
 		<h3 class="mb-10">Here's who I am and what I do</h3>
