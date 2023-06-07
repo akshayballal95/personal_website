@@ -90,6 +90,20 @@
 		<p class="font-light">Blog</p>
 	</Tab>
 
+	<Tab
+	bind:group={$tabSet}
+	name="Chat"
+	value={5}
+	class="rounded"
+	on:click={() => {
+		goto('/chat');
+	}}
+>
+	<!-- <svelte:fragment slot="lead">SD</svelte:fragment> -->
+	<p class="font-light">Chat</p>
+</Tab>
+
+
 	
 
 	<!-- ... -->

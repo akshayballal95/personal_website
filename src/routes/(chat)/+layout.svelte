@@ -90,13 +90,6 @@
 		$message_feed = [...$message_feed, newMessage];
 	}
 
-    function handleKey(e:KeyboardEvent){
-        if (e.key=="Enter"){
-
-            addMessage()
-            currentMessage=''
-        }
-    }
 
 </script>
 
@@ -117,7 +110,6 @@
 			<button class="input-group-shim">+</button>
 			<textarea
             
-                on:keydown={(e)=>handleKey(e)}
 				bind:value={currentMessage}
 				class="bg-transparent border-0 ring-0"
 				name="prompt"
