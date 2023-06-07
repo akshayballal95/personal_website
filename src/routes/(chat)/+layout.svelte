@@ -65,7 +65,7 @@
 	onMount(() => scrollChatBottom('smooth'));
 
 	async function chat(message: String) {
-		const response = await fetch('http://13.53.243.0/app.conversation/run', {
+		const response = await fetch('http://13.48.134.189/app.conversation/run', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json'
@@ -105,7 +105,7 @@
 	<!-- ---- / ---- -->
 	<svelte:fragment slot="pageFooter">
 		<div
-			class="input-group input-group-divider grid-cols-[auto_1fr_auto] rounded-container-token md:w-2/4"
+			class="m-5 input-group input-group-divider grid-cols-[auto_1fr_auto] rounded-container-token md:w-2/4"
 		>
 			<button class="input-group-shim">+</button>
 			<textarea
