@@ -3,7 +3,7 @@
 	import BlogList from '$lib/blogs/blog_list.svelte';
 	import { tabSet } from '$lib/stores/stateStore';
 	import { onMount } from 'svelte';
-	import type { Blog } from '../input_model';
+	import type { Blog } from '../../input_model';
 
 	/** @type {import('./$types').PageData} */
 	export let data: { blogs: Blog[] };

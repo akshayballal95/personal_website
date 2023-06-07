@@ -1,0 +1,74 @@
+<script lang="ts">
+	import { tabSet } from '$lib/stores/stateStore';
+	import { Avatar } from '@skeletonlabs/skeleton';
+	import { elemChat, message_feed } from '$lib/stores/messageStore';
+	import avatar from '$lib/assets/avatar.jpg'
+	import img from '$lib/assets/img.png'
+	
+
+	class chatInterface {
+		constructor() {
+			this.history = '';
+			this.human_input = '';
+			this.memory = [];
+		}
+
+		history: String;
+		human_input: String;
+		memory: memory[];
+	}
+
+	class memory {
+		constructor() {
+			this.type = '';
+			this.data = { content: '', additional_kwargs: {} };
+		}
+
+		type: String;
+		data: {
+			content: String;
+			additional_kwargs: {};
+		};
+	}
+	
+
+	$tabSet = 5;
+
+
+
+
+</script>
+
+	<div class="flex flex-col h-full w-full justify-center items-center">
+		<div class="flex flex-col h-full md:w-2/4 gap-5">
+			<!-- Conversation -->
+			<section bind:this={$elemChat} class=" max-h-fit p-4 overflow-y-scroll space-y-4">
+				{#each $message_feed as bubble}
+					{#if bubble.host === false}
+						<div class="grid grid-cols-[auto_1fr] gap-2">
+							<Avatar src={img} width="w-12" />
+							<div class="card p-4 variant-soft rounded-tl-none space-y-2">
+								<header class="flex justify-between items-center">
+									<p class="font-bold">{"Akshay"}</p>
+									<small class="opacity-50">{bubble.timestamp}</small>
+								</header>
+								<p>{bubble.message}</p>
+							</div>
+						</div>
+					{:else}
+						<div class="grid grid-cols-[1fr_auto] gap-2">
+							<div class="card p-4 rounded-tr-none space-y-2 {bubble.color}">
+								<header class="flex justify-between items-center">
+									<p class="font-bold">{"You"}</p>
+									<small class="opacity-50">{bubble.timestamp}</small>
+								</header>
+								<p>{bubble.message}</p>
+							</div>
+							<Avatar src={avatar} width="w-12" />
+						</div>
+					{/if}
+				{/each}
+			</section>
+		</div>
+	</div>
+<!-- <button class="btn variant-filled" on:click={() => chat('How are you')}>Chat</button> -->

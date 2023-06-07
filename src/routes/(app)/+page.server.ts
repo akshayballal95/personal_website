@@ -1,4 +1,4 @@
-import type { Blog } from "../input_model"
+import type { Blog } from "../../input_model"
 
 /** @type {import('./$types').PageLoad} */
 export async function load({ params }) {
