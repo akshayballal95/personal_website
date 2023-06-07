@@ -98,6 +98,15 @@
 				<!-- <svelte:fragment slot="lead">SD</svelte:fragment> -->
 				<p class="font-light">Blog</p>
 			</ListBoxItem>
+
+			<ListBoxItem bind:group={$tabSet} name="Chat" value={5} class="rounded"
+			on:click={() => {
+				goto('/chat');
+				drawerStore.close();
+			}}>
+				<!-- <svelte:fragment slot="lead">SD</svelte:fragment> -->
+				<p class="font-light">Chat</p>
+			</ListBoxItem>
 			<!-- ... -->
 		</ListBox>
 	</Drawer>
