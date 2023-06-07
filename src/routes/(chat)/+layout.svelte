@@ -58,31 +58,40 @@
 	
 	}
 
+	function keyHandler(e:KeyboardEvent){
+		console.log(e.key)
+		if (e.key=="Enter"){
+			addMessage()
+		}
+	}
+
 	function getCurrentTimestamp(): string {
 		return new Date().toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
 	}
 	onMount(() => scrollChatBottom('smooth'));
 
 	async function chat(message: String) {
-		const response = await fetch('https://gpt_server-1-v2639104.deta.app/app.conversation/run', {
+		const response = await fetch('api/chat',  {
 			method: 'POST',
+			
 			headers: {
-				'Content-Type': 'application/json'
+				'Content-Type': 'application/json',
+				'Access-Control-Allow-Origin': '*',
 			},
 			body: JSON.stringify({
 				human_input: message
 			})
 		});
+	
 
-       let result = await response.json()
-
+		let AImessage =await response.json()
         const newMessage = {
 			id: Date.now(),
 			host: false,
 			avatar: 48,
 			name: 'Jane',
 			timestamp: getCurrentTimestamp(),
-			message: result.output,
+			message:AImessage.output,
 			color: 'variant-soft-primary'
 		};
 		// Append the new message to the message feed
@@ -116,7 +125,7 @@
 				placeholder="Write a message..."
 				rows="1"
 			/>
-			<button on:click={addMessage} class="variant-filled-primary">Send</button>
+			<button on:keydown={(e)=>keyHandler(e)} on:click={addMessage} class="variant-filled-primary">Send</button>
 		</div>
 	</svelte:fragment>
 
