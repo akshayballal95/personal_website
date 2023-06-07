@@ -16,7 +16,6 @@
 		drawerStore
 	} from '@skeletonlabs/skeleton';
 	import Header from '$lib/header.svelte';
-	import Footer from '$lib/footer.svelte';
 	import { goto } from '$app/navigation';
 	import { tabSet } from '$lib/stores/stateStore';
 	import { inject } from '@vercel/analytics';
