@@ -65,7 +65,7 @@
 	onMount(() => scrollChatBottom('smooth'));
 
 	async function chat(message: String) {
-		const response = await fetch('http://13.48.134.189/app.conversation/run', {
+		const response = await fetch('https://gpt_server-1-v2639104.deta.app/app.conversation/run', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json'
