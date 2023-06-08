@@ -1,5 +1,6 @@
 
 /** @type {import('./$types').PageLoad} */
+
 export async function load({ params }) {
     const blog = await import(`../../../../lib/assets/blogs/${params.blog_id}.svx`);
 

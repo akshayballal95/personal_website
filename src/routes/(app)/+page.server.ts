@@ -1,11 +1,12 @@
 import type { Blog } from "../../input_model"
 
+
 /** @type {import('./$types').PageLoad} */
 export async function load({ params }) {
 
     let blogs: Blog[] = []
 
-    const paths = import.meta.glob('./blogs/[blog_id]/blogs/*.svx', { eager: true })
+    const paths = import.meta.glob('../../lib/assets/blogs/*.svx', { eager: true })
 
     for (const path in paths) {
         const file = paths[path]

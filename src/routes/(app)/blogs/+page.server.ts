@@ -4,7 +4,7 @@ export async function load({ params }) {
 
     let blogs: Blog[] = []
 
-    const paths = import.meta.glob('../../../../lib/assets/blogs/*.svx', { eager: true })
+    const paths = import.meta.glob('../../../lib/assets/blogs/*.svx', { eager: true })
 
     for (const path in paths) {
         const file = paths[path]
