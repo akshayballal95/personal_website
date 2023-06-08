@@ -12,6 +12,14 @@
 
 </script>
 
+<svelte:head>
+	<title>AI Assistant</title>
+	<meta
+		name="description"
+		content="You can talk to my chatbot assistant about anything related to Machine Learning and Artificial Intelligence."
+	/>
+</svelte:head>
+
 	<div class="flex flex-col h-full w-full justify-center items-center">
 
 		{#if $message_feed.length!=0}
@@ -47,7 +55,7 @@
 		</div>
 		{:else}
 		<div class = 'flex flex-col items-center gap-3'><h4>Ask me Questions like:</h4>
-			<span class="chip variant-filled">What projects have you worked on</span>
+			<span  class="chip variant-filled">What projects have you worked on</span>
 			
 			<span class="chip variant-filled">Tell Me about yourself</span>
 
