@@ -6,40 +6,15 @@
 	import img from '$lib/assets/img.png'
 	
 
-	class chatInterface {
-		constructor() {
-			this.history = '';
-			this.human_input = '';
-			this.memory = [];
-		}
-
-		history: String;
-		human_input: String;
-		memory: memory[];
-	}
-
-	class memory {
-		constructor() {
-			this.type = '';
-			this.data = { content: '', additional_kwargs: {} };
-		}
-
-		type: String;
-		data: {
-			content: String;
-			additional_kwargs: {};
-		};
-	}
-	
-
 	$tabSet = 5;
-
 
 
 
 </script>
 
 	<div class="flex flex-col h-full w-full justify-center items-center">
+
+		{#if $message_feed.length!=0}
 		<div class="flex flex-col h-full md:w-2/4 gap-5">
 			<!-- Conversation -->
 			<section bind:this={$elemChat} class=" max-h-fit p-4 overflow-y-scroll space-y-4">
@@ -70,5 +45,14 @@
 				{/each}
 			</section>
 		</div>
+		{:else}
+		<div class = 'flex flex-col items-center gap-3'><h4>Ask me Questions like:</h4>
+			<span class="chip variant-filled">What projects have you worked on</span>
+			
+			<span class="chip variant-filled">Tell Me about yourself</span>
+
+			<span class="chip variant-filled">Anything about Machine Learning and AI<span>
+			</div>
+		{/if}
 	</div>
 <!-- <button class="btn variant-filled" on:click={() => chat('How are you')}>Chat</button> -->
