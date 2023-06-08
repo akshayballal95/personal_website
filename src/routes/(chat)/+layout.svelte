@@ -21,7 +21,6 @@
 	import { inject } from '@vercel/analytics';
 	import { dev } from '$app/environment';
 	import { onMount } from 'svelte';
-	import { faker } from '@faker-js/faker';
 	import { message_feed, elemChat } from '$lib/stores/messageStore';
 	inject({ mode: dev ? 'development' : 'production' });
 
@@ -118,7 +117,7 @@
 		<div
 			class="m-5 input-group input-group-divider grid-cols-[auto_1fr_auto] rounded-container-token md:w-2/4"
 		>
-			<button class="input-group-shim">+</button>
+			<div class="input-group-shim"></div>
 			<textarea
 			on:keydown={(e)=>keyHandler(e)}
 				bind:value={currentMessage}

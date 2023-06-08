@@ -46,9 +46,9 @@
 				></a
 			>
 			<button
-				on:click={() => goto('/projects')}
+				on:click={() => goto('/chat')}
 				type="button"
-				class="btn variant-ringed rounded-full">Projects</button
+				class="btn  variant-filled-surface rounded-full">Chat With My AI Assistant</button
 			>
 		</div>
 		<p class="text-justify">
