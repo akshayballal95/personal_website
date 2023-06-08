@@ -1,8 +1,7 @@
 
 /** @type {import('./$types').PageLoad} */
 export async function load({ params }) {
-
-    const blog = await import(`../[blog_id]/blogs/${params.blog_id}.svx`);
+    const blog = await import(`../../../../lib/assets/blogs/${params.blog_id}.svx`);
 
     return {
         id: params.blog_id,
