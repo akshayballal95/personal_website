@@ -25,12 +25,12 @@
 	<slot />
 	<!-- ---- / ---- -->
 
-	<Drawer padding="0" position="top" regionBackdrop="w-full">
+	<Drawer  padding="0" position="top" regionBackdrop="w-full" regionDrawer="h-auto" >
 		<ListBox
 			hover="hover:variant-soft-primary"
 			active="variant-filled-primary"
-			class=" m-6 gap-5 flex flex-col justify-center items-center"
-		>
+			class=" pt-6 gap-4 flex flex-col justify-center items-center  "
+		>	
 			<button class="btn-icon variant-filled absolute self-end top-5 right-5" on:click={()=>drawerStore.close()}
 				><i class="fa-solid fa-xmark fa-xl" />
 			</button>
