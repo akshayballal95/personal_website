@@ -30,7 +30,7 @@
 	}
 
 	let currentMessage = '';
-
+	$: currentMessage
 	function addMessage(): void {
 		const newMessage = {
 			id: Date.now(),
@@ -59,9 +59,9 @@
 	}
 
 	function keyHandler(e:KeyboardEvent){
-		console.log(e.key)
 		if (e.key=="Enter"){
 			addMessage()
+			currentMessage = ''
 		}
 	}
 
@@ -96,6 +96,9 @@
 		};
 		// Append the new message to the message feed
 		$message_feed = [...$message_feed, newMessage];
+		setTimeout(() => {
+			scrollChatBottom('smooth');
+		}, 0);
 	}
 
 
@@ -117,7 +120,7 @@
 		>
 			<button class="input-group-shim">+</button>
 			<textarea
-            
+			on:keydown={(e)=>keyHandler(e)}
 				bind:value={currentMessage}
 				class="bg-transparent border-0 ring-0"
 				name="prompt"
@@ -125,7 +128,7 @@
 				placeholder="Write a message..."
 				rows="1"
 			/>
-			<button on:keydown={(e)=>keyHandler(e)} on:click={addMessage} class="variant-filled-primary">Send</button>
+			<button  on:click={addMessage} class="variant-filled-primary">Send</button>
 		</div>
 	</svelte:fragment>
 
