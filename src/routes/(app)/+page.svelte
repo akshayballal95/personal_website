@@ -22,7 +22,7 @@
 	/>
 </svelte:head>
 
-<div class="h-full flex items-center p-3">
+<div class="h-full flex items-center p-3 xl:p-12">
 	<div class="flex xl:flex-row flex-col gap-10">
 		<div >
 			<Aboutme />
