@@ -6,7 +6,7 @@
 </script>
 
 <div
-	class=" md:h-[500px] md:w-[800px] md:flex-row flex flex-col gap-5 md:p-0 items-center bg-neutral-950 bg-opacity-0"
+	class=" md:flex-row flex flex-col gap-5 md:p-0 items-center bg-neutral-950 bg-opacity-0"
 >
 
 	<div class=" flex flex-col items-center gap-5 card md:min-w-[350px] h-full w-full md:w-auto">
@@ -39,9 +39,9 @@
 	<div class="flex flex-col justify-center h-full">
 		<h2 class="mb-2">Hello</h2>
 		<h3 class="mb-10">Here's who I am and what I do</h3>
-		<div class="flex gap-5 mb-10">
+		<div class="flex flex-col lg:flex-row gap-5 mb-10">
 			<a href={resume} download
-				><button type="button" class="btn variant-filled rounded-full"
+				><button type="button" class="btn variant-filled rounded-full w-full"
 					><i class="fa-regular fa-download" /> <span>Resume</span></button
 				></a
 			>

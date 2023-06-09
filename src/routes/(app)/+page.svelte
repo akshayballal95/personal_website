@@ -23,12 +23,12 @@
 </svelte:head>
 
 <div class="h-full flex items-center p-3">
-	<div class="flex xl:flex-row flex-col gap-8 justify-around">
-		<div>
+	<div class="flex xl:flex-row flex-col gap-10">
+		<div >
 			<Aboutme />
 		</div>
 
-		<div class="flex flex-col gap-3 lg:basis-2/5 self-start">
+		<div class="flex flex-col gap-3 xl:basis-5/5 self-start">
 
 			<h3>Recent Blogs</h3>
 			<BlogList blogs={data.blogs} />

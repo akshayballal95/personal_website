@@ -24,6 +24,7 @@
 	<!-- Router Slot -->
 	<slot />
 	<!-- ---- / ---- -->
+	<svelte:fragment slot="pageFooter"><Footer/></svelte:fragment>
 
 	<Drawer  padding="0" position="top" regionBackdrop="w-full" regionDrawer="h-auto" >
 		<ListBox
