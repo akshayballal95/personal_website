@@ -67,7 +67,7 @@
 	function getCurrentTimestamp(): string {
 		return new Date().toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
 	}
-	onMount(() => scrollChatBottom('smooth'));
+	onMount(() => {if($elemChat) scrollChatBottom('smooth')});
 
 	async function chat(message: String) {
 		const response = await fetch('api/chat',  {
