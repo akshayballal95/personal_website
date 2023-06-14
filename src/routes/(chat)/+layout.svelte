@@ -59,6 +59,8 @@
 
 	function keyHandler(e:KeyboardEvent){
 		if (e.key=="Enter"){
+			e.preventDefault()
+
 			addMessage()
 			currentMessage = ''
 		}
@@ -119,6 +121,7 @@
 		>
 			<div class="input-group-shim"></div>
 			<textarea
+			
 			on:keydown={(e)=>keyHandler(e)}
 				bind:value={currentMessage}
 				class="bg-transparent border-0 ring-0"
@@ -127,8 +130,9 @@
 				placeholder="Write a message..."
 				rows="1"
 			/>
-			<button  on:click={addMessage} class="variant-filled-primary">Send</button>
+			<button type="submit" on:click={addMessage} class="variant-filled-primary">Send</button>
 		</div>
+
 	</svelte:fragment>
 
 	<Drawer padding="0" position="top" regionBackdrop="w-full">
