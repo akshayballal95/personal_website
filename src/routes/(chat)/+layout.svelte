@@ -29,7 +29,7 @@
 	}
 
 	let currentMessage = '';
-	$: currentMessage
+	$: currentMessage;
 	function addMessage(): void {
 		const newMessage = {
 			id: Date.now(),
@@ -43,56 +43,55 @@
 		// Append the new message to the message feed
 		$message_feed = [...$message_feed, newMessage];
 		// Clear the textarea message
-        	// Smoothly scroll to the bottom of the feed
+		// Smoothly scroll to the bottom of the feed
 		setTimeout(() => {
 			scrollChatBottom('smooth');
 		}, 0);
-        chat(currentMessage)
-        	// Smoothly scroll to the bottom of the feed
+		chat(currentMessage);
+		// Smoothly scroll to the bottom of the feed
 		setTimeout(() => {
 			scrollChatBottom('smooth');
 		}, 0);
 
 		currentMessage = '';
-	
 	}
 
-	function keyHandler(e:KeyboardEvent){
-		if (e.key=="Enter"){
-			e.preventDefault()
-
-			addMessage()
-			currentMessage = ''
+	function keyHandler(e: KeyboardEvent) {
+		if (e.key == 'Enter' && !e.shiftKey) {
+			e.preventDefault();
+			addMessage();
+			currentMessage = '';
 		}
 	}
 
 	function getCurrentTimestamp(): string {
 		return new Date().toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
 	}
-	onMount(() => {if($elemChat) scrollChatBottom('smooth')});
+	onMount(() => {
+		if ($elemChat) scrollChatBottom('smooth');
+	});
 
 	async function chat(message: String) {
-		const response = await fetch('api/chat',  {
+		const response = await fetch('api/chat', {
 			method: 'POST',
-			
+
 			headers: {
 				'Content-Type': 'application/json',
-				'Access-Control-Allow-Origin': '*',
+				'Access-Control-Allow-Origin': '*'
 			},
 			body: JSON.stringify({
 				human_input: message
 			})
 		});
-	
 
-		let AImessage =await response.json()
-        const newMessage = {
+		let AImessage = await response.json();
+		const newMessage = {
 			id: Date.now(),
 			host: false,
 			avatar: 48,
 			name: 'Jane',
 			timestamp: getCurrentTimestamp(),
-			message:AImessage.output,
+			message: AImessage.output,
 			color: 'variant-soft-primary'
 		};
 		// Append the new message to the message feed
@@ -101,8 +100,6 @@
 			scrollChatBottom('smooth');
 		}, 0);
 	}
-
-
 </script>
 
 <AppShell
@@ -119,10 +116,9 @@
 		<div
 			class="m-5 input-group input-group-divider grid-cols-[auto_1fr_auto] rounded-container-token md:w-2/4"
 		>
-			<div class="input-group-shim"></div>
+			<div class="input-group-shim" />
 			<textarea
-			
-			on:keydown={(e)=>keyHandler(e)}
+				on:keydown={(e) => keyHandler(e)}
 				bind:value={currentMessage}
 				class="bg-transparent border-0 ring-0"
 				name="prompt"
@@ -132,7 +128,6 @@
 			/>
 			<button type="submit" on:click={addMessage} class="variant-filled-primary">Send</button>
 		</div>
-
 	</svelte:fragment>
 
 	<Drawer padding="0" position="top" regionBackdrop="w-full">
