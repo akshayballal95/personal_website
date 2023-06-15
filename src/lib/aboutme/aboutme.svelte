@@ -9,7 +9,7 @@
 	class=" md:flex-row flex flex-col gap-5 md:p-0 items-center bg-neutral-950 bg-opacity-0"
 >
 
-	<div class=" flex flex-col items-center gap-5 card md:min-w-[350px] h-full w-full md:w-auto">
+	<div class=" flex flex-col items-center gap-5 card md:min-w-[350px] h-full w-full md:w-auto justify-center">
 		<Avatar class="mt-10 mb-5" src={img} width="w-40" rounded="rounded-full" />
 		<h1 class="unstyled text-4xl">Akshay Ballal</h1>
 		<div class="h-0.5 mt-5 w-14 bg-primary-500 rounded-full" />

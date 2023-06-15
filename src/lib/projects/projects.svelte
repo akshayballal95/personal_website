@@ -9,9 +9,6 @@
 
 	let resume = item as Resume;
 
-
-	
-
 	// export let projects: any;
 	let pros: any[];
 	$: pros = [];
