@@ -51,13 +51,14 @@
 				</Tab>
 			</TabGroup>
 		</div>
-		<iframe
-			title="CarVision"
-			src="https://akshayballal-carvision.hf.space"
-			frameborder="0"
-			width="1200"
-			height="700"
-		/>
+		<div >
+			<iframe class = "lg:w-[1200px] lg:h-[700px] w-full h-[800px] p-0"
+				title="CarVision"
+				src="https://akshayballal-carvision.hf.space"
+				frameborder="0"
+			/>
+		</div>
+
 		{#each pros as pro}
 			{#if (pro.metadata.type == 'software' && $projectSet == 0) || (pro.metadata.type == 'hardware' && $projectSet == 1)}
 				<div
