@@ -25,6 +25,7 @@
 	});
 </script>
 
+
 <div class="flex h-full justify-center items-center p-5">
 	<div class="md:w-3/4 lg:w-2/4 lg:min-w-[800px] flex flex-col gap-8 items-center justify-center">
 		<div class=" flex flex-col gap-4 items-center">
