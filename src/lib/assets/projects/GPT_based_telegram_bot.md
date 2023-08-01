@@ -2,6 +2,7 @@
 title: GPT Based Telegram Bot
 type: software
 image: "https://res.cloudinary.com/dltwftrgc/image/upload/v1683815793/Projects/telebot_nxmrdm.png"
+idx: 4
 ---
 
 I created a Telegram bot that was trained to talk like me using OpenAI's GPT-3 Model. The bot was fine-tuned using my own conversations with other people, resulting in a text output that closely mimicked my speech patterns and mannerisms.

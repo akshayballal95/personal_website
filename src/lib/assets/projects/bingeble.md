@@ -2,6 +2,7 @@
 title: Bingeble
 type: software
 image: "https://res.cloudinary.com/dltwftrgc/image/upload/v1683493043/Projects/logo_vshozn.png"
+idx: 11
 ---
 Bingeble is a social movie recommendation app developed using Flutter for the front-end and Firebase for the back-end. It is designed to help users discover new movies based on their personal preferences and recommendations from friends.
 

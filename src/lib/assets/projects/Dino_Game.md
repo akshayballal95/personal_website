@@ -2,6 +2,7 @@
 title: AI-Powered Game Bot
 type: software
 image: "https://res.cloudinary.com/dltwftrgc/image/upload/v1683816538/Projects/pytorch-logo_zqmjmb.png"
+idx: 2
 ---
 I developed an AI-Powered Game Bot that can play the popular Chrome Dino Game using PyTorch and Efficient Net. This project involved training a deep learning model using PyTorch to recognize the obstacles in the game and make decisions about when to jump and avoid them.  
 

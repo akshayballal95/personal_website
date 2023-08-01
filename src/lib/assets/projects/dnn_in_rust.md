@@ -2,6 +2,7 @@
 title: Deep Neural Network from Scratch in Rust
 type: software
 image: "https://res.cloudinary.com/dltwftrgc/image/upload/v1683700799/Blogs/rust_dnn_1/cover_n3jun5.png"
+idx: 3
 ---
 I implemented a Deep Neural Network (DNN) for image classification from scratch in Rust. The project involved designing and implementing the architecture of the DNN, including the input and output layers, hidden layers, and activation functions.
 

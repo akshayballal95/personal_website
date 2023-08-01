@@ -6,6 +6,7 @@
 	import { Tab, TabGroup } from '@skeletonlabs/skeleton';
 	import { goto } from '$app/navigation';
 	import { fly, slide } from 'svelte/transition';
+	import { parse } from 'postcss';
 
 	let resume = item as Resume;
 
@@ -20,8 +21,10 @@
 
 		for (const path in paths) {
 			const file: any = paths[path];
-			pros = [...pros, file];
+			pros = [...pros, file];	
 		}
+		console.log(pros[2].metadata)
+
 	});
 </script>
 
@@ -60,7 +63,7 @@
 			/>
 		</div>
 
-		{#each pros as pro}
+		{#each pros.sort((a,b)=> a.metadata.idx - b.metadata.idx) as pro}
 			{#if (pro.metadata.type == 'software' && $projectSet == 0) || (pro.metadata.type == 'hardware' && $projectSet == 1)}
 				<div
 					class="card pt-10 pb-10 md:pr-10 w-full flex flex-col"

@@ -2,6 +2,7 @@
 title: Regenerative Shock Absorber
 type: hardware
 image: "https://res.cloudinary.com/dltwftrgc/image/upload/v1683484638/Projects/Render-RegenShox_sgnorg.png"
+idx: 10
 
 ---
 I was part of a project that aimed to convert the vibrational energy released by conventional shock absorbers into electrical energy. By using the Principle of Electromagnetic Induction and Lorentz Force, we replaced the oil-based damper with a coil and magnet-based system. The movement of the magnet inside the coil induced current in the coil, which was rectified to generate direct current.  

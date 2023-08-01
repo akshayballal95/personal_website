@@ -2,6 +2,7 @@
 title: My Website made with SvelteKit
 type: software
 image: "https://res.cloudinary.com/dltwftrgc/image/upload/v1683813963/Projects/ab-high-resolution-logo-color-on-transparent-background_cwsgkr.png"
+idx: 5
 ---
 This [personal website](https://www.akshaymakes.com) was developed using SvelteKit, a modern and lightweight web framework. The website features a clean and modern design, showcasing my personal brand and hosting my blog. The website is designed with high performance in mind, allowing for quick load times and smooth navigation.
 
