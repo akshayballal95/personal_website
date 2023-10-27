@@ -4,8 +4,7 @@
 	<div class="md:flex-row flex flex-col md:items-start  items-center md:gap-12 gap-5">
 		<div class="flex flex-col justify-center items-center text-sm unstyled">
 			<div class="font-semibold mb-2">Call</div>
-			<div>+91-7762844196</div>
-			<div>+91-7904872595</div>
+			<div>+31-0645791146</div>
 		</div>
 
 		<div class="flex flex-col justify-center items-center text-sm unstyled">

@@ -10,6 +10,16 @@
   "avatar": "",
   "education": [
     {
+      "country": "The Netherlands",
+      "start_date": "2023",
+      "field": "Artificial Intelligence and Engineering Systems",
+      "degree": "Master of Science",
+      "institute_name": "Eindhoven University of Technology",
+      "city": "Eindhoven",
+      "end_date": "Present",
+      "description":"Specializing in High Tech Systems and Robotics \n Working on Brain Computer Interfaces in MindLink AI" 
+    },
+    {
       "country": "India",
       "start_date": "2013",
       "field": "Mechanical Engineering",
