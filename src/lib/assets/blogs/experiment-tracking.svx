@@ -4,7 +4,7 @@ author: Akshay Ballal
 stage: live
 image: https://res.cloudinary.com/dltwftrgc/image/upload/v1688229145/Blogs/experiment-tracking/cover_image_ziziuy.jpg
 description: Unlocking Performance - Maximizing Model Accuracy through Experiment Tracking and Hyperparameter Tuning with TensorBoard in PyTorch
-date: 07-01-2023
+date: 07/01/2023
 ---
 
 ![Cover Image](https://res.cloudinary.com/dltwftrgc/image/upload/v1688229145/Blogs/experiment-tracking/cover_image_ziziuy.jpg)
