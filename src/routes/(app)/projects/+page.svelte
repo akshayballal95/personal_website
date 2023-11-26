@@ -27,7 +27,7 @@
 		name="robots"
 		content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
 	/>
-	<title>Akshay Ballal: Machine Learning Enthusiast</title>
+	<title>My Projects and Builds</title>
 
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:creator" content="@akshayballal95" />
@@ -35,7 +35,7 @@
 		property="twitter:image"
 		content="https://res.cloudinary.com/dltwftrgc/image/upload/v1687028785/Blogs/Vision-Transformer/cover_image_2_havvkp.jpg"
 	/>
-	<meta property="twitter:title" content="Akshay Ballal - Machine Learning Enthusiast - Projects" />
+	<meta property="twitter:title" content="Akshay Ballal - Projects and Builds" />
 
 	<meta
 		property="twitter:description"
