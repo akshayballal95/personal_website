@@ -2,7 +2,7 @@
 title: Building an AI Game Bot Using Imitation Learning and 3D Convolution ResNet
 author: Akshay Ballal
 stage: live
-image: https://dev-to-uploads.s3.amazonaws.com/uploads/articles/29jy0lkg0lj3pi1q5bfv.png
+image: https://dev-to-uploads.s3.amazonaws.com/uploads/articles/8xnt8ktf7op24obtqnps.jpg
 description: Unlocking the Secrets of AI Gaming with Imitation Learning, Motion Analysis, and Google Snake - Learn, Play, and Train Without the Hassle of Building Your Own Game
 date: 01/02/2024
 ---
