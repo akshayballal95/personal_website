@@ -8,7 +8,7 @@ export default defineConfig({
 	},
 	server: {
 		proxy: {
-			'/blog': 'https://hashnode-blog-sigma.vercel.app/'
+			'/blog': 'https://hashnode-blog-sigma.vercel.app/blog'
 		}
 	}
 });
