@@ -9,7 +9,7 @@ date: 06/19/2023
 
 ![https://res.cloudinary.com/dltwftrgc/image/upload/v1687028786/Blogs/Vision-Transformer/cover_image_bgxvpq.jpg](https://res.cloudinary.com/dltwftrgc/image/upload/v1687028786/Blogs/Vision-Transformer/cover_image_bgxvpq.jpg)
 
-# Introduction
+## Introduction
 
 In recent years, the field of computer vision has been revolutionized by the advent of transformer models. Originally designed for natural language processing tasks, transformers have proven to be incredibly powerful in capturing spatial dependencies in visual data as well. The Vision Transformer (ViT) is a prime example of this, presenting a novel architecture that achieves state-of-the-art performance on various image classification tasks.
 
@@ -27,7 +27,7 @@ Finally, we will bring it all together by creating the ViT model, utilizing the 
 
 By the end of this post, you will have gained a solid understanding of the Vision Transformer architecture and its implementation in PyTorch. Armed with this knowledge, you will be able to modify and extend the model to suit your specific needs or even build upon it for advanced computer vision applications. Let's start.
 
-# Step 0: Install and Import Dependencies
+## Step 0: Install and Import Dependencies
 
 ```python
 !pip install -q torchinfo
@@ -42,7 +42,7 @@ from torchinfo import summary
 ```
 
 ---
-# Step 1: Get the Data
+## Step 1: Get the Data
 
 1.1. Download the Data from the Web (It will be a .zip file for this)
 1.2. Extract the zip file
@@ -87,23 +87,22 @@ os.remove(data_path / 'pizza_steak_sushi.zip')
 ```
 
 ---
-# Step 2: Define Transformations
+## Step 2: Define Transformations
 
 1. Resize the images using `Resize()` to 224. We choose the images size to be 224 based on the ViT Paper
-
 2. Convert to Tensor using `ToTensor()`
 
 
 ```python
 from torchvision.transforms import Resize, Compose, ToTensor
 
-# Define the train_transform using Compose
+## Define the train_transform using Compose
 train_transform = Compose([
     Resize((224, 224)),
     ToTensor()
 ])
 
-# Define the test_transform using Compose
+## Define the test_transform using Compose
 test_transform = Compose([
     Resize((224, 224)),
     ToTensor()
@@ -111,7 +110,7 @@ test_transform = Compose([
 ```
 
 ---
-# Step 3: Create Dataset and DataLoader
+## Step 3: Create Dataset and DataLoader
 
 We can use PyTorch's ImageFolder DataSet library to create our Datasets.
 
@@ -227,13 +226,11 @@ At a broad level, what ViT does is, it:
 
 1. **Creates Patch Embeddings**
    ![Equations](https://res.cloudinary.com/dltwftrgc/image/upload/v1687117539/Blogs/Vision-Transformer/equations_avmfr1.png)
-
 2. Passes embeddings through **Transformer Blocks**:
 
   - The patch embeddings, along with the classification token, are passed through multiple Transformer blocks.
   - Each Transformer block consists of a MultiHead Self-Attention Block (MSA Block) and a Multi-Layer Perceptron Block (MLP Block).
   - Skip connections are established between the input to the Transformer block and the input to the MSA block, as well as between the input to the MLP block and the output of the MLP block. These skip connections help mitigate the vanishing gradient problem as more Transformer blocks are added.
-
 3. Performs **Classification**:
 
   - The final output from the Transformer blocks is passed through an MLP block.
@@ -243,7 +240,7 @@ At a broad level, what ViT does is, it:
 We will dive into each of these steps in detail, starting with the crucial process of creating patch embeddings.
 
 ---
-# Step 4: Create Patch Embedding Layer
+## Step 4: Create Patch Embedding Layer
 
 For the ViT paper, we need to perform the following functions on the image before passing to the MultiHead Self Attention Transformer Layer
 
@@ -270,7 +267,9 @@ assert IMAGE_WIDTH % PATCH_SIZE == 0 and IMAGE_HEIGHT % PATCH_SIZE ==0 , print("
 
 ```
 
-## Step 4.1 Converting the image into patches of 16 x 16 and creating an embedding vector for each patch of size 768.
+## Step 4.1 
+
+Converting the image into patches of 16 x 16 and creating an embedding vector for each patch of size 768.
 
 This can be accomplished by using a Conv2D Layer with a kernel_size equal to patch_size and a stride equal to patch_size
 
@@ -416,9 +415,9 @@ summary(model=patch_embedding_layer,
 ![Patch Embedding](https://res.cloudinary.com/dltwftrgc/image/upload/v1687024823/Blogs/Vision-Transformer/patch_embedding_layer_v5gefy.png)
 
 ---
-# Step 5. Creating the Multi-Head Self Attention (MSA) Block.
+## Step 5. Creating the Multi-Head Self Attention (MSA) Block.
 
-## Understanding MSA Block
+### Understanding MSA Block
 
 As a first step of putting together our transformer block for the Vision Transformer model, we will be creating a MultiHead Self Attention Block.
 
@@ -426,7 +425,7 @@ Let us take a moment to understand the MSA Block. The MSA block itself consists 
 
 So, our input shape to the MSA Block will be the shape of our patch embeddings that we made using the PatchEmbeddingLayer -> `[batch_size, sequence_length, embedding_dimensions]`. And the output from the MSA layer will be of the same shape as the input.
 
-## MSA Block Code
+### MSA Block Code
 
 Now let us begin to write code for out MSA Block. This will be short as PyTorch has a pre-built implementation of [LayerNorm](https://pytorch.org/docs/stable/generated/torch.nn.LayerNorm.html) and the [MultiHeadAttention Layer](https://pytorch.org/docs/stable/generated/torch.nn.MultiheadAttention.html). We just have to pass the right arguments to suit our architecture. We can find the various parameters that are required for out MSA block in this table from the original ViT Paper.
 
@@ -460,7 +459,7 @@ class MultiHeadSelfAttentionBlock(nn.Module):
     return output
 ```
 
-## Let's test our MSA Block
+### Let's test our MSA Block
 
 
 ```python
@@ -492,9 +491,9 @@ summary(model=multihead_self_attention_block,
 ![MSA_Block](https://res.cloudinary.com/dltwftrgc/image/upload/v1687024822/Blogs/Vision-Transformer/msa_block_pudxdm.png)
 
 ---
-# Step 6. Creating the Machine Learning Perceptron (MLP) Block
+## Step 6. Creating the Machine Learning Perceptron (MLP) Block
 
-## Understanding the MLP Block
+### Understanding the MLP Block
 
 The Machine Learning Perceptron (MLP) Block in the transformer is a combination of a Fully Connected Layer (also called as a Linear Layer or a Dense Layer) and a non-linear layer. In the case of ViT, the non-linear layer is a GeLU layer.
 
@@ -506,7 +505,7 @@ Input → Linear → GeLU → Dropout → Linear → Dropout
 
 According to the paper, the first Linear Layer scales the embedding dimensions to the 3072 dimensions (for the ViT-16/Base). The Dropout is set to 0.1 and the second Linear Layer scales down the dimensions back to the embedding dimensions.
 
-## MLP Block Code
+### MLP Block Code
 
 Let us now assemble our MLP Block. According to the ViT Paper, the output from the MSA Block added to the input to the MSA Block (denoted by the skip/residual connection in the model architecture figure) is passed as input to the MLP Block. All the layers are provided by the PyTorch library. We just need to assemble it.
 
@@ -531,7 +530,7 @@ class MachineLearningPerceptronBlock(nn.Module):
     return self.mlp(self.layernorm(x))
 ```
 
-## Let's test our MLP Block
+### Let's test our MLP Block
 
 ```python
 mlp_block = MachineLearningPerceptronBlock(embedding_dims = EMBEDDING_DIMS,
@@ -552,7 +551,7 @@ summary(model=mlp_block,
 Amazing, looks like the MLP Block is also working as expected.
 
 ---
-# Step 7. Putting together the Transformer Block
+## Step 7. Putting together the Transformer Block
 
 ```python
 class TransformerBlock(nn.Module):
@@ -611,7 +610,7 @@ summary(model=transformer_block,
 ![Transformer Block](https://res.cloudinary.com/dltwftrgc/image/upload/v1687024823/Blogs/Vision-Transformer/transformer_block_kq7xx1.png)
 
 ---
-# Step 8. Creating the ViT Model
+## Step 8. Creating the ViT Model
 
 Finally, let’s put together our ViT Model. It’s going to be as simple as combining whatever we have done till now. One slight addition will be the classifier layer that we will add. In ViT the classifier layer is a simple Linear layer with Layer Normalization. The classification is performed on the zeroth index of the output of the transformer.
 
@@ -657,8 +656,6 @@ summary(model=vit,
 
 ![ViT Model](https://res.cloudinary.com/dltwftrgc/image/upload/v1687024829/Blogs/Vision-Transformer/vit_model_l7ycte.png)
 
-
-That's it. Now you can train this model just like you would any other model in PyTorch. Let me know how it works out for you. 
 
 That’s it. Now you can train this model just like you would any other model in PyTorch. Let me know how it works out for you. I hope this step-by-step guide has helped you understand the Vision Transformer and inspired you to dive deeper into the world of computer vision and transformer models. With the knowledge gained, you are well-equipped to push the boundaries of computer vision and unlock the potential of these groundbreaking architectures.
 

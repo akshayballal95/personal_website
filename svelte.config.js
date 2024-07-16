@@ -19,7 +19,7 @@ const mdsvexOptions = {
 	remarkPlugins: [
 		remarkMath,
 	  ],
-	rehypePlugins: [[addClasses, {"img":"rounded-md", "ul":"list-disc list-inside ml-5", "ol":"list-decimal", }],],
+	rehypePlugins: [[addClasses, {"img":"rounded-md", "ul":"list-disc list-inside ml-5 ", "ol":"list-decimal", 'p':'text-base' }],],
 	highlight: {
 		highlighter: async (code, lang = "text") => {
 			const highlighter = await shiki.getHighlighter({ theme: "github-dark" });
