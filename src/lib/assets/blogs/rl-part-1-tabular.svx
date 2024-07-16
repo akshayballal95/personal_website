@@ -1,0 +1,34 @@
+---
+title: Reinforcement Learning Series- Part 1- Tabular Q Learning
+author: Akshay Ballal
+stage: draft
+image: https://cdn-images-1.medium.com/max/800/0*M2-JeaNGT4VODSa2
+description: Learn how Reinforcement Learning works with theory and code implementation along with tips and tricks.
+date: 07/16/2024
+---
+![Cover](https://cdn-images-1.medium.com/max/800/0*M2-JeaNGT4VODSa2)
+
+Reinforcement Learning is becoming the new trend. From controlling robots to optimizing logistics to tuning language models, reinforcement learning is the go-to strategy. 
+However, newcomers to the field face a fragmented landscape and heavy reliance on implementation details. 
+Even if you find a suitable RL algorithm from the many available, implementing it requires attention to fine details that aren't part of the main RL algorithm, and getting these details right is challenging. While this is often problem-dependent, this series aims to show examples of implementation details across different RL problems and algorithms.
+
+In this first edition, we explore the most basic form of Q-learning: Vanilla or Tabular Q-learning. You'll see that even with the most basic algorithm, there are several tricks we can use to improve and adapt it to various problems.
+
+This RL series is geared towards practitioners who already have basic knowledge of RL and have trained some basic RL agents. For this reason, I may not go into complete theory details and will mainly focus on finer implementation tricks. Nonetheless, let's begin with some required basics. Also, in practice, one would use libraries like stable-baselines, but they are black boxes and do not provide a good understanding of how things work under the hood.
+
+### What is the agent’s objective in RL?
+
+Every RL agent is trained for one simple objective: to maximize the total rewards accumulated. To do this, we need the agent to learn to take the most optimal decision in every state it can face. The equation below shows the total reward accumulated by the agent starting at time step *t*.
+
+
+
+Git Repo: https://github.com/akshayballal95/rl-blog-series/tree/tabular
+
+<div style="display: flex; gap:10px; align-items: center">
+
+<div style = "display: flex; flex-direction:column; gap:10px; justify-content:space-between">
+<p style="padding:0; margin:0">my website: <a href ="http://www.akshaymakes.com/">http://www.akshaymakes.com/</a></p>
+<p  style="padding:0; margin:0">linkedin: <a href ="https://www.linkedin.com/in/akshay-ballal/">https://www.linkedin.com/in/akshay-ballal/</a></p>
+<p  style="padding:0; margin:0">twitter: <a href ="https://twitter.com/akshayballal95">https://twitter.com/akshayballal95/</a></p>
+</div>
+</div>
