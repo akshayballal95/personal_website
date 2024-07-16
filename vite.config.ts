@@ -5,10 +5,5 @@ export default defineConfig({
 	plugins: [sveltekit()],
 	test: {
 		include: ['src/**/*.{test,spec}.{js,ts}']
-	},
-	server: {
-		proxy: {
-			'/blog': 'https://hashnode-blog-sigma.vercel.app/blog'
-		}
 	}
 });
