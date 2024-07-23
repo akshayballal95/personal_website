@@ -1,7 +1,8 @@
 <script lang="ts">
 	// import '../theme.postcss';
 	// The ordering of these imports is critical to your app working properly
-	import '@skeletonlabs/skeleton/themes/theme-gold-nouveau.css';
+	import '../../theme.postcss';
+	// import '@skeletonlabs/skeleton/themes/theme-wintry.css';
 	// If you have source.organizeImports set to true in VSCode, then it will auto change this ordering
 	import '@skeletonlabs/skeleton/styles/all.css';
 	// Most of your app wide CSS should be put in this file
@@ -18,7 +19,8 @@
 	
 </script>
 
-<AppShell>
+<AppShell
+>
 	<svelte:fragment slot="header"><Header /></svelte:fragment>
 
 	<!-- Router Slot -->

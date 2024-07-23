@@ -15,11 +15,11 @@ const dirName = path.resolve(fileURLToPath(import.meta.url), '../');
 
 /** @type {import('mdsvex').MdsvexOptions} */
 const mdsvexOptions = {
-	extensions: ['.md', '.svx'],
+	extensions: ['.md', '.svx', '.mdx'],
 	remarkPlugins: [
 		remarkMath,
 	  ],
-	rehypePlugins: [[addClasses, {"img":"rounded-md", "ul":"list-disc list-inside ml-5 ", "ol":"list-decimal", 'p':'text-base' }], rehypeKatexSvelte],
+	rehypePlugins: [[addClasses, {"img":"rounded-md", "ul":"list-disc list-inside ml-5 ", "ol":"list-decimal", "p":"text-base", "code, kbd, samp, pre": "text-xs" }], rehypeKatexSvelte],
 	highlight: {
 		highlighter: async (code, lang = "text") => {
 			const highlighter = await shiki.getHighlighter({ theme: "github-dark" });

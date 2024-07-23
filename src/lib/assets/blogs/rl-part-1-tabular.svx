@@ -18,9 +18,15 @@ This RL series is geared towards practitioners who already have basic knowledge 
 
 ### What is the agent’s objective in RL?
 
-Every RL agent is trained for one simple objective: to maximize the total rewards accumulated. To do this, we need the agent to learn to take the most optimal decision in every state it can face. The equation below shows the total reward accumulated by the agent starting at time step *t*.
+Every RL agent is trained for one simple objective: to maximize the total rewards accumulated. To do this, we need the agent to learn to take the most optimal decision in every state it can face. The equation below shows the total reward accumulated by the agent tarting at time step *t*. 
 
-
+$$
+\begin{align*}
+G_t &= R_{t+1} + \gamma R_{t+2} + \gamma^2 R_{t+3} + ... + \gamma^{T-1} R_T \\
+&=\sum_{k=0}^{\infty}{\gamma ^k R_{t+k+1}} \\
+&=R_{t+1} + \gamma G_{t+1}
+\end{align*}
+$$
 
 Git Repo: https://github.com/akshayballal95/rl-blog-series/tree/tabular
 

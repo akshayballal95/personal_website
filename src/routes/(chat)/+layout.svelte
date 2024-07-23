@@ -1,7 +1,7 @@
 <script lang="ts">
-	// import '../theme.postcss';
+	import '../../theme.postcss';
 	// The ordering of these imports is critical to your app working properly
-	import '@skeletonlabs/skeleton/themes/theme-gold-nouveau.css';
+	// import '@skeletonlabs/skeleton/themes/theme-gold-nouveau.css';
 	// If you have source.organizeImports set to true in VSCode, then it will auto change this ordering
 	import '@skeletonlabs/skeleton/styles/all.css';
 	// Most of your app wide CSS should be put in this file
@@ -72,7 +72,7 @@
 	});
 
 	async function chat(message: String) {
-		const response = await fetch('api/chat', {
+		const response = await fetch('../api/chat', {
 			method: 'POST',
 
 			headers: {
