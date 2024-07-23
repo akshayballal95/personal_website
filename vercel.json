@@ -1,8 +1,0 @@
-{
-	"rewrites": [
-		{
-			"source": "/blog",
-			"destination": "https://hashnode-blog-sigma.vercel.app/blog"
-		}
-	]
-}

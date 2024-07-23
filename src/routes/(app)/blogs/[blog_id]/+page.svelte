@@ -14,23 +14,6 @@
 			.replace(/ /g, ' ');
 	}
 
-	// onMount(() => {
-	// 	let script = document.createElement('script');
-	// 	script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js';
-	// 	document.head.append(script);
-
-	// 	script.onload = () => {
-	// 		MathJax = {
-	// 			tex: {
-	// 				inlineMath: [
-	// 					['$', '$'],
-	// 					['\\(', '\\)']
-	// 				]
-	// 			},
-	// 			svg: { fontCache: 'global' }
-	// 		};
-	// 	};
-	// });
 </script>
 
 <svelte:head>
@@ -40,7 +23,7 @@
 </svelte:head>
 
 <div class="flex justify-center lg:p-10 p-5">
-	<div class="flex flex-col gap-8 w-full md:w-3/4 max-w-4xl rounded-md card md:p-8 p-5">
+	<div class="flex flex-col gap-8 w-full h-full md:w-3/4 max-w-4xl rounded-md card md:p-8 p-5 relative">
 		<h2 class="mt-5">{data.title}</h2>
 		<p>{formattedDate(data.date)}</p>
 

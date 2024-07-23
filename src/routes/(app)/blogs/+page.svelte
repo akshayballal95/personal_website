@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import type { Blog } from '..//../input_model';
+	import type { Blog } from '../../../input_model';
 	import { tabSet } from '$lib/stores/stateStore';
 	import BlogList from '$lib/blogs/blog_list.svelte';
 
