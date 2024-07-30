@@ -10,6 +10,9 @@ import { escapeSvelte, mdsvex } from 'mdsvex'
 import { fileURLToPath } from 'url';
 import rehypeKatexSvelte from "rehype-katex-svelte";
 import remarkMath from 'remark-math'
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import rehypeExternalLinks from 'rehype-external-links';
+
 
 const dirName = path.resolve(fileURLToPath(import.meta.url), '../');
 
@@ -19,7 +22,24 @@ const mdsvexOptions = {
 	remarkPlugins: [
 		remarkMath,
 	  ],
-	rehypePlugins: [[addClasses, {"img":"rounded-md", "ul":"list-disc list-inside ml-5 ", "ol":"list-outside", "p":"text-base" }], rehypeKatexSvelte],
+	rehypePlugins: [[addClasses, {"img":"rounded-md", "ul":"list-disc list-inside ml-5 ", "ol":"list-outside", "p":"text-base" }], rehypeKatexSvelte,
+
+	  rehypeExternalLinks,
+	[
+		rehypeAutolinkHeadings,
+		{
+			// Adds hyperlinks to the headings, requires rehypeSlug
+			behavior: 'prepend',
+			properties: { className: ['heading-link'], title: 'Permalink', ariaHidden: 'true' },
+			content: {
+				type: 'element',
+				tagName: 'span',
+				properties: {},
+				children: [{ type: 'text', value: '#' }]
+			}
+		}
+	]
+],
 	highlight: {
 		highlighter: async (code, lang = "text") => {
 			const highlighter = await shiki.getHighlighter({ theme: "github-dark" });

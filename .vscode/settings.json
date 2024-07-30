@@ -95,5 +95,14 @@
 		"text",
 		"track",
 		"width"
-	]
+	],
+	"frontMatter.framework.id": "other",
+	"frontMatter.content.publicFolder": "",
+	"frontMatter.content.pageFolders": [
+		{
+			"title": "blogs",
+			"path": "[[workspace]]/src/lib/assets/blogs"
+		}
+	],
+	"frontMatter.git.enabled": true
 }
