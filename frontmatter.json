@@ -66,7 +66,8 @@
         {
           "title": "image",
           "name": "image",
-          "type": "image"
+          "type": "image",
+          "isPreviewImage": true
         },
         {
           "title": "description",
@@ -80,5 +81,6 @@
         }
       ]
     }
-  ]
+  ],
+  "frontMatter.git.enabled": true
 }

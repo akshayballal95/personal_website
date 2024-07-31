@@ -2,12 +2,12 @@
 title: Using YOLO with CLIP to improve Retrieval
 author: Akshay Ballal
 stage: live
-image: https://miro.medium.com/v2/resize:fit:1100/format:webp/1*dk356h-Q9LFff7sEMYFypg.png
+image: https://res.cloudinary.com/dltwftrgc/image/upload/v1722427969/Blogs/yolo_clip/cover_2_kmmtfe.jpg
 description: In this article we explore how object detection can be used with embeddings to make retrieval more better.
 date: 07/30/2024
 ---
 <div class = "flex justify-center items-center">
-<img src = https://miro.medium.com/v2/resize:fit:1100/format:webp/1*dk356h-Q9LFff7sEMYFypg.png width = 600>
+<img src = https://res.cloudinary.com/dltwftrgc/image/upload/v1722427969/Blogs/yolo_clip/cover_2_kmmtfe.jpg width = 600>
 </div>
 In this article we are going to see how we can use object detection models like YOLO along with multimodal embedding models like CLIP to make image retrieval better. 
 
