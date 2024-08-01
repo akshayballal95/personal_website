@@ -6,6 +6,9 @@
     "markdown",
     "svx"
   ],
+  "frontMatter.preview.host": "http://localhost:5173",
+  "frontMatter.preview.pathName": "blogs",
+  "frontMatter.framework.startCommand": "npm run dev",
   "frontMatter.taxonomy.contentTypes": [
     {
       "name": "default",
@@ -30,7 +33,8 @@
         {
           "title": "image",
           "name": "image",
-          "type": "image"
+          "type": "image",
+          "isPreviewImage": true
         },
         {
           "title": "description",
@@ -82,5 +86,13 @@
       ]
     }
   ],
-  "frontMatter.git.enabled": true
+  "frontMatter.git.enabled": true,
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "blogs",
+      "path": "[[workspace]]/src/lib/assets/blogs"
+    }
+  ],
+  "frontMatter.content.publicFolder": "",
+  "frontMatter.framework.id": "other"
 }

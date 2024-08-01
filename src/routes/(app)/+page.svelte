@@ -23,7 +23,7 @@
 	<meta name="title" content="Akshay Ballal: Machine Learning Enthusiast">
 </svelte:head>
 
-<div class="h-full flex p-3 xl:p-12">
+<div class="container h-full flex p-3 xl:p-12">
 	<div class="flex xl:flex-row flex-col gap-10">
 		<div class="xl:basis-3/5" >
 			<Aboutme />

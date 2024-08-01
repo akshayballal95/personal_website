@@ -3,7 +3,7 @@ title: From the Shadows to the Spotlight- Unveiling the Untold History of Deep L
 author: Akshay Ballal
 stage: live
 image: https://res.cloudinary.com/dltwftrgc/image/upload/v1686247608/Blogs/From-the-shadows-to-the-spotlight/cover_image_wlipti.jpg
-description: Many newcomers to the realm of Deep Learning may find it surprising to come across a blog post detailing the "history" of this field. After all, Deep Learning is often perceived as an emerging, cutting-edge technology, seemingly devoid of any substantial historical background. However, the truth is that Deep Learning can be traced back as far as the **1940s**. Its apparent novelty arises from its lack of popularity during certain periods and its numerous name changes. Only recently has it gained widespread recognition under the label of "Deep Learning."
+description: Deep Learning, often seen as a new technology, actually dates back to the 1940s. Its novelty comes from periods of low popularity and various name changes. Only recently has it gained widespread recognition as "Deep Learning."
 date: 06/06/2023
 ---
 

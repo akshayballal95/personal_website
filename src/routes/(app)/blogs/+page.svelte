@@ -18,8 +18,8 @@
 	<meta name="keywords" content="Artificial Intelligence, Machine Learning, Programming, Rust" />
 </svelte:head>
 
-<div class="lg:flex-row flex flex-col w-full items-start justify-around p-4  ">
-	<div class="flex flex-col lg:w-2/4 gap-10"><h1> My Blogs </h1>
+<div class="lg:flex-row flex flex-col w-full items-start justify-around p-4 overflow-hidden">
+	<div class="flex flex-col lg:w-2/4 gap-10 overflow-hidden"><h1> My Blogs </h1>
 
 		<div  >
 			<BlogList blogs={data.blogs} />

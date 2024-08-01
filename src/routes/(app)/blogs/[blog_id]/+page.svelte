@@ -1,4 +1,5 @@
-<script lang="ts" id="MathJax-script">
+<script lang="ts">
+	import { tabSet } from '$lib/stores/stateStore';
 	import { onMount } from 'svelte';
 
 	/** @type {import('./$types').PageData} */
@@ -13,6 +14,11 @@
 			})
 			.replace(/ /g, ' ');
 	}
+	let y = 0;
+	onMount(() => {
+		$tabSet = 4;
+		document.body.querySelector('#blog')?.scrollIntoView();
+	});
 
 </script>
 
@@ -22,8 +28,11 @@
 	<meta name="title" content={data.title} />
 </svelte:head>
 
-<div class="flex justify-center lg:p-10 p-5">
-	<div class="flex flex-col gap-8 w-full h-full md:w-3/4 max-w-4xl rounded-md card md:p-8 p-5 relative">
+<svelte:window bind:scrollY={y} />
+
+
+<div class="flex justify-center lg:p-10 p-5 mx-auto overflow-hidden">
+	<div id="blog" class="flex flex-col gap-8 md:w-3/4 max-w-4xl rounded-md card md:p-8 p-5">
 		<h2 class="mt-5">{data.title}</h2>
 		<p>{formattedDate(data.date)}</p>
 

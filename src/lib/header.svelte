@@ -1,4 +1,4 @@
-<script lang = "ts">
+<script lang="ts">
     import { AppBar } from "@skeletonlabs/skeleton";
 	import Navlinks from "./navlinks.svelte";
 	import { LightSwitch } from '@skeletonlabs/skeleton';
@@ -6,7 +6,7 @@
 </script>
 
 
-<AppBar>
+<AppBar >
 	<svelte:fragment slot="lead" >
 		<div class="lg:flex-row flex flex-col items-baseline whitespace-nowrap cursor-pointer" on:click={()=>{goto("/")}} on:keydown={()=>{}}>
 			<p class="unstyled font-bold text-2xl">Akshay Ballal</p>
