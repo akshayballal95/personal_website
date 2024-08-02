@@ -7,7 +7,7 @@ description: In this article we explore how object detection can be used with em
 date: 07/30/2024
 ---
 <div class = "flex justify-center items-center">
-<img src = https://res.cloudinary.com/dltwftrgc/image/upload/v1722427969/Blogs/yolo_clip/cover_2_kmmtfe.jpg width = 600>
+<img alt="cover image" src = https://res.cloudinary.com/dltwftrgc/image/upload/v1722427969/Blogs/yolo_clip/cover_2_kmmtfe.jpg width = 600>
 </div>
 In this article we are going to see how we can use object detection models like YOLO along with multimodal embedding models like CLIP to make image retrieval better. 
 
@@ -247,7 +247,7 @@ for i, index in enumerate(top_k_indices):
   if image_embeddings[index].cropped_image is not None:
     image_embeddings[index].cropped_image.display(ax = ax[0][i])
   else:
-    ax[0][i].imshow(Image.open(image_embeddings[index].image_path))
+  ax[0][i].imshow(Image.open(image_embeddings[index].image_path))
   ax[1][i].imshow(Image.open(image_embeddings[index].image_path))
   ax[0][i].axis('off')
   ax[1][i].axis('off')

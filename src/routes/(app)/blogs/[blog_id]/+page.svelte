@@ -17,7 +17,7 @@
 	let y = 0;
 	onMount(() => {
 		$tabSet = 4;
-		document.body.querySelector('#blog')?.scrollIntoView();
+		document.body.querySelector('#blog')?.scrollTo(0, 0);
 	});
 
 </script>
@@ -32,7 +32,7 @@
 
 
 <div class="flex justify-center lg:p-10 p-5 mx-auto overflow-hidden">
-	<div id="blog" class="flex flex-col gap-8 md:w-3/4 max-w-4xl rounded-md card md:p-8 p-5">
+	<div id="blog" class="flex flex-col gap-8 md:w-3/4 max-w-4xl rounded-md card md:p-8 p-5 relative">
 		<h2 class="mt-5">{data.title}</h2>
 		<p>{formattedDate(data.date)}</p>
 
