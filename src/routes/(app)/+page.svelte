@@ -23,18 +23,15 @@
 	<meta name="title" content="Akshay Ballal: Machine Learning Enthusiast">
 </svelte:head>
 
-<div class="container h-full flex p-3 xl:p-12">
-	<div class="flex xl:flex-row flex-col gap-10">
-		<div class="xl:basis-3/5" >
+<div class="h-full flex justify-center items-center p-3 xl:p-12 ">
+	<div class="flex xl:flex-row flex-col gap-10 w-full max-w-7xl">
+		<div class="xl:basis-3/5 xl:max-w-3xl" >
 			<Aboutme />
 		</div>
 
-		<div class="flex flex-col gap-3 self-start">
-
+		<div class="flex flex-col gap-3 xl:basis-2/5">
 			<h3>Recent Blogs</h3>
 			<BlogList blogs={data.blogs} />
 		</div>
-
 	</div>
-
 </div>

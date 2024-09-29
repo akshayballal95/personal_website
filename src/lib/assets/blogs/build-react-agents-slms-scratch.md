@@ -290,6 +290,9 @@ agent = Agent( system=system_prompt, function_calling_prompt=function_calling_pr
 loop_agent(agent, "what is the square root of the difference between 32^2 and 54");
 ```
 
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1rpJZ-hSGG0E83xUNE5oAU2R0UmANn7Tb)
+
+
 ### Conclusion
 
 By following this step-by-step guide, you can create a function-calling agent using a custom model trained with **Unsloth** and **LoRA adapters**. This approach ensures efficient memory use while maintaining robust reasoning and function execution capabilities.

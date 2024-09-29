@@ -55,13 +55,13 @@
 				</Tab>
 			</TabGroup>
 		</div>
-		<div >
+		<!-- <div >
 			<iframe class = "lg:w-[1200px] lg:h-[700px] w-full h-[800px] p-0"
 				title="CarVision"
 				src="https://akshayballal-carvision.hf.space"
 				frameborder="0"
 			/>
-		</div>
+		</div> -->
 
 		{#each pros.sort((a,b)=> a.metadata.idx - b.metadata.idx) as pro}
 			{#if (pro.metadata.type == 'software' && $projectSet == 0) || (pro.metadata.type == 'hardware' && $projectSet == 1)}

@@ -5,11 +5,10 @@
 	import { goto } from '$app/navigation';
 </script>
 
-<div
-	class=" md:flex-row flex flex-col gap-5 md:p-0 items-center bg-neutral-950 bg-opacity-0"
->
-
-	<div class=" flex flex-col items-center gap-5 card md:min-w-[350px] h-full w-full md:w-auto justify-center">
+<div class=" md:flex-row flex flex-col gap-5 md:p-0 items-center bg-neutral-950 bg-opacity-0">
+	<div
+		class=" flex flex-col items-center gap-5 card md:min-w-[350px] h-full w-full md:w-auto justify-center"
+	>
 		<Avatar class="mt-10 mb-5" src={img} width="w-40" rounded="rounded-full" />
 		<h1 class="unstyled text-4xl">Akshay Ballal</h1>
 		<div class="h-0.5 mt-5 w-14 bg-primary-500 rounded-full" />
@@ -31,9 +30,7 @@
 			<a class="unstyled" href="https://www.linkedin.com/in/akshay-ballal/"
 				><i class="fa-brands fa-linkedin" /></a
 			>
-
 		</div>
-
 	</div>
 
 	<div class="flex flex-col justify-center h-full">
@@ -48,17 +45,33 @@
 			<button
 				on:click={() => goto('/chat')}
 				type="button"
-				class="btn  variant-filled-surface rounded-full">Chat With My AI Assistant</button
+				class="btn variant-filled-surface rounded-full">Chat With My AI Assistant</button
 			>
 		</div>
 		<p class="text-justify">
-			Welcome to my personal website! I am a self-taught AI developer driven by a passion for
-			pushing the boundaries of technology. Applying First Principles thinking, I strive to solve
-			complex challenges and create innovative solutions. As a Technology Enthusiast, I constantly
-			explore the latest advancements in the field. I am deeply committed to leveraging AI for
-			social good and advocate for green technology. Join me on this journey as I utilize my
-			self-taught expertise to build products and technologies that address industrial problems.
-			Let's collaborate and shape a better future together.
+			Welcome to my personal website! I am an AI developer pursuing a Master’s in Artificial
+			Intelligence at TU Eindhoven, where I am constantly applying First Principles thinking to
+			solve complex problems. I am the creator of EmbedAnything, a Rust-based library designed to
+			optimize embedding pipelines, making them faster and more reliable. As the head of the Machine
+			Learning team at Team Serpentine, I am leading the development of AI solutions for
+			Brain-Computer Interfaces. With a passion for advancing technology, I am committed to using AI
+			for social good and exploring green technology innovations. Let’s collaborate to shape a
+			better future through cutting-edge solutions to real-world challenges.
 		</p>
+	</div>
+
+
+</div>
+<!-- Add the following card -->
+<div class="card p-4 mt-8 w-full max-w-3xl mx-auto">
+	<div class="flex flex-col md:flex-row items-center gap-4">
+		<img src="https://res.cloudinary.com/dltwftrgc/image/upload/v1712504276/Projects/EmbedAnything_500_x_200_px_a4l8xu.png" alt="EmbedAnything Preview" class="w-full md:w-1/3 rounded-lg">
+		<div class="flex-1">
+			<h3 class="h3 mb-2">EmbedAnything</h3>
+			<p class="mb-4">A Rust-based library designed to optimize embedding pipelines, making them faster and more reliable.</p>
+			<a href="https://github.com/StarlightSearch/EmbedAnything" target="_blank" rel="noopener noreferrer" class="btn variant-filled-primary">
+				<i class="fab fa-github mr-2"></i> View on GitHub
+			</a>
+		</div>
 	</div>
 </div>

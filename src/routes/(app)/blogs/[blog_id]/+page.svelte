@@ -51,7 +51,7 @@
 <svelte:window bind:scrollY={y} />
 
 <div class="flex justify-center lg:p-10 p-5 mx-auto overflow-hidden">
-	<div id="blog" class="flex flex-col gap-8 md:w-3/4 w-full rounded-md card md:p-8 p-5 relative">
+	<div id="blog" class="flex flex-col gap-8 xl:w-1/2 md:w-3/4 w-full rounded-md card md:p-8 p-5 relative">
 		<h2 class="mt-5">{data.title}</h2>
 		<p>{formattedDate(data.date)}</p>
 
