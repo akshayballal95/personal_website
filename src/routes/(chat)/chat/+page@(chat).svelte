@@ -25,7 +25,7 @@
 		{#if $message_feed.length!=0}
 		<div class="flex flex-col h-full md:w-2/4 gap-5">
 			<!-- Conversation -->
-			<section bind:this={$elemChat} class=" max-h-fit p-4 overflow-y-scroll space-y-4">
+			<section bind:this={$elemChat} class="max-h-fit p-4 overflow-y-auto space-y-4">
 				{#each $message_feed as bubble}
 					{#if bubble.host === false}
 						<div class="grid grid-cols-[auto_1fr] gap-2">
