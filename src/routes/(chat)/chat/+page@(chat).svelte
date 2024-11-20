@@ -4,7 +4,7 @@
 	import { elemChat, message_feed } from '$lib/stores/messageStore';
 	import avatar from '$lib/assets/avatar.jpg'
 	import img from '$lib/assets/img.png'
-	
+	import { marked } from 'marked';
 
 	$tabSet = 5;
 
@@ -35,7 +35,7 @@
 									<p class="font-bold">{"Akshay"}</p>
 									<small class="opacity-50">{bubble.timestamp}</small>
 								</header>
-								<p>{bubble.message}</p>
+								<p>{@html marked(bubble.message)}</p>
 							</div>
 						</div>
 					{:else}
@@ -45,7 +45,7 @@
 									<p class="font-bold">{"You"}</p>
 									<small class="opacity-50">{bubble.timestamp}</small>
 								</header>
-								<p>{bubble.message}</p>
+								<p>{@html marked(bubble.message)}</p>
 							</div>
 							<Avatar src={avatar} width="w-12" />
 						</div>
