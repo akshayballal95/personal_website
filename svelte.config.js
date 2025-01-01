@@ -22,7 +22,7 @@ const mdsvexOptions = {
 	remarkPlugins: [
 		remarkMath,
 	  ],
-	rehypePlugins: [[addClasses, {"img":"rounded-md", "ul":"list-disc list-inside ml-5 ", "ol":"list-outside", "p":"text-base" }], rehypeKatexSvelte,
+	rehypePlugins: [[addClasses, {"img":"rounded-md", "ul":"list-disc list-inside ml-5 ", "ol":"list-outside", "p":"text-base" ,"p": "z-0" }], rehypeKatexSvelte,
 
 	  rehypeExternalLinks,
 	[
