@@ -11,12 +11,16 @@
 	import { AppShell, Drawer, ListBox, ListBoxItem, Toast, drawerStore } from '@skeletonlabs/skeleton';
 	import Header from '$lib/header.svelte';
 	import Footer from '$lib/footer.svelte';
-	import { goto } from '$app/navigation';
+	import { goto, afterNavigate } from '$app/navigation';
 	import { tabSet } from '$lib/stores/stateStore';
 	import { inject } from '@vercel/analytics';
 	import { dev } from '$app/environment';
 	inject({ mode: dev ? 'development' : 'production' });
 	
+	afterNavigate(() => {
+		// Target the main content area of AppShell
+		document.querySelector('#page')?.scrollTo(0, 0);
+	});
 </script>
 
 <AppShell
