@@ -93,23 +93,25 @@ onMount(async () => {
 						<li>Vector streaming for memory-efficient indexing</li>
 						<li>91.2% Rust, 8.5% Python codebase</li>
 					</ul>
-					<div class="flex gap-3">
-						<a
-							href="https://github.com/StarlightSearch/EmbedAnything"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="btn variant-filled-primary"
-						>
-							<i class="fab fa-github mr-2" /> View on GitHub
-						</a>
-						<a
-							href="https://pypi.org/project/embed-anything/"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="btn variant-filled-tertiary"
-						>
-							<i class="fab fa-python mr-2" /> View on PyPI
-						</a>
+					<div class="flex-col gap-3 ">
+						<div class="flex flex-col gap-3">
+							<a
+								href="https://github.com/StarlightSearch/EmbedAnything"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="btn variant-filled-primary"
+							>
+								<i class="fab fa-github mr-2" /> View on GitHub
+							</a>
+							<a
+								href="https://pypi.org/project/embed-anything/"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="btn variant-filled-tertiary"
+							>
+								<i class="fab fa-python mr-2" /> View on PyPI
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
