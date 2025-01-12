@@ -111,8 +111,17 @@
 
   "work_experience": [
     {
-      "description": "Developed and executed strategic plans to increase revenue and market share.\nLed the design and development of innovative products resulting in a 20% increase in efficiency.\nSuccessfully patented multiple products, protecting company intellectual property and increasing brand recognition.\nManaged team members to ensure productivity and team cohesiveness",
+      "description": "Working on identifying process drift with optical sensor data\nUsing uncertainty estimation with Bayesian Inference methods to make the algorithm more robust.\nImplementing Mechanistic Interpretability techniques like Sparse Autoencoders and Post-hoc XAI like GradCam.",
       "end_date": "Present",
+      "job_title": "Machine Learning Intern",
+      "start_date": "November 2024",
+      "city": "Eindhoven",
+      "country": "The Netherlands",
+      "company_name": "ASML"
+    },
+    {
+      "description": "Developed and executed strategic plans to increase revenue and market share.\nLed the design and development of innovative products resulting in a 20% increase in efficiency.\nSuccessfully patented multiple products, protecting company intellectual property and increasing brand recognition.\nManaged team members to ensure productivity and team cohesiveness",
+      "end_date": "July 2023",
       "job_title": "Chief Product Officer",
       "start_date": "September 2019",
       "city": "Chennai",
