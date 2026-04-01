@@ -3,6 +3,7 @@
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
+		"postinstall": "patch-package",
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
@@ -28,6 +29,7 @@
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte3": "^4.0.0",
 		"mdsvex": "^0.10.6",
+		"patch-package": "^8.0.1",
 		"postcss": "^8.4.23",
 		"prettier": "^2.8.0",
 		"prettier-plugin-svelte": "^2.8.1",

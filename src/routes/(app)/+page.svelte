@@ -185,7 +185,7 @@
     font-size: 1rem;
     font-weight: 600;
     letter-spacing: 0.01em;
-    color: #F5F0EB;
+    color: var(--text-primary);
     margin: 0;
 }
 
@@ -202,8 +202,8 @@
 
 /* ── Project card ── */
 .project-card {
-    background: rgba(255, 255, 255, 0.025);
-    border: 1px solid rgba(255, 255, 255, 0.07);
+    background: var(--surface-card);
+    border: 1px solid var(--border-subtle);
     border-radius: 16px;
     overflow: hidden;
     display: flex;
@@ -219,22 +219,23 @@
 
 .project-img-wrap {
     width: 100%;
-    height: 160px;
     overflow: hidden;
-    background: rgba(255,255,255,0.03);
+    background: rgba(128, 128, 128, 0.06);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 
 .project-img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    max-height: 200px;
+    object-fit: contain;
     border-radius: 0;
-    transition: transform 0.4s ease;
     display: block;
+    transition: transform 0.4s ease;
 }
 
 .project-card:hover .project-img {
-    transform: scale(1.04);
+    transform: scale(1.02);
 }
 
 .project-body {
@@ -256,7 +257,7 @@
     font-size: 1.1rem;
     font-weight: 700;
     letter-spacing: -0.02em;
-    color: #F5F0EB;
+    color: var(--text-primary);
     margin: 0;
 }
 
@@ -291,7 +292,7 @@
     font-size: 0.845rem;
     font-weight: 300;
     line-height: 1.7;
-    color: rgba(245, 240, 235, 0.58);
+    color: var(--text-muted);
     margin: 0;
 }
 
@@ -308,7 +309,7 @@
     font-family: 'DM Sans', sans-serif;
     font-size: 0.8rem;
     font-weight: 300;
-    color: rgba(245, 240, 235, 0.52);
+    color: var(--text-faint);
     padding-left: 1.1rem;
     position: relative;
     margin: 0;
@@ -359,12 +360,12 @@
 
 .project-btn--ghost {
     background: transparent;
-    color: rgba(245, 240, 235, 0.62);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-muted);
+    border: 1px solid var(--border-subtle);
 }
 
 .project-btn--ghost:hover {
     border-color: rgba(159, 107, 35, 0.35);
-    color: rgba(245, 240, 235, 0.9);
+    color: var(--text-primary);
 }
 </style>

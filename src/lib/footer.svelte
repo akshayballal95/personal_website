@@ -32,7 +32,7 @@
 
 <style>
 .site-footer {
-    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    border-top: 1px solid var(--border-subtle);
     padding: 1rem 2rem;
 }
 
@@ -59,7 +59,7 @@
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.65rem;
     letter-spacing: 0.08em;
-    color: rgba(245, 240, 235, 0.3);
+    color: var(--text-faint);
     margin: 0;
     white-space: nowrap;
 }
@@ -85,14 +85,14 @@
     gap: 0.4rem;
     font-family: 'DM Sans', sans-serif;
     font-size: 0.75rem;
-    color: rgba(245, 240, 235, 0.38);
+    color: var(--text-faint);
     text-decoration: none;
     transition: color 0.2s ease;
     white-space: nowrap;
 }
 
 .footer-contact:hover {
-    color: rgba(245, 240, 235, 0.75);
+    color: var(--text-muted);
 }
 
 .footer-icon {
@@ -112,7 +112,7 @@
     width: 30px;
     height: 30px;
     border-radius: 6px;
-    color: rgba(245, 240, 235, 0.35);
+    color: var(--text-faint);
     text-decoration: none;
     font-size: 0.85rem;
     transition: color 0.2s ease, background 0.2s ease;

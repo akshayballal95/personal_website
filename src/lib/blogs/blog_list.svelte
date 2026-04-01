@@ -36,8 +36,8 @@
     display: flex;
     gap: 1rem;
     padding: 0.875rem 0.875rem 1rem;
-    background: rgba(255, 255, 255, 0.025);
-    border: 1px solid rgba(255, 255, 255, 0.065);
+    background: var(--surface-card);
+    border: 1px solid var(--border-subtle);
     border-radius: 12px;
     text-decoration: none !important;
     transition: background 0.22s ease, border-color 0.22s ease, transform 0.22s ease;
@@ -56,7 +56,7 @@
     height: 68px;
     border-radius: 8px;
     overflow: hidden;
-    background: rgba(255,255,255,0.04);
+    background: var(--surface-card);
 }
 
 .blog-img {
@@ -93,7 +93,7 @@
     font-size: 0.875rem;
     font-weight: 600;
     line-height: 1.55;
-    color: #F5F0EB;
+    color: var(--text-primary);
     margin: 0;
     transition: color 0.2s ease;
     text-decoration: none;
@@ -108,7 +108,7 @@
     font-size: 0.75rem;
     font-weight: 300;
     line-height: 1.6;
-    color: rgba(245, 240, 235, 0.42);
+    color: var(--text-faint);
     margin: 0;
     padding-bottom: 2px;
     display: -webkit-box;

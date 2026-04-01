@@ -21,7 +21,7 @@
 	import { inject } from '@vercel/analytics';
 	import { dev } from '$app/environment';
 	import { onMount } from 'svelte';
-	import { message_feed, elemChat } from '$lib/stores/messageStore';
+	import { message_feed, elemChat, isLoading } from '$lib/stores/messageStore';
 	inject({ mode: dev ? 'development' : 'production' });
 
 	function scrollChatBottom(behavior?: ScrollBehavior): void {
@@ -72,33 +72,29 @@
 	});
 
 	async function chat(message: String) {
-		const response = await fetch('../api/chat', {
-			method: 'POST',
+		$isLoading = true;
+		try {
+			const response = await fetch('../api/chat', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify({ human_input: message })
+			});
 
-			headers: {
-				'Content-Type': 'application/json',
-				'Access-Control-Allow-Origin': '*'
-			},
-			body: JSON.stringify({
-				human_input: message
-			})
-		});
-
-		let AImessage = await response.json();
-		const newMessage = {
-			id: Date.now(),
-			host: false,
-			avatar: 48,
-			name: 'Jane',
-			timestamp: getCurrentTimestamp(),
-			message: AImessage.output,
-			color: 'variant-soft-primary'
-		};
-		// Append the new message to the message feed
-		$message_feed = [...$message_feed, newMessage];
-		setTimeout(() => {
-			scrollChatBottom('smooth');
-		}, 0);
+			let AImessage = await response.json();
+			const newMessage = {
+				id: Date.now(),
+				host: false,
+				avatar: 48,
+				name: 'Akshay',
+				timestamp: getCurrentTimestamp(),
+				message: AImessage.output,
+				color: 'variant-soft-primary'
+			};
+			$message_feed = [...$message_feed, newMessage];
+			setTimeout(() => scrollChatBottom('smooth'), 0);
+		} finally {
+			$isLoading = false;
+		}
 	}
 </script>
 
@@ -123,10 +119,17 @@
 				class="bg-transparent border-0 ring-0"
 				name="prompt"
 				id="prompt"
-				placeholder="Write a message..."
+				placeholder="Ask me anything..."
 				rows="1"
+				disabled={$isLoading}
 			/>
-			<button type="submit" on:click={addMessage} class="variant-filled-primary">Send</button>
+			<button type="submit" on:click={addMessage} class="variant-filled-primary" disabled={$isLoading}>
+				{#if $isLoading}
+					<i class="fa-solid fa-circle-notch fa-spin" />
+				{:else}
+					Send
+				{/if}
+			</button>
 		</div>
 	</svelte:fragment>
 

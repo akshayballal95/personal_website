@@ -29,7 +29,7 @@
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(10, 10, 12, 0.82);
+    background: var(--header-bg);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
     border-bottom: 1px solid rgba(159, 107, 35, 0.18);
@@ -59,7 +59,7 @@
     font-weight: 700;
     font-size: 1.2rem;
     letter-spacing: -0.025em;
-    color: #F5F0EB;
+    color: var(--text-primary);
     transition: opacity 0.2s ease;
 }
 

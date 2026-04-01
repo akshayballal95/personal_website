@@ -82,8 +82,8 @@
     flex-direction: column;
     align-items: center;
     gap: 1.25rem;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(159, 107, 35, 0.22);
+    background: var(--surface-card);
+    border: 1px solid var(--border-accent);
     border-radius: 18px;
     padding: 2rem 1.75rem 1.5rem;
     flex-shrink: 0;
@@ -119,7 +119,7 @@
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
-    border: 3px solid #0e0e10;
+    border: 3px solid var(--avatar-border);
 }
 
 /* ── Profile meta ── */
@@ -136,7 +136,7 @@
     font-size: 1.35rem;
     font-weight: 700;
     letter-spacing: -0.025em;
-    color: #F5F0EB;
+    color: var(--text-primary);
     margin: 0;
     line-height: 1;
 }
@@ -163,7 +163,7 @@
     display: flex;
     gap: 0.4rem;
     padding-top: 0.75rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    border-top: 1px solid var(--border-subtle);
     width: 100%;
     justify-content: center;
 }
@@ -175,7 +175,7 @@
     width: 36px;
     height: 36px;
     border-radius: 8px;
-    color: rgba(245, 240, 235, 0.45);
+    color: var(--text-faint);
     text-decoration: none;
     transition: color 0.2s ease, background 0.2s ease;
     font-size: 1rem;
@@ -216,7 +216,7 @@
     font-weight: 700;
     letter-spacing: -0.03em;
     line-height: 1.15;
-    color: #F5F0EB;
+    color: var(--text-primary);
     margin: 0;
 }
 
@@ -255,8 +255,8 @@
     align-items: center;
     padding: 0.6rem 1.4rem;
     background: transparent;
-    color: rgba(245, 240, 235, 0.65);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-muted);
+    border: 1px solid var(--border-subtle);
     border-radius: 8px;
     font-family: 'DM Sans', sans-serif;
     font-size: 0.875rem;
@@ -268,7 +268,7 @@
 
 .btn-ghost:hover {
     border-color: rgba(159, 107, 35, 0.4);
-    color: rgba(245, 240, 235, 0.92);
+    color: var(--text-primary);
     transform: translateY(-1px);
 }
 
@@ -278,7 +278,7 @@
     font-size: 0.875rem;
     font-weight: 300;
     line-height: 1.85;
-    color: rgba(245, 240, 235, 0.6);
+    color: var(--text-muted);
     margin: 0;
 }
 </style>

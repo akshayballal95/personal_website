@@ -55,7 +55,7 @@
     font-size: 0.85rem;
     font-weight: 400;
     letter-spacing: 0.01em;
-    color: rgba(245, 240, 235, 0.55);
+    color: var(--text-muted);
     background: none;
     border: none;
     cursor: pointer;
@@ -77,7 +77,7 @@
 }
 
 .nav-item:hover {
-    color: rgba(245, 240, 235, 0.9);
+    color: var(--text-primary);
 }
 
 .nav-item:hover::after {
@@ -103,8 +103,8 @@
     width: 36px;
     height: 36px;
     padding: 0;
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.08);
+    background: var(--toggle-bg);
+    border: 1px solid var(--toggle-border);
     border-radius: 8px;
     cursor: pointer;
     align-items: center;
@@ -119,7 +119,7 @@
     display: block;
     width: 16px;
     height: 1.5px;
-    background: rgba(245, 240, 235, 0.75);
+    background: var(--bar-color);
     border-radius: 1px;
     transition: opacity 0.2s ease;
 }
