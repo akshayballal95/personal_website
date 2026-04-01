@@ -1,11 +1,11 @@
 <footer class="site-footer">
     <div class="footer-inner">
-        <p class="footer-copy">© 2024 Akshay Ballal</p>
+        <p class="footer-copy">© 2026 Akshay Ballal</p>
 
         <div class="footer-contacts">
-            <a href="tel:+310645791146" class="footer-contact">
+            <a href="tel:+31045791146" class="footer-contact">
                 <i class="fa-solid fa-phone footer-icon" />
-                <span>+31 0645791146</span>
+                <span>+31 645791146</span>
             </a>
             <a href="mailto:arballal95@gmail.com" class="footer-contact">
                 <i class="fa-solid fa-envelope footer-icon" />
