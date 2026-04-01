@@ -37,9 +37,13 @@ Machine Learning, Deep Learning, Computer Vision, NLP, Rust, Python, PyTorch, RA
 
 export const POST: RequestHandler = async ({ request }) => {
     let body = await request.json()
+    const input = body.human_input;
+    if (typeof input !== 'string' || input.trim().length === 0 || input.length > 2000) {
+        return new Response(JSON.stringify({ error: 'Invalid input' }), { status: 400 });
+    }
     const response = await openai.chat.completions.create({
         model: "gpt-4o-mini",
-        messages: [{ "role": "system", "content": system_prompt }, { "role": "user", "content": body.human_input }]
+        messages: [{ "role": "system", "content": system_prompt }, { "role": "user", "content": input }]
     })
 
     return new Response(JSON.stringify({ output: response.choices[0].message.content }));

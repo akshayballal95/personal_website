@@ -5,6 +5,11 @@
 	import avatar from '$lib/assets/avatar.jpg'
 	import img from '$lib/assets/img.png'
 	import { marked } from 'marked';
+	import DOMPurify from 'dompurify';
+
+	function safeMarkdown(text: string): string {
+		return DOMPurify.sanitize(marked(text) as string);
+	}
 
 	$tabSet = 5;
 
@@ -40,7 +45,7 @@
 									<p class="font-bold text-sm">Akshay</p>
 									<small class="opacity-50 text-xs">{bubble.timestamp}</small>
 								</header>
-								<div class="text-sm prose dark:prose-invert max-w-none">{@html marked(bubble.message)}</div>
+								<div class="text-sm prose dark:prose-invert max-w-none">{@html safeMarkdown(bubble.message)}</div>
 							</div>
 						</div>
 					{:else}

@@ -2,6 +2,15 @@ import sendgrid from '@sendgrid/mail';
 import { VITE_SENDGRID_API_KEY } from '$env/static/private';
 import { toastStore, type ToastSettings } from '@skeletonlabs/skeleton';
 
+function escapeHtml(str: string): string {
+    return str
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#x27;');
+}
+
 /** @type {import('./$types').Actions} */
 export const actions = {
     default: async ({ cookies, request }) => {
@@ -25,11 +34,11 @@ export const actions = {
             message: data.get('message') as string,
         };
 
-        const html = "<p>First Name: " + formData.firstName + "</p>" +
-            "<p>Last Name: " + formData.lastName + "</p>" +
-            "<p>Email: " + formData.email + "</p>" +
-            "<p>Subject: " + formData.subject + "</p>" +
-            "<p>Message: " + formData.message + "</p>";
+        const html = "<p>First Name: " + escapeHtml(formData.firstName) + "</p>" +
+            "<p>Last Name: " + escapeHtml(formData.lastName) + "</p>" +
+            "<p>Email: " + escapeHtml(formData.email) + "</p>" +
+            "<p>Subject: " + escapeHtml(formData.subject) + "</p>" +
+            "<p>Message: " + escapeHtml(formData.message) + "</p>";
 
         try {
             const response_send = await sendgrid.send({

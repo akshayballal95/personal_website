@@ -1,7 +1,11 @@
+import { error } from '@sveltejs/kit';
 
 /** @type {import('./$types').PageLoad} */
 
 export async function load({ params }) {
+    if (!/^[a-zA-Z0-9_-]+$/.test(params.blog_id)) {
+        throw error(404, 'Not found');
+    }
     const blog = await import(`../../../../lib/assets/blogs/${params.blog_id}.md`);
 
     return {
