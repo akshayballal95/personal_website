@@ -1,8 +1,8 @@
 {
   "personal_information": {
-    "introduction": "",
-    "position": "Chief Product Officer",
-    "phone_number": "7762844196",
+    "introduction": "Versatile AI Engineer with a background in developing deep learning models and using AI in products. I have authored two open source libraries, out of which one has over 300,000 downloads with 750 stars on GitHub.",
+    "position": "Machine Learning Engineer",
+    "phone_number": "+31-645791146",
     "email": "arballal95@gmail.com",
     "last_name": "Ballal",
     "first_name": "Akshay"
@@ -16,147 +16,154 @@
       "degree": "Master of Science",
       "institute_name": "Eindhoven University of Technology",
       "city": "Eindhoven",
-      "end_date": "Present",
-      "description":"Specializing in High Tech Systems and Robotics \n Working on Brain Computer Interfaces in MindLink AI" 
+      "end_date": "2025",
+      "description": "Graduated Cum Laude\nML Team Lead at Serpentine AI — research group developing AI models for brain signal processing."
     },
     {
       "country": "India",
       "start_date": "2013",
       "field": "Mechanical Engineering",
       "degree": "Bachelor of Engineering",
-      "institute_name": "Birla Institute of Technology",
+      "institute_name": "Birla Institute of Technology, Mesra",
       "city": "Ranchi",
       "end_date": "2017",
-      "description":"Part of a student Baja Racing Team, Firebolt Racing\nWorked as Chassis Designer and Vehicle Integration Head\nDesigned and Manufactured 3 Cars over 3 years." 
+      "description": "Part of a student Baja Racing Team, Firebolt Racing.\nWorked as Chassis Designer and Vehicle Integration Head.\nDesigned and manufactured 3 cars over 3 years."
     }
   ],
   "address": {
-    "city": "Chennai",
-    "address_line_1": "C604, Emami Tejomaya",
-    "address_line_2": "OMR Egatur",
-    "pincode": "603103"
+    "city": "Eindhoven",
+    "address_line_1": "",
+    "address_line_2": "",
+    "pincode": ""
   },
   "projects": [
     {
-      "start_date": "2017",
-      "description": "I am proud to have led the development of a cutting-edge 3D printer that is designed to print high-temperature materials like PEEK, PEI, and PAEK. With applications in aerospace and biomedical industries, this printer is a game-changer in the world of advanced manufacturing.\n What sets this printer apart is its unique extruder head, which is capable of printing inside a heated chamber that is completely isolated from all electronics and drive components. This ensures that the printing process is precise and free from any external influences, resulting in high-quality, reliable parts.As the lead engineer on this project, I oversaw a team of skilled professionals to bring this printer to life. The result is a groundbreaking machine that has the potential to revolutionize the way we approach advanced manufacturing. I am thrilled to have been a part of this project, and I look forward to seeing the impact it will have in the future",
-      "title": "Continuous Fiber 3D Printer",
-      "end_date": "2018"
+      "start_date": "February 2024",
+      "end_date": "Present",
+      "description": "Author of EmbedAnything — 750 GitHub stars and over 300,000 downloads.\nProvides fast multi-modal embeddings generation.\nContributed several models to open-source projects.",
+      "title": "EmbedAnything"
     },
     {
-      "description": "Designed a shock absorber that can absorb energy from road bumps and convert it into electricity",
-      "title": "Regenerative Shock absorber",
-      "start_date": "2016",
-      "end_date": "2017"
+      "start_date": "February 2025",
+      "end_date": "Present",
+      "description": "Built a multi-platform desktop application that indexes local files and allows semantic search across them.\nUsed RAG techniques like hybrid search and reranking to improve retrieval quality.\nUsed Ollama for local LLMs and OpenAI, Gemini API for cloud LLMs.",
+      "title": "Starlight Search"
+    },
+    {
+      "start_date": "February 2025",
+      "end_date": "Present",
+      "description": "An open-source agentic library and agent API server for intelligent chat applications.\nImplemented CodeAgent architecture where the agent writes Python code to execute tool calls.\nDeployed the agent as an API on AWS cloud services using EC2 instance.",
+      "title": "Lumo Agent"
+    },
+    {
+      "start_date": "September 2023",
+      "end_date": "July 2025",
+      "description": "Developed a robust deep learning model to predict limb movements from EEG Motor Imagery data in real-time.\nImplemented data pipelines to handle real-time data with filtering and buffering.\nPresented a live demo of the application at Dutch Design Week 2024.",
+      "title": "AI Motor Imagery"
     }
   ],
   "id": "Wge83PkyBViAm5Hk3zE9",
   "target_company": {
-    "job_description": "Structural Analysis",
-    "company_name": "Tesla",
-    "position": "Mechanical Design Engineer"
+    "job_description": "",
+    "company_name": "",
+    "position": ""
   },
-
-  "certification":[
+  "certification": [
     {
-      "course_name":"Convolutional Neural Networks",
+      "course_name": "Convolutional Neural Networks",
       "date": "Feb 2023",
-      "credential":"Credential ID 24KKVWBDGYHV",
+      "credential": "Credential ID 24KKVWBDGYHV",
       "platform": "Coursera",
-      "url":"https://www.coursera.org/account/accomplishments/certificate/24KKVWBDGYHV"
+      "url": "https://www.coursera.org/account/accomplishments/certificate/24KKVWBDGYHV"
     },
     {
-      "course_name":"Deep Learning Specialization",
+      "course_name": "Deep Learning Specialization",
       "date": "Feb 2023",
-      "credential":"Credential ID EQXBTTW29QN5",
+      "credential": "Credential ID EQXBTTW29QN5",
       "platform": "Coursera",
-      "url":"https://www.coursera.org/account/accomplishments/specialization/certificate/EQXBTTW29QN5"
+      "url": "https://www.coursera.org/account/accomplishments/specialization/certificate/EQXBTTW29QN5"
     },
     {
-      "course_name":"Sequence Models",
+      "course_name": "Sequence Models",
       "date": "Feb 2023",
-      "credential":"Credential ID V8JEHG5HGCKL",
+      "credential": "Credential ID V8JEHG5HGCKL",
       "platform": "Coursera",
-      "url":"https://www.coursera.org/account/accomplishments/certificate/V8JEHG5HGCKL"
+      "url": "https://www.coursera.org/account/accomplishments/certificate/V8JEHG5HGCKL"
     },
     {
-      "course_name":"Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization",
+      "course_name": "Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization",
       "date": "Jan 2023",
-      "credential":"Credential ID 3QBGWYLWPP5R",
+      "credential": "Credential ID 3QBGWYLWPP5R",
       "platform": "Coursera",
-      "url":"https://www.coursera.org/account/accomplishments/certificate/3QBGWYLWPP5R"
+      "url": "https://www.coursera.org/account/accomplishments/certificate/3QBGWYLWPP5R"
     },
     {
-      "course_name":"Structuring Machine Learning Projects",
+      "course_name": "Structuring Machine Learning Projects",
       "date": "Jan 2023",
-      "credential":"Credential ID 8YRTGURSJA2R",
+      "credential": "Credential ID 8YRTGURSJA2R",
       "platform": "Coursera",
-      "url":"https://www.coursera.org/account/accomplishments/certificate/8YRTGURSJA2R"
+      "url": "https://www.coursera.org/account/accomplishments/certificate/8YRTGURSJA2R"
     },
     {
-      "course_name":"Neural Networks and Deep Learning",
+      "course_name": "Neural Networks and Deep Learning",
       "date": "Dec 2022",
-      "credential":"Credential ID 4HSGMWLNPRUX",
+      "credential": "Credential ID 4HSGMWLNPRUX",
       "platform": "Coursera",
-      "url":"https://www.coursera.org/account/accomplishments/certificate/4HSGMWLNPRUX"
+      "url": "https://www.coursera.org/account/accomplishments/certificate/4HSGMWLNPRUX"
     },
     {
-      "course_name":"Introduction to Computer Science and Programing Using Python",
+      "course_name": "Introduction to Computer Science and Programming Using Python",
       "date": "Nov 2016",
-      "credential":"Credential ID 0a3d508a4bc546ab8324e488a76a0ab8",
+      "credential": "Credential ID 0a3d508a4bc546ab8324e488a76a0ab8",
       "platform": "edX",
-      "url":"https://courses.edx.org/certificates/0a3d508a4bc546ab8324e488a76a0ab8"
+      "url": "https://courses.edx.org/certificates/0a3d508a4bc546ab8324e488a76a0ab8"
     }
   ],
-
   "work_experience": [
     {
-      "description": "Working on identifying process drift with optical sensor data\nUsing uncertainty estimation with Bayesian Inference methods to make the algorithm more robust.\nImplementing Mechanistic Interpretability techniques like Sparse Autoencoders and Post-hoc XAI like GradCam.",
+      "description": "Improve machine learning model performance on out-of-distribution data using domain adaptation.\nPre-training foundational vision models for optical sensor data.",
       "end_date": "Present",
+      "job_title": "Machine Learning Engineer",
+      "start_date": "September 2025",
+      "city": "Eindhoven",
+      "country": "The Netherlands",
+      "company_name": "ASML (via TMC)"
+    },
+    {
+      "description": "Developed Generative AI pipelines for user persona detection and an AI coach for children.\nDeployed serverless AI functions in Azure and integrated RAG pipelines for the coach using Azure services.",
+      "end_date": "October 2025",
+      "job_title": "AI Lead Engineer",
+      "start_date": "July 2025",
+      "city": "Eindhoven",
+      "country": "The Netherlands",
+      "company_name": "ChatLicense (Freelancer)"
+    },
+    {
+      "description": "Employed Deep Learning Models on optical sensor data to predict KPIs for metrology.\nProvided uncertainty estimation with Bayesian Inference methods to make the model more robust.\nDeveloped Denoising Diffusion Models resulting in 93% accuracy in process drift prediction.\nImplemented Mechanistic Interpretability techniques like Sparse Autoencoders and Post-hoc XAI like GradCam.",
+      "end_date": "August 2024",
       "job_title": "Machine Learning Intern",
-      "start_date": "November 2024",
+      "start_date": "November 2023",
       "city": "Eindhoven",
       "country": "The Netherlands",
       "company_name": "ASML"
     },
     {
-      "description": "Developed and executed strategic plans to increase revenue and market share.\nLed the design and development of innovative products resulting in a 20% increase in efficiency.\nSuccessfully patented multiple products, protecting company intellectual property and increasing brand recognition.\nManaged team members to ensure productivity and team cohesiveness",
+      "description": "Spearheaded product strategy contributing to the successful launch of innovative products and features.\nEstablished customer feedback loops, enabling continuous iteration and measurable product improvements.\nDirected cross-functional software and hardware teams to ensure timely delivery of high-quality products.\nCo-inventor of 7 patents in the fields of Additive Manufacturing and Composites.",
       "end_date": "July 2023",
       "job_title": "Chief Product Officer",
-      "start_date": "September 2019",
+      "start_date": "December 2019",
       "city": "Chennai",
       "country": "India",
-      "company_name": "Fabhead Automation"
+      "company_name": "Fabheads Automation"
     },
     {
-      "job_title": "Head Engineering",
-      "description": "Conducted Preliminary and Critical Design Reviews, resulting in improved product functionality and quality.\nDemonstrated strong leadership skills by leading a team of engineers to deliver successful projects, while ensuring timely delivery and budget adherence.\nAchieved increased reliability of the product through rigorous testing and design optimization, resulting in improved customer satisfaction and retention.\nSpearheaded the development of new technologies and features, resulting in increased sales and revenue for the company.",
-      "city": "Chennai",
-      "end_date": "September 2019",
-      "company_name": "Fabheads Automation",
-      "start_date": "December 2017",
-      "country": "India"
-    },
-    {
-      "description": "Created complex CAD models and performed thermal and structural analysis, resulting in optimized product designs and improved manufacturing efficiency.\nDeveloped detailed engineering drawings and generated accurate bills of materials, enabling streamlined production and reduced material waste.\nConducted extensive research on industry standards and best practices to incorporate into design processes, resulting in improved product functionality and customer satisfaction.\nCollaborated with cross-functional teams to identify and resolve design issues, resulting in timely project completion and successful product launches."
-      ,
-      "company_name": "Fabheads Automation",
-      "country": "India",
+      "description": "Joined the startup as the first founding employee.\nPioneered the development of Asia's first carbon fiber 3D printer by leading a team of 10 engineers.\nBuilt backend for the slicer in Django with tool-path optimizations, resulting in 20% faster prints than other slicers.",
+      "end_date": "December 2019",
+      "job_title": "Head of Engineering",
       "start_date": "July 2017",
-      "job_title": "Mechanical Design Engineer",
       "city": "Chennai",
-      "end_date": "December 2017"
-    },
-    {
-      "description": "Devised techniques for thermal management of the product and  performed several simulations to analyze the internal temperature profile of the device.\nPerformed vibration analysis of the product and developed new enclosure design for increasing the life of the product in harsher environments.\nWorked on the design of a new product which would be used for Security and Tracking of Motorbikes.",
-      "company_name": "Carnot Technologies",
       "country": "India",
-      "start_date": "December 2016",
-      "job_title": "Product Design Intern",
-      "city": "Mumbai",
-      "end_date": "June 2017"
+      "company_name": "Fabheads Automation"
     }
-
-
   ]
 }

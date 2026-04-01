@@ -53,13 +53,10 @@
         </div>
 
         <p class="bio">
-            Welcome to my personal website! I am an AI developer pursuing a Master's in Artificial
-            Intelligence at TU Eindhoven, where I am constantly applying First Principles thinking to
-            solve complex problems. I am the creator of EmbedAnything, a Rust-based library designed to
-            optimize embedding pipelines, making them faster and more reliable. As the head of the
-            Machine Learning team at Team Serpentine, I am leading the development of AI solutions for
-            Brain-Computer Interfaces. With a passion for advancing technology, I am committed to using
-            AI for social good and exploring green technology innovations.
+            Versatile AI Engineer with a background in developing deep learning models and deploying AI in products.
+            I authored two open-source libraries — EmbedAnything has over 300,000 downloads and 750 GitHub stars.
+            I hold an MSc. in Artificial Intelligence from Eindhoven University of Technology (Cum Laude) and have
+            six years of prior industry experience spanning machine learning, software development, and engineering.
         </p>
     </div>
 </div>
