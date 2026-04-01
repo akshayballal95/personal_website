@@ -1,119 +1,131 @@
 <script lang="ts">
-	import { TabGroup, Tab, ListBox, ListBoxItem } from '@skeletonlabs/skeleton';
-	import { tabSet } from '$lib/stores/stateStore';
-	import { goto } from '$app/navigation';
+    import { tabSet } from '$lib/stores/stateStore';
+    import { goto } from '$app/navigation';
+    import { drawerStore } from '@skeletonlabs/skeleton';
+    import type { DrawerSettings } from '@skeletonlabs/skeleton';
 
-	import { Drawer, drawerStore } from '@skeletonlabs/skeleton';
-	import type { DrawerSettings } from '@skeletonlabs/skeleton';
+    const links = [
+        { label: 'About',    value: 0, href: '/' },
+        { label: 'Resume',   value: 1, href: '/resume' },
+        { label: 'Projects', value: 2, href: '/projects' },
+        { label: 'Contact',  value: 3, href: '/contact' },
+        { label: 'Blog',     value: 4, href: '/blogs' },
+        { label: 'Chat',     value: 5, href: '/chat' },
+    ];
 
-	let innerWidth = 0;
-
-	function trigger(position: 'left' | 'top' | 'right' | 'bottom'): void {
-		const s: DrawerSettings = { id: 'demo', position };
-		drawerStore.open(s);
-	}
+    function openDrawer(): void {
+        const s: DrawerSettings = { id: 'demo', position: 'top' };
+        drawerStore.open(s);
+    }
 </script>
 
-<svelte:window bind:innerWidth />
-
-<TabGroup
-	justify="justify-center gap-2"
-	active="variant-filled-primary"
-	hover="hover:variant-soft-primary"
-	flex="flex-1 lg:flex-none"
-	rounded=""
-	border=""
-	class="bg-surface-100-800-token w-full hidden md:block"
->
-	<Tab
-		bind:group={$tabSet}
-		on:click={() => {
-			goto('/');
-		}}
-		name="about_me"
-		value={0}
-		class="rounded"
-	>
-		<!-- <svelte:fragment slot="lead">SD</svelte:fragment> -->
-		<p class="font-light">About Me</p>
-	</Tab>
-
-	<Tab
-		bind:group={$tabSet}
-		on:click={() => {
-			goto('/resume');
-		}}
-		name="resume"
-		value={1}
-		class="rounded"
-	>
-		<!-- <svelte:fragment slot="lead">SD</svelte:fragment> -->
-		<p class="font-light">Resume</p>
-	</Tab>
-
-	<Tab
-		bind:group={$tabSet}
-		on:click={() => {
-			goto('/projects');
-		}}
-		name="projects"
-		value={2}
-		class="rounded"
-	>
-		<!-- <svelte:fragment slot="lead">SD</svelte:fragment> -->
-		<p class="font-light">Projects</p>
-	</Tab>
-
-	<Tab
-		bind:group={$tabSet}
-		name="Contact"
-		value={3}
-		class="rounded"
-		on:click={() => {
-			goto('/contact');
-		}}
-	>
-		<!-- <svelte:fragment slot="lead">SD</svelte:fragment> -->
-		<p class="font-light">Contact</p>
-	</Tab>
-
-	<Tab
-		bind:group={$tabSet}
-		name="Blog"
-		value={4}
-		class="rounded"
-		on:click={() => {
-			goto('/blogs');
-		}}
-	>
-		<!-- <svelte:fragment slot="lead">SD</svelte:fragment> -->
-		<p class="font-light">Blog</p>
-	</Tab>
-
-	<Tab
-	bind:group={$tabSet}
-	name="Chat"
-	value={5}
-	class="rounded"
-	on:click={() => {
-		goto('/chat');
-	}}
->
-	<!-- <svelte:fragment slot="lead">SD</svelte:fragment> -->
-	<p class="font-light">Chat</p>
-</Tab>
-
-
-	
-
-	<!-- ... -->
-</TabGroup>
+<nav class="nav-desktop hidden md:flex" aria-label="Main navigation">
+    {#each links as link}
+        <button
+            class="nav-item"
+            class:is-active={$tabSet === link.value}
+            on:click={() => { $tabSet = link.value; goto(link.href); }}
+        >
+            {link.label}
+        </button>
+    {/each}
+</nav>
 
 <button
-	class="btn-icon variant-filled md:hidden"
-	on:click={() => {
-		trigger('top');
-	}}
+    class="mobile-toggle md:hidden"
+    on:click={openDrawer}
+    aria-label="Open navigation"
 >
-	<i class="fa-solid fa-arrow-down" />
+    <span class="bar"></span>
+    <span class="bar bar--mid"></span>
+    <span class="bar"></span>
 </button>
+
+<style>
+/* ── Desktop nav ── */
+.nav-desktop {
+    align-items: center;
+    gap: 0;
+}
+
+.nav-item {
+    position: relative;
+    padding: 0.375rem 0.875rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    color: rgba(245, 240, 235, 0.55);
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    white-space: nowrap;
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 60%;
+    height: 1.5px;
+    background: linear-gradient(90deg, transparent, #D4900A, transparent);
+    border-radius: 1px;
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-item:hover {
+    color: rgba(245, 240, 235, 0.9);
+}
+
+.nav-item:hover::after {
+    transform: translateX(-50%) scaleX(1);
+    background: linear-gradient(90deg, transparent, rgba(159, 107, 35, 0.6), transparent);
+}
+
+.nav-item.is-active {
+    color: #D4900A;
+}
+
+.nav-item.is-active::after {
+    transform: translateX(-50%) scaleX(1);
+    background: linear-gradient(90deg, transparent, #D4900A, transparent);
+}
+
+/* ── Mobile toggle ── */
+.mobile-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 8px;
+    cursor: pointer;
+    align-items: center;
+    transition: border-color 0.2s ease;
+}
+
+.mobile-toggle:hover {
+    border-color: rgba(159, 107, 35, 0.4);
+}
+
+.bar {
+    display: block;
+    width: 16px;
+    height: 1.5px;
+    background: rgba(245, 240, 235, 0.75);
+    border-radius: 1px;
+    transition: opacity 0.2s ease;
+}
+
+.bar--mid {
+    width: 11px;
+    margin-right: 5px;
+}
+</style>

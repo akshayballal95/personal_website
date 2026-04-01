@@ -9,13 +9,13 @@
 	<meta name="author" content="Akshay Ballal" />
 	<meta
 		name="description"
-		content="Welcome to my personal website! I am a self-taught AI developer driven by a passion for pushing the boundaries of technology. Applying First Principles thinking, I strive to solve complex challenges and create innovative solutions. As a Technology Enthusiast, I constantly explore the latest advancements in the field. I am deeply committed to leveraging AI for social good and advocate for green technology. Join me on this journey as I utilize my self-taught expertise to build products and technologies that address industrial problems. Let's collaborate and shape a better future together."
+		content="Welcome to my personal website! I am a Machine Learning Engineer driven by a passion for pushing the boundaries of technology. Applying First Principles thinking, I strive to solve complex challenges and create innovative solutions. I am deeply committed to leveraging AI for social good and advocate for green technology. Join me on this journey as I utilize my expertise to build products and technologies that address industrial problems. Let's collaborate and shape a better future together."
 	/>
 
 	<meta property="og:title" content="My Projects and Demos" />
 	<meta
 		property="og:description"
-		content="I am a Machine Learning Enthusiast. Check out all my Projects and Demos."
+		content="I am a Machine Learning Engineer. Check out all my Projects and Demos."
 	/>
 	<meta property="og:url" content="www.akshaymakes.com" />
 	<meta
@@ -39,7 +39,7 @@
 
 	<meta
 		property="twitter:description"
-		content="I am a Machine Learning Enthusiast. Check out all my Projects and Demos."
+		content="I am a Machine Learning Engineer. Check out all my Projects and Demos."
 	/>
 </svelte:head>
 

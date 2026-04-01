@@ -1,12 +1,14 @@
 /*place global styles here */
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,500;1,600;1,700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=JetBrains+Mono:wght@300;400;500&display=swap');
 
 html,
 body {
 	@apply h-full overflow-hidden;
 }
+
 p {
 	@apply text-sm;
+	font-family: 'DM Sans', sans-serif;
 }
 
 ol {
@@ -14,25 +16,44 @@ ol {
 }
 
 li {
-	@apply mt-3;
+	@apply mt-3 text-sm;
+	font-family: 'DM Sans', sans-serif;
 }
 
 pre {
 	@apply text-xs;
 }
+
 code {
 	@apply text-sm;
 }
+
 img {
 	@apply rounded-md;
 }
 
-@font-face {
-	font-family: 'Poppins';
-	src: url('/fonts/Poppins/Poppins-Light.ttf');
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Remove link underlines globally — use explicit underline only where intentional */
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
 }
 
 :root {
-	--theme-font-family-base: 'Poppins', sans-serif;
-	--theme-font-family-heading: 'Poppins', sans-serif;
+	--font-display: 'Plus Jakarta Sans', sans-serif;
+	--font-body: 'DM Sans', sans-serif;
+	--font-mono: 'JetBrains Mono', monospace;
+	--theme-font-family-base: 'DM Sans', sans-serif;
+	--theme-font-family-heading: 'Plus Jakarta Sans', sans-serif;
+	--amber: #9f6b23;
+	--amber-light: #D4900A;
+	--amber-bright: #f6c636;
+	--text-primary: #F5F0EB;
+	--text-muted: rgba(245, 240, 235, 0.55);
 }

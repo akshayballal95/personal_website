@@ -14,7 +14,7 @@ link: https://medium.com/@akshayballal95/deep-neural-network-from-scratch-in-rus
 
 Hi there! I'm excited to share with you my latest blog post on building a Deep Neural Network from Scratch in Rust. In this post, I'll take you through the basics of neural networks and show you how to implement them using Rust programming language.
 
-As a machine learning enthusiast, I have always been fascinated by the inner workings of neural networks. While there are many high-level libraries that make it easy to build neural networks, I believe that understanding the fundamentals and building it from scratch is essential for mastering the concepts.
+As a machine learning engineer, I have always been fascinated by the inner workings of neural networks. While there are many high-level libraries that make it easy to build neural networks, I believe that understanding the fundamentals and building it from scratch is essential for mastering the concepts.
 
 In this tutorial series, I will guide you through building a neural network model step by step, explaining each concept along the way. We'll start with a brief introduction to neural networks and then dive into the Rust programming language, which is known for its performance, safety, and concurrency.
 

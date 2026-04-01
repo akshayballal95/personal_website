@@ -16,6 +16,8 @@ import rehypeExternalLinks from 'rehype-external-links';
 
 const dirName = path.resolve(fileURLToPath(import.meta.url), '../');
 
+let highlighterInstance = null;
+
 /** @type {import('mdsvex').MdsvexOptions} */
 const mdsvexOptions = {
 	extensions: ['.md', '.svx', '.mdx'],
@@ -42,12 +44,14 @@ const mdsvexOptions = {
 ],
 	highlight: {
 		highlighter: async (code, lang = "text") => {
-			const highlighter = await shiki.getHighlighter({ theme: "github-dark" });
-			const html = escapeSvelte(highlighter.codeToHtml(code, {lang}));
-			return html
-		
+			if (!highlighterInstance) {
+				highlighterInstance = await shiki.getHighlighter({ theme: "dark-plus" });
+			}
+			const html = escapeSvelte(highlighterInstance.codeToHtml(code, {lang}));
+			return html;
+		}
 	}
-}}
+}
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {

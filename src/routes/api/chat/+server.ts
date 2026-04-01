@@ -1,5 +1,5 @@
-import { error } from '@sveltejs/kit';
-import { OpenAI } from 'openai'
+import { OpenAI } from 'openai';
+import type { RequestHandler } from './$types';
 
 const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY
@@ -29,13 +29,12 @@ const system_prompt = `You are Akshay Ballal's Assistant. Akshay Ballal is a Mac
     If you dont know the answer just say I dont know. Be kind, humble and modest.
     `
 
-/** @type {import('./$types').RequestHandler} */
-export async function POST({ request }) {
+export const POST: RequestHandler = async ({ request }) => {
     let body = await request.json()
     const response = await openai.chat.completions.create({
-        model: "gpt-4o-mini",
+        model: "gpt-5.4-nano",
         messages: [{ "role": "system", "content": system_prompt }, { "role": "user", "content": body.human_input }]
     })
 
-    return new Response(JSON.stringify({ output: response.choices[0].message.content }))
-}
+    return new Response(JSON.stringify({ output: response.choices[0].message.content }));
+};
