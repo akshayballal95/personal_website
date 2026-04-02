@@ -66,7 +66,7 @@
 		{#each pros.sort((a,b)=> a.metadata.idx - b.metadata.idx) as pro}
 			{#if (pro.metadata.type == 'software' && $projectSet == 0) || (pro.metadata.type == 'hardware' && $projectSet == 1)}
 				<div
-					class="card pt-10 pb-10 md:pr-10 w-full flex flex-col"
+					class="card pt-3 pb-3 md:pr-6 w-full flex flex-col"
 					in:fly={{ duration: 500, x: $projectSet == 0 ? -150 : 150 }}
 				>
 					<div class="flex items-center">
@@ -74,16 +74,16 @@
 
 						<p class="unstyled text-2xl text-primary-500">{pro.metadata.title}</p>
 					</div>
-					<div class="lg:flex-row flex flex-col gap-5 mt-5 justify-around items-center">
+					<div class="lg:flex-row flex flex-col gap-3 mt-3 justify-around items-center">
 						<p
 							class="text-justify unstyled text-sm ml-5 mr-5 lg:mr-5 lg:ml-8 md:basis-3/5 shrink-0"
 						>
 							<svelte:component this={pro.default} />
 						</p>
-						<div class=" lg:h-80 lg:w-1 w-64 h-0.5 mr-6 bg-primary-500" />
+						<div class="lg:h-32 lg:w-1 w-64 h-0.5 mr-6 bg-primary-500" />
 
-						<div class=" w-72">
-							<img alt="" class=" object-contain rounded-md" src={pro.metadata.image} />
+						<div class="w-40">
+							<img alt="" class="object-contain rounded-md" src={pro.metadata.image} />
 						</div>
 					</div>
 				</div>

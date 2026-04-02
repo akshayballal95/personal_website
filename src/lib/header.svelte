@@ -19,7 +19,7 @@
         </div>
         <div class="header-right">
             <Navlinks />
-            <LightSwitch />
+            <span class="hidden md:inline-flex"><LightSwitch /></span>
         </div>
     </div>
 </header>

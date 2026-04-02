@@ -1,7 +1,7 @@
 ---
 title: Lumo Agent
 type: software
-image: "https://opengraph.githubassets.com/1/StarlightSearch/lumo"
+image: "https://getreflect.starlight-search.com/logo.png"
 idx: 3
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: AI Motor Imagery
 type: software
-image: "https://res.cloudinary.com/dltwftrgc/image/upload/v1712504276/Projects/EmbedAnything_500_x_200_px_a4l8xu.png"
+image: "https://serpentine.ai/images/logo.svg"
 idx: 4
 ---
 

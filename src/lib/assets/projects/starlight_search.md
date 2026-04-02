@@ -1,7 +1,7 @@
 ---
 title: Starlight Search
 type: software
-image: "https://opengraph.githubassets.com/1/StarlightSearch/starlight-search"
+image: "https://getreflect.starlight-search.com/logo.png"
 idx: 2
 ---
 

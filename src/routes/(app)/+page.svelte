@@ -97,6 +97,36 @@
 					</div>
 				</div>
 
+				<!-- Reflect -->
+				<div class="project-card">
+					<div class="project-img-wrap">
+						<img
+							src="https://getreflect.starlight-search.com/logo.png"
+							alt="Reflect"
+							class="project-img"
+						/>
+					</div>
+					<div class="project-body">
+						<div class="project-header">
+							<h3 class="project-title">Reflect</h3>
+						</div>
+						<p class="project-desc">
+							Memory for AI agents — stores, ranks, and retrieves reflections so agents learn from
+							outcomes and improve with every execution cycle.
+						</p>
+						<ul class="project-list">
+							<li>Long-term memory for AI agents</li>
+							<li>Continuous improvement through outcome learning</li>
+							<li>Works across any operating system</li>
+						</ul>
+						<div class="project-links">
+							<a href="https://getreflect.starlight-search.com" target="_blank" rel="noopener noreferrer" class="project-btn project-btn--primary unstyled">
+								Get Started
+							</a>
+						</div>
+					</div>
+				</div>
+
 				<!-- Candle Contributions -->
 				<div class="project-card">
 					<div class="project-img-wrap">
@@ -198,6 +228,10 @@
 
 @media (min-width: 900px) {
     .projects-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (min-width: 1200px) {
+    .projects-grid { grid-template-columns: 1fr 1fr 1fr; }
 }
 
 /* ── Project card ── */

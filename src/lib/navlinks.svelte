@@ -115,6 +115,10 @@
     border-color: rgba(159, 107, 35, 0.4);
 }
 
+@media (min-width: 768px) {
+    .mobile-toggle { display: none; }
+}
+
 .bar {
     display: block;
     width: 16px;
