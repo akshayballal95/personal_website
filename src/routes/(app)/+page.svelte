@@ -8,7 +8,7 @@
 	/** @type {import('./$types').PageData} */
 	export let data: { blogs: Blog[] };
 
-	let githubStats = { stars: 0, forks: 0 };
+	let githubStats = { stars: 1300, forks: 0 };
 
 	onMount(async () => {
 		$tabSet = 0;

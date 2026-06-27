@@ -22,7 +22,7 @@ I'm a Machine Learning Engineer based in Eindhoven, The Netherlands. I'm passion
 5. **Head of Engineering @ Fabheads Automation** — July 2017–December 2019, Chennai, India. First founding employee. Pioneered Asia's first carbon fiber 3D printer, led a team of 10 engineers, and built a slicer backend in Django with tool-path optimizations (20% faster prints).
 
 ## Open Source & Projects
-1. **EmbedAnything** (github.com/StarlightSearch/EmbedAnything) — My flagship open-source project. A Rust-powered, multi-modal embedding pipeline supporting text, images, audio, PDFs, and more. Streams embeddings directly to vector databases. Supports dense, sparse, ONNX, and late-interaction embeddings. Over 750 GitHub stars and 300,000+ downloads.
+1. **EmbedAnything** (github.com/StarlightSearch/EmbedAnything) — My flagship open-source project. A Rust-powered, multi-modal embedding pipeline supporting text, images, audio, PDFs, and more. Streams embeddings directly to vector databases. Supports dense, sparse, ONNX, and late-interaction embeddings. Over 1300 GitHub stars and 300,000+ downloads.
 2. **Starlight Search** — A multi-platform desktop app for semantic search over local files. Uses hybrid search + reranking for better retrieval, Ollama for local LLMs, and supports OpenAI/Gemini APIs.
 3. **Lumo Agent** — An open-source agentic library and API server. Implements a CodeAgent architecture where the agent writes Python code to execute tool calls. Deployed on AWS EC2.
 4. **AI Motor Imagery** — Deep learning model predicting limb movements from EEG signals in real-time. Built data pipelines with real-time filtering and buffering. Demonstrated live at Dutch Design Week 2024.

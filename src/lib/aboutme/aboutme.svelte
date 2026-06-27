@@ -54,7 +54,7 @@
 
         <p class="bio">
             Versatile AI Engineer with a background in developing deep learning models and deploying AI in products.
-            I authored two open-source libraries — EmbedAnything has over 300,000 downloads and 750 GitHub stars.
+            I authored two open-source libraries — EmbedAnything has over 300,000 downloads and 1300 GitHub stars.
             I hold an MSc. in Artificial Intelligence from Eindhoven University of Technology (Cum Laude) and have
             six years of prior industry experience spanning machine learning, software development, and engineering.
         </p>
