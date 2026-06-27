@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <radialGradient id="pulsarLogoGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#A78BFA"/>
+      <stop offset="60%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#4338CA"/>
+    </radialGradient>
+  </defs>
+  <circle cx="32" cy="32" r="30" fill="none" stroke="#6366F1" stroke-width="1.2" opacity="0.25"/>
+  <circle cx="32" cy="32" r="22" fill="none" stroke="#6366F1" stroke-width="1.2" opacity="0.5"/>
+  <path d="M32 6 L36.5 27.5 L58 32 L36.5 36.5 L32 58 L27.5 36.5 L6 32 L27.5 27.5 Z" fill="url(#pulsarLogoGrad)"/>
+  <circle cx="32" cy="32" r="4.5" fill="#FFFFFF"/>
+</svg>

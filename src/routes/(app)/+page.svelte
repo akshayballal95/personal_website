@@ -111,7 +111,7 @@
 							<h3 class="project-title">Reflect</h3>
 						</div>
 						<p class="project-desc">
-							Memory for AI agents — stores, ranks, and retrieves reflections so agents learn from
+							Memory for AI agents that stores, ranks, and retrieves reflections so agents learn from
 							outcomes and improve with every execution cycle.
 						</p>
 						<ul class="project-list">
@@ -122,6 +122,68 @@
 						<div class="project-links">
 							<a href="https://getreflect.starlight-search.com" target="_blank" rel="noopener noreferrer" class="project-btn project-btn--primary unstyled">
 								Get Started
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Pulsar -->
+				<div class="project-card">
+					<div class="project-img-wrap">
+						<img
+							src="/images/pulsar-logo.svg"
+							alt="Pulsar"
+							class="project-img"
+						/>
+					</div>
+					<div class="project-body">
+						<div class="project-header">
+							<h3 class="project-title">Pulsar</h3>
+						</div>
+						<p class="project-desc">
+							A Cursor-like web IDE for knowledge work. Write, research, and draft alongside AI
+							with full visibility into every file change and tool call.
+						</p>
+						<ul class="project-list">
+							<li>Monaco editor with markdown preview and PDF viewer</li>
+							<li>Streaming agent chat with diffs and thread history</li>
+							<li>Agent Skills standard and multi-project workspaces</li>
+							<li>Slack and Telegram integrations</li>
+						</ul>
+						<div class="project-links">
+							<a href="https://pulsarbot.cloud" target="_blank" rel="noopener noreferrer" class="project-btn project-btn--primary unstyled">
+								Visit Website
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Ajna DrawSense -->
+				<div class="project-card">
+					<div class="project-img-wrap">
+						<img
+							src="/images/ajna-drawsense-logo.svg"
+							alt="Ajna DrawSense"
+							class="project-img"
+						/>
+					</div>
+					<div class="project-body">
+						<div class="project-header">
+							<h3 class="project-title">Ajna DrawSense</h3>
+						</div>
+						<p class="project-desc">
+							AI-powered engineering drawing analysis. Upload technical drawings and automatically
+							extract dimensions, tolerances, and machine fit checks.
+						</p>
+						<ul class="project-list">
+							<li>LangGraph + Gemini multi-stage analysis pipeline</li>
+							<li>YOLO detection for dimension annotation regions</li>
+							<li>Machine capability matching and tolerance validation</li>
+							<li>React frontend + FastAPI backend on AWS Lambda</li>
+						</ul>
+						<div class="project-links">
+							<a href="https://takshaai.triviz.cloud" target="_blank" rel="noopener noreferrer" class="project-btn project-btn--primary unstyled">
+								Live App
 							</a>
 						</div>
 					</div>
@@ -145,9 +207,9 @@
 							three key models to enhance the framework's capabilities.
 						</p>
 						<ul class="project-list">
-							<li>ColPali — Vision RAG Model</li>
-							<li>Splade Model — Sparse Bert for BM25</li>
-							<li>Reranker Model — Cross-encoder Architecture</li>
+							<li>ColPali: Vision RAG Model</li>
+							<li>Splade Model: Sparse Bert for BM25</li>
+							<li>Reranker Model: Cross-encoder Architecture</li>
 						</ul>
 						<div class="project-links">
 							<a href="https://github.com/huggingface/candle/commits?author=akshayballal95" target="_blank" rel="noopener noreferrer" class="project-btn project-btn--primary unstyled">
@@ -350,7 +412,7 @@
 }
 
 .project-list li::before {
-    content: '—';
+    content: '•';
     position: absolute;
     left: 0;
     color: rgba(159, 107, 35, 0.55);

@@ -17,7 +17,7 @@
       "institute_name": "Eindhoven University of Technology",
       "city": "Eindhoven",
       "end_date": "2025",
-      "description": "Graduated Cum Laude\nML Team Lead at Serpentine AI — research group developing AI models for brain signal processing."
+      "description": "Graduated Cum Laude\nML Team Lead at Serpentine AI, a research group developing AI models for brain signal processing."
     },
     {
       "country": "India",
@@ -40,7 +40,7 @@
     {
       "start_date": "February 2024",
       "end_date": "Present",
-      "description": "Author of EmbedAnything — 1300 GitHub stars and over 300,000 downloads.\nProvides fast multi-modal embeddings generation.\nContributed several models to open-source projects.",
+      "description": "Author of EmbedAnything with 1300 GitHub stars and over 300,000 downloads.\nProvides fast multi-modal embeddings generation.\nContributed several models to open-source projects.",
       "title": "EmbedAnything"
     },
     {
@@ -56,10 +56,16 @@
       "title": "Lumo Agent"
     },
     {
-      "start_date": "September 2023",
-      "end_date": "July 2025",
-      "description": "Developed a robust deep learning model to predict limb movements from EEG Motor Imagery data in real-time.\nImplemented data pipelines to handle real-time data with filtering and buffering.\nPresented a live demo of the application at Dutch Design Week 2024.",
-      "title": "AI Motor Imagery"
+      "start_date": "March 2026",
+      "end_date": "Present",
+      "description": "Cursor-like web IDE for knowledge work: documents, research, and drafting alongside AI.\nBuilt file explorer, Monaco editor with markdown/PDF preview, and streaming agent chat with visible tool calls and diffs.\nNext.js app with Agent Skills, Slack/Telegram integrations, and persistent agent sandboxes on AWS.",
+      "title": "Pulsar"
+    },
+    {
+      "start_date": "April 2025",
+      "end_date": "Present",
+      "description": "AI-powered engineering drawing analysis platform for manufacturing teams.\nBuilt a LangGraph + Gemini pipeline with YOLO detection to extract dimensions, tolerances, and machine fit checks from PDF/image drawings.\nFull-stack monorepo with React/TypeScript frontend and Python FastAPI backend on AWS Lambda.",
+      "title": "Ajna DrawSense"
     }
   ],
   "id": "Wge83PkyBViAm5Hk3zE9",
@@ -131,7 +137,7 @@
     },
     {
       "description": "Developed Generative AI pipelines for user persona detection and an AI coach for children.\nDeployed serverless AI functions in Azure and integrated RAG pipelines for the coach using Azure services.",
-      "end_date": "October 2025",
+      "end_date": "Present",
       "job_title": "AI Lead Engineer",
       "start_date": "July 2025",
       "city": "Eindhoven",

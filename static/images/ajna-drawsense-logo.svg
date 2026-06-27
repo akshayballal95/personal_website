@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="10" y1="10" x2="110" y2="110" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0F766E"/>
+      <stop offset="100%" stop-color="#14B8A6"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="20" y2="20" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FBBF24"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+    <!-- Glow filter for the eye -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Container -->
+  <rect x="4" y="4" width="112" height="112" rx="26" fill="url(#bg)"/>
+
+  <!-- Bold T crossbar with arrow tips -->
+  <path d="M26,32 L30,28 L90,28 L94,32 L94,40 L90,44 L30,44 L26,40 Z" fill="white"/>
+
+  <!-- T stem - upper part (above eye) -->
+  <rect x="49" y="44" width="22" height="14" fill="white"/>
+
+  <!-- T stem - lower part (below eye) -->
+  <rect x="49" y="76" width="22" height="14" rx="2" fill="white"/>
+
+  <!-- AI Eye shape - almond/lens form -->
+  <!-- Eye white (sclera) - almond shape -->
+  <ellipse cx="60" cy="66" rx="18" ry="11" fill="white"/>
+
+  <!-- Eye outline for definition -->
+  <ellipse cx="60" cy="66" rx="18" ry="11" stroke="url(#bg)" stroke-width="1.5" fill="white"/>
+
+  <!-- Iris - amber/gold ring -->
+  <circle cx="60" cy="66" r="8" fill="url(#gold)" filter="url(#glow)">
+    <!-- Pulse animation on the iris -->
+    <animate attributeName="r" values="7.5;8.5;7.5" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1"/>
+  </circle>
+
+  <!-- Pupil - dark teal -->
+  <circle cx="60" cy="66" r="4" fill="#0A5C55">
+    <!-- Pupil contracts/dilates -->
+    <animate attributeName="r" values="4;3.2;4" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1"/>
+  </circle>
+
+  <!-- Light reflection on the eye -->
+  <circle cx="57" cy="63.5" r="1.8" fill="white" opacity="0.9">
+    <animate attributeName="opacity" values="0.9;0.5;0.9" dur="3s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Subtle scan line moving across the eye -->
+  <line x1="42" y1="66" x2="42" y2="66" stroke="#FBBF24" stroke-width="1.5" stroke-linecap="round" opacity="0">
+    <animate attributeName="x1" values="42;78;42" dur="4s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1"/>
+    <animate attributeName="x2" values="45;81;45" dur="4s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1"/>
+    <animate attributeName="y1" values="58;58;58" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="74;74;74" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.6;0.6;0" dur="4s" repeatCount="indefinite" keyTimes="0;0.1;0.9;1"/>
+  </line>
+
+  <!-- Ambient glow around the eye - breathing -->
+  <ellipse cx="60" cy="66" rx="20" ry="13" fill="none" stroke="#FBBF24" stroke-width="1" opacity="0">
+    <animate attributeName="opacity" values="0;0.3;0" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1"/>
+    <animate attributeName="rx" values="19;22;19" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1"/>
+    <animate attributeName="ry" values="12;14;12" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1"/>
+  </ellipse>
+</svg>
