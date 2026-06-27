@@ -41,7 +41,7 @@
     border-radius: 12px;
     text-decoration: none !important;
     transition: background 0.22s ease, border-color 0.22s ease, transform 0.22s ease;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .blog-card:hover {

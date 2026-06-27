@@ -138,6 +138,17 @@
 		line-height: 1.75;
 	}
 
+	:global(.blog-content img) {
+		display: block;
+		width: auto;
+		height: auto;
+		max-width: min(100%, 40rem);
+		max-height: 26rem;
+		object-fit: contain;
+		margin: 1.5rem auto;
+		border-radius: 8px;
+	}
+
 	/* Inline code (not inside pre) */
 	:global(.blog-container :not(pre) > code) {
 		font-family: 'JetBrains Mono', Consolas, monospace;
