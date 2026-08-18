@@ -66,11 +66,11 @@
 							<h3 class="project-title">EmbedAnything</h3>
 							<div class="project-badges">
 								<span class="badge">
-									<i class="fab fa-github" />
+									<i class="fab fa-github"></i>
 									{githubStats.stars} stars
 								</span>
 								<span class="badge">
-									<i class="fa fa-code-fork" />
+									<i class="fa fa-code-fork"></i>
 									{githubStats.forks} forks
 								</span>
 								<img src="https://static.pepy.tech/badge/embed-anything" alt="PyPI downloads" class="badge-img" />
@@ -88,10 +88,10 @@
 						</ul>
 						<div class="project-links">
 							<a href="https://github.com/StarlightSearch/EmbedAnything" target="_blank" rel="noopener noreferrer" class="project-btn project-btn--primary unstyled">
-								<i class="fab fa-github" /> View on GitHub
+								<i class="fab fa-github"></i> View on GitHub
 							</a>
 							<a href="https://pypi.org/project/embed-anything/" target="_blank" rel="noopener noreferrer" class="project-btn project-btn--ghost unstyled">
-								<i class="fab fa-python" /> PyPI
+								<i class="fab fa-python"></i> PyPI
 							</a>
 						</div>
 					</div>
@@ -213,7 +213,7 @@
 						</ul>
 						<div class="project-links">
 							<a href="https://github.com/huggingface/candle/commits?author=akshayballal95" target="_blank" rel="noopener noreferrer" class="project-btn project-btn--primary unstyled">
-								<i class="fab fa-github" /> View Contributions
+								<i class="fab fa-github"></i> View Contributions
 							</a>
 						</div>
 					</div>

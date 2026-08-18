@@ -1,10 +1,12 @@
 <script lang="ts">
 	import { tabSet } from '$lib/stores/stateStore';
-	import { toastStore, type ToastSettings } from '@skeletonlabs/skeleton';
+	import { getToastStore, type ToastSettings } from '@skeletonlabs/skeleton';
 	import { slide } from 'svelte/transition';
 
 	/** @type {import('./$types').ActionData} */
 	export let form: { success: string };
+
+	const toast = getToastStore();
 
 	const t: ToastSettings = {
 		autohide: true,
@@ -23,9 +25,9 @@
 	};
 
 	if (form?.success == 'true') {
-		toastStore.trigger(t);
+		toast.trigger(t);
 	} else if (form?.success == 'false') {
-		toastStore.trigger(e);
+		toast.trigger(e);
 	}
 
 	interface FormData {
@@ -104,8 +106,7 @@
 				class="textarea"
 				name="message"
 				rows="4"
-				placeholder="Let me know how I can help you..."
-			/>
+				placeholder="Let me know how I can help you..."></textarea>
 		</label>
 
 		<!-- If you want replyTo to be set to specific email -->

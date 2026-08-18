@@ -1,8 +1,8 @@
 // import adapter from '@sveltejs/adapter-auto';
 import adapter from '@sveltejs/adapter-vercel';
-import { vitePreprocess } from '@sveltejs/kit/vite';
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
-import addClasses from "rehype-add-classes"
+import rehypeClassNames from "rehype-class-names"
 import path from 'path'
 import shiki from 'shiki'
 /** @type {import('@sveltejs/kit').Config} */
@@ -24,7 +24,7 @@ const mdsvexOptions = {
 	remarkPlugins: [
 		remarkMath,
 	  ],
-	rehypePlugins: [[addClasses, {"img":"rounded-md", "ul":"list-disc list-inside ml-5 ", "ol":"list-outside", "p":"text-base" ,"p": "z-0" }], rehypeKatexSvelte,
+	rehypePlugins: [[rehypeClassNames, { img: "rounded-md", ul: "list-disc list-inside ml-5", ol: "list-outside", p: "z-0" }], rehypeKatexSvelte,
 
 	  rehypeExternalLinks,
 	[

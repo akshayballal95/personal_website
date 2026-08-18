@@ -4,27 +4,27 @@
 
         <div class="footer-contacts">
             <a href="tel:+31045791146" class="footer-contact">
-                <i class="fa-solid fa-phone footer-icon" />
+                <i class="fa-solid fa-phone footer-icon"></i>
                 <span>+31 645791146</span>
             </a>
             <a href="mailto:arballal95@gmail.com" class="footer-contact">
-                <i class="fa-solid fa-envelope footer-icon" />
+                <i class="fa-solid fa-envelope footer-icon"></i>
                 <span>arballal95@gmail.com</span>
             </a>
         </div>
 
         <div class="footer-social">
             <a class="footer-social-btn" href="https://twitter.com/akshayballal95" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                <i class="fa-brands fa-twitter" />
+                <i class="fa-brands fa-twitter"></i>
             </a>
             <a class="footer-social-btn" href="https://www.facebook.com/arballal/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                <i class="fa-brands fa-facebook" />
+                <i class="fa-brands fa-facebook"></i>
             </a>
             <a class="footer-social-btn" href="https://github.com/akshayballal95" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                <i class="fa-brands fa-github" />
+                <i class="fa-brands fa-github"></i>
             </a>
             <a class="footer-social-btn" href="https://www.linkedin.com/in/akshay-ballal/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                <i class="fa-brands fa-linkedin" />
+                <i class="fa-brands fa-linkedin"></i>
             </a>
         </div>
     </div>

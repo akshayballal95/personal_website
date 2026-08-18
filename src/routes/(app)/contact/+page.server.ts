@@ -1,6 +1,5 @@
 import sendgrid from '@sendgrid/mail';
 import { VITE_SENDGRID_API_KEY } from '$env/static/private';
-import { toastStore, type ToastSettings } from '@skeletonlabs/skeleton';
 
 function escapeHtml(str: string): string {
     return str

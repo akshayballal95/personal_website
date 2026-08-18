@@ -2,8 +2,6 @@
 	import '../../theme.postcss';
 	// The ordering of these imports is critical to your app working properly
 	// import '@skeletonlabs/skeleton/themes/theme-gold-nouveau.css';
-	// If you have source.organizeImports set to true in VSCode, then it will auto change this ordering
-	import '@skeletonlabs/skeleton/styles/all.css';
 	// Most of your app wide CSS should be put in this file
 	import '../../app.postcss';
 
@@ -13,7 +11,7 @@
 		ListBox,
 		ListBoxItem,
 		Toast,
-		drawerStore
+		getDrawerStore
 	} from '@skeletonlabs/skeleton';
 	import Header from '$lib/header.svelte';
 	import { goto } from '$app/navigation';
@@ -22,6 +20,9 @@
 	import { dev } from '$app/environment';
 	import { onMount } from 'svelte';
 	import { message_feed, elemChat, isLoading } from '$lib/stores/messageStore';
+
+	const drawer = getDrawerStore();
+
 	inject({ mode: dev ? 'development' : 'production' });
 
 	function scrollChatBottom(behavior?: ScrollBehavior): void {
@@ -112,7 +113,7 @@
 		<div
 			class="m-5 input-group input-group-divider grid-cols-[auto_1fr_auto] rounded-container-token md:w-2/4"
 		>
-			<div class="input-group-shim" />
+			<div class="input-group-shim"></div>
 			<textarea
 				on:keydown={(e) => keyHandler(e)}
 				bind:value={currentMessage}
@@ -122,10 +123,10 @@
 				placeholder="Ask me anything..."
 				rows="1"
 				disabled={$isLoading}
-			/>
+			></textarea>
 			<button type="submit" on:click={addMessage} class="variant-filled-primary" disabled={$isLoading}>
 				{#if $isLoading}
-					<i class="fa-solid fa-circle-notch fa-spin" />
+					<i class="fa-solid fa-circle-notch fa-spin"></i>
 				{:else}
 					Send
 				{/if}
@@ -141,14 +142,14 @@
 		>
 			<button
 				class="btn-icon variant-filled absolute self-end top-5 right-5"
-				on:click={() => drawerStore.close()}
-				><i class="fa-solid fa-xmark fa-xl" />
+				on:click={() => drawer.close()}
+				><i class="fa-solid fa-xmark fa-xl"></i>
 			</button>
 			<ListBoxItem
 				bind:group={$tabSet}
 				on:click={() => {
 					goto('/');
-					drawerStore.close();
+					drawer.close();
 				}}
 				name="about_me"
 				value={0}
@@ -162,7 +163,7 @@
 				bind:group={$tabSet}
 				on:click={() => {
 					goto('/resume');
-					drawerStore.close();
+					drawer.close();
 				}}
 				name="resume"
 				value={1}
@@ -176,7 +177,7 @@
 				bind:group={$tabSet}
 				on:click={() => {
 					goto('/projects');
-					drawerStore.close();
+					drawer.close();
 				}}
 				name="projects"
 				value={2}
@@ -193,7 +194,7 @@
 				class="rounded"
 				on:click={() => {
 					goto('/contact');
-					drawerStore.close();
+					drawer.close();
 				}}
 			>
 				<!-- <svelte:fragment slot="lead">SD</svelte:fragment> -->
@@ -207,7 +208,7 @@
 				class="rounded"
 				on:click={() => {
 					goto('/blogs');
-					drawerStore.close();
+					drawer.close();
 				}}
 			>
 				<!-- <svelte:fragment slot="lead">SD</svelte:fragment> -->

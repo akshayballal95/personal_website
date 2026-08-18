@@ -41,7 +41,7 @@
 	<div class="bg-transparent w-full flex flex-col lg:w-2/4 gap-12 items-center justify-center p-5">
 		<div class="flex flex-col gap-4 items-center">
 			<h2 class="text-center">Resume</h2>
-			<div class="h-1 w-56 bg-primary-500" />
+			<div class="h-1 w-56 bg-primary-500"></div>
 		</div>
 
 		<!-- Experience -->
@@ -62,7 +62,7 @@
 						<!-- node + connecting line -->
 						<div class="relative flex flex-col items-center shrink-0 w-16">
 							{#if i < resume.work_experience.length - 1}
-								<div class="absolute left-1/2 top-8 -translate-x-1/2 w-0.5 h-[calc(100%+2rem)] bg-primary-500/30" />
+								<div class="absolute left-1/2 top-8 -translate-x-1/2 w-0.5 h-[calc(100%+2rem)] bg-primary-500/30"></div>
 							{/if}
 							{#if logoMap[experience.company_name]}
 								<div class="logo-wrapper z-10 w-16 h-16 flex items-center justify-center rounded-2xl p-1.5 {darkBgLogos.has(experience.company_name) ? 'bg-surface-800' : 'bg-white border border-surface-300-600-token'}">
@@ -75,7 +75,7 @@
 								</div>
 							{:else}
 								<div class="z-10 w-16 h-16 flex items-center justify-center">
-									<div class="w-4 h-4 rounded-full bg-primary-500 ring-4 ring-surface-100-800-token" />
+									<div class="w-4 h-4 rounded-full bg-primary-500 ring-4 ring-surface-100-800-token"></div>
 								</div>
 							{/if}
 						</div>
@@ -115,7 +115,7 @@
 						<!-- node + connecting line -->
 						<div class="relative flex flex-col items-center shrink-0 w-16">
 							{#if i < resume.education.length - 1}
-								<div class="absolute left-1/2 top-8 -translate-x-1/2 w-0.5 h-[calc(100%+2rem)] bg-primary-500/30" />
+								<div class="absolute left-1/2 top-8 -translate-x-1/2 w-0.5 h-[calc(100%+2rem)] bg-primary-500/30"></div>
 							{/if}
 							{#if logoMap[education.institute_name]}
 								<div class="logo-wrapper z-10 w-16 h-16 flex items-center justify-center rounded-2xl p-1.5 {darkBgLogos.has(education.institute_name) ? 'bg-surface-800' : 'bg-white border border-surface-300-600-token'}">
@@ -128,7 +128,7 @@
 								</div>
 							{:else}
 								<div class="z-10 w-16 h-16 flex items-center justify-center">
-									<div class="w-4 h-4 rounded-full bg-primary-500 ring-4 ring-surface-100-800-token" />
+									<div class="w-4 h-4 rounded-full bg-primary-500 ring-4 ring-surface-100-800-token"></div>
 								</div>
 							{/if}
 						</div>
@@ -182,7 +182,7 @@
 						</div>
 					</div>
 					{#if i < resume.certification.length - 1}
-						<div class="h-px bg-neutral-600 w-full" />
+						<div class="h-px bg-neutral-600 w-full"></div>
 					{/if}
 				{/each}
 			</div>

@@ -3,18 +3,19 @@
 	// The ordering of these imports is critical to your app working properly
 	import '../../theme.postcss';
 	// import '@skeletonlabs/skeleton/themes/theme-wintry.css';
-	// If you have source.organizeImports set to true in VSCode, then it will auto change this ordering
-	import '@skeletonlabs/skeleton/styles/all.css';
 	// Most of your app wide CSS should be put in this file
 	import '../../app.postcss';
 
-	import { AppShell, Drawer, ListBox, ListBoxItem, Toast, drawerStore, LightSwitch } from '@skeletonlabs/skeleton';
+	import { AppShell, Drawer, ListBox, ListBoxItem, Toast, LightSwitch, getDrawerStore } from '@skeletonlabs/skeleton';
 	import Header from '$lib/header.svelte';
 	import Footer from '$lib/footer.svelte';
 	import { goto, afterNavigate } from '$app/navigation';
 	import { tabSet } from '$lib/stores/stateStore';
 	import { inject } from '@vercel/analytics';
 	import { dev } from '$app/environment';
+
+	const drawer = getDrawerStore();
+
 	inject({ mode: dev ? 'development' : 'production' });
 	
 	afterNavigate(() => {
@@ -39,14 +40,14 @@
 			active="variant-filled-primary"
 			class=" pt-6 gap-4 flex flex-col justify-center items-center  "
 		>	
-			<button class="btn-icon variant-filled absolute self-end top-5 right-5" on:click={()=>drawerStore.close()}
-				><i class="fa-solid fa-xmark fa-xl" />
+			<button class="btn-icon variant-filled absolute self-end top-5 right-5" on:click={()=>drawer.close()}
+				><i class="fa-solid fa-xmark fa-xl"></i>
 			</button>
 			<ListBoxItem
 				bind:group={$tabSet}
 				on:click={() => {
 					goto('/');
-					drawerStore.close();
+					drawer.close();
 				}}
 				name="about_me"
 				value={0}
@@ -60,7 +61,7 @@
 				bind:group={$tabSet}
 				on:click={() => {
 					goto('/resume');
-					drawerStore.close();
+					drawer.close();
 				}}
 				name="resume"
 				value={1}
@@ -74,7 +75,7 @@
 				bind:group={$tabSet}
 				on:click={() => {
 					goto('/projects');
-					drawerStore.close();
+					drawer.close();
 				}}
 				name="projects"
 				value={2}
@@ -91,7 +92,7 @@
 				class="rounded"
 				on:click={() => {
 					goto('/contact');
-					drawerStore.close();
+					drawer.close();
 				}}
 			>
 				<!-- <svelte:fragment slot="lead">SD</svelte:fragment> -->
@@ -101,7 +102,7 @@
 			<ListBoxItem bind:group={$tabSet} name="Blog" value={4} class="rounded"
 			on:click={() => {
 				goto('/blogs');
-				drawerStore.close();
+				drawer.close();
 			}}>
 				<!-- <svelte:fragment slot="lead">SD</svelte:fragment> -->
 				<p class="font-light">Blog</p>
@@ -110,7 +111,7 @@
 			<ListBoxItem bind:group={$tabSet} name="Chat" value={5} class="rounded"
 			on:click={() => {
 				goto('/chat');
-				drawerStore.close();
+				drawer.close();
 			}}>
 				<!-- <svelte:fragment slot="lead">SD</svelte:fragment> -->
 				<p class="font-light">Chat</p>

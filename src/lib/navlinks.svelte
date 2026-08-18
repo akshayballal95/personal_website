@@ -1,8 +1,10 @@
 <script lang="ts">
     import { tabSet } from '$lib/stores/stateStore';
     import { goto } from '$app/navigation';
-    import { drawerStore } from '@skeletonlabs/skeleton';
+    import { getDrawerStore } from '@skeletonlabs/skeleton';
     import type { DrawerSettings } from '@skeletonlabs/skeleton';
+
+    const drawer = getDrawerStore();
 
     const links = [
         { label: 'About',    value: 0, href: '/' },
@@ -15,7 +17,7 @@
 
     function openDrawer(): void {
         const s: DrawerSettings = { id: 'demo', position: 'top' };
-        drawerStore.open(s);
+        drawer.open(s);
     }
 </script>
 

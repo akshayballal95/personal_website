@@ -19,16 +19,16 @@
 
         <div class="social-row">
             <a class="social-btn" href="https://twitter.com/akshayballal95" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                <i class="fa-brands fa-twitter" />
+                <i class="fa-brands fa-twitter"></i>
             </a>
             <a class="social-btn" href="https://www.facebook.com/arballal/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                <i class="fa-brands fa-facebook" />
+                <i class="fa-brands fa-facebook"></i>
             </a>
             <a class="social-btn" href="https://github.com/akshayballal95" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                <i class="fa-brands fa-github" />
+                <i class="fa-brands fa-github"></i>
             </a>
             <a class="social-btn" href="https://www.linkedin.com/in/akshay-ballal/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                <i class="fa-brands fa-linkedin" />
+                <i class="fa-brands fa-linkedin"></i>
             </a>
         </div>
     </aside>
@@ -43,7 +43,7 @@
         <div class="cta-row">
             <a href={resume} download>
                 <button type="button" class="btn-amber">
-                    <i class="fa-regular fa-download" />
+                    <i class="fa-regular fa-download"></i>
                     <span>Resume</span>
                 </button>
             </a>

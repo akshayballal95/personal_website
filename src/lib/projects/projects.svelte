@@ -6,7 +6,6 @@
 	import { Tab, TabGroup } from '@skeletonlabs/skeleton';
 	import { goto } from '$app/navigation';
 	import { fly, slide } from 'svelte/transition';
-	import { parse } from 'postcss';
 
 	let resume = item as Resume;
 
@@ -33,7 +32,7 @@
 	<div class="md:w-3/4 lg:w-2/4 lg:min-w-[800px] flex flex-col gap-8 items-center justify-center">
 		<div class=" flex flex-col gap-4 items-center">
 			<h2>Projects</h2>
-			<div class="h-1 w-56 bg-primary-500" />
+			<div class="h-1 w-56 bg-primary-500"></div>
 
 			<TabGroup
 				justify="justify-center"
@@ -70,7 +69,7 @@
 					in:fly={{ duration: 500, x: $projectSet == 0 ? -150 : 150 }}
 				>
 					<div class="flex items-center">
-						<div class="h-12 w-2 mr-5 bg-primary-500" />
+						<div class="h-12 w-2 mr-5 bg-primary-500"></div>
 
 						<p class="unstyled text-2xl text-primary-500">{pro.metadata.title}</p>
 					</div>
@@ -80,7 +79,7 @@
 						>
 							<svelte:component this={pro.default} />
 						</p>
-						<div class="lg:h-32 lg:w-1 w-64 h-0.5 mr-6 bg-primary-500" />
+						<div class="lg:h-32 lg:w-1 w-64 h-0.5 mr-6 bg-primary-500"></div>
 
 						<div class="w-40">
 							<img alt="" class="object-contain rounded-md" src={pro.metadata.image} />
