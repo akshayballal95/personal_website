@@ -3,6 +3,7 @@
     import { goto } from '$app/navigation';
     import { getDrawerStore } from '@skeletonlabs/skeleton';
     import type { DrawerSettings } from '@skeletonlabs/skeleton';
+    import { CHAT_ENABLED } from '$lib/config';
 
     const drawer = getDrawerStore();
 
@@ -12,7 +13,7 @@
         { label: 'Projects', value: 2, href: '/projects' },
         { label: 'Contact',  value: 3, href: '/contact' },
         { label: 'Blog',     value: 4, href: '/blogs' },
-        { label: 'Chat',     value: 5, href: '/chat' },
+        ...(CHAT_ENABLED ? [{ label: 'Chat', value: 5, href: '/chat' }] : []),
     ];
 
     function openDrawer(): void {

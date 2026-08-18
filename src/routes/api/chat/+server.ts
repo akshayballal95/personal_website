@@ -1,5 +1,6 @@
 import type { RequestHandler } from '@sveltejs/kit';
 import { OpenAI } from 'openai';
+import { CHAT_ENABLED } from '$lib/config';
 
 const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY
@@ -37,7 +38,16 @@ Machine Learning, Deep Learning, Computer Vision, NLP, Rust, Python, PyTorch, RA
 `
 
 export const POST: RequestHandler = async ({ request }) => {
-    let body = await request.json()
+    // This endpoint is unauthenticated and spends OpenAI credits, so it has to
+    // refuse on its own rather than rely on the UI being hidden.
+    if (!CHAT_ENABLED) {
+        return new Response(JSON.stringify({ error: 'Not found' }), {
+            status: 404,
+            headers: { 'Content-Type': 'application/json' }
+        });
+    }
+
+    const body = await request.json()
     const input = body.human_input;
     if (typeof input !== 'string' || input.trim().length === 0 || input.length > 2000) {
         return new Response(JSON.stringify({ error: 'Invalid input' }), { status: 400 });

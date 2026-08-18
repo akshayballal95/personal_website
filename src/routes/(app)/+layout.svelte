@@ -13,6 +13,7 @@
 	import { tabSet } from '$lib/stores/stateStore';
 	import { inject } from '@vercel/analytics';
 	import { dev } from '$app/environment';
+	import { CHAT_ENABLED } from '$lib/config';
 
 	const drawer = getDrawerStore();
 
@@ -108,14 +109,15 @@
 				<p class="font-light">Blog</p>
 			</ListBoxItem>
 
-			<ListBoxItem bind:group={$tabSet} name="Chat" value={5} class="rounded"
-			on:click={() => {
-				goto('/chat');
-				drawer.close();
-			}}>
-				<!-- <svelte:fragment slot="lead">SD</svelte:fragment> -->
-				<p class="font-light">Chat</p>
-			</ListBoxItem>
+			{#if CHAT_ENABLED}
+				<ListBoxItem bind:group={$tabSet} name="Chat" value={5} class="rounded"
+				on:click={() => {
+					goto('/chat');
+					drawer.close();
+				}}>
+					<p class="font-light">Chat</p>
+				</ListBoxItem>
+			{/if}
 			<!-- ... -->
 		</ListBox>
 		<div class="flex justify-center pb-6 pt-2">

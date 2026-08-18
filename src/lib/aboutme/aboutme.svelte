@@ -2,6 +2,7 @@
     import img from '$lib/assets/img.png';
     import resume from '$lib/assets/projects/resume.pdf';
     import { goto } from '$app/navigation';
+    import { CHAT_ENABLED } from '$lib/config';
 </script>
 
 <div class="about-wrap">
@@ -47,9 +48,11 @@
                     <span>Resume</span>
                 </button>
             </a>
-            <button type="button" class="btn-ghost" on:click={() => goto('/chat')}>
-                Chat With My AI Assistant
-            </button>
+            {#if CHAT_ENABLED}
+                <button type="button" class="btn-ghost" on:click={() => goto('/chat')}>
+                    Chat With My AI Assistant
+                </button>
+            {/if}
         </div>
 
         <p class="bio">
